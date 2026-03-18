@@ -404,7 +404,7 @@
   .music-table { display: flex; flex-direction: column; gap: 2px; border-radius: 10px; overflow: hidden; margin-bottom: 20px; }
   .music-row {
     display: grid;
-    grid-template-columns: 2.5fr 1.2fr 1fr 0.8fr 1.5fr 0.8fr 0.6fr;
+    grid-template-columns: 2.5fr 1.2fr 1fr 0.8fr 1.5fr 0.6fr;
     gap: 10px;
     padding: 14px 16px;
     align-items: start;
@@ -1832,7 +1832,6 @@
         <div>Fecha · Ciudad</div>
         <div>Tipo</div>
         <div>Precio est.</div>
-        <div>Ideal para</div>
         <div>Link</div>
         <div>Elegir</div>
       </div>
@@ -1846,7 +1845,7 @@
         <div><strong>28 o 29 Abr</strong><br>Köln · StaatenHaus<br>Noche libre ✅</div>
         <div><span class="type-badge type-opera">Gran Ópera</span></div>
         <div>€15 – €95<br><small>por persona</small></div>
-        <div>Manolo, Toño, Lorena, MariTere<br><small>Cookie + Andrés: cenan aparte</small></div>
+        
         <div><a href="https://www.oper.koeln/en/productions/ernani/1150" target="_blank" class="link-btn">oper.koeln ↗</a></div>
         <div><button class="music-select-btn" onclick="selectMusic('a')">Elegir ✓</button></div>
       </div>
@@ -1860,7 +1859,7 @@
         <div><strong>28 Abr</strong><br>Köln · Philharmonie<br>Noche libre ✅</div>
         <div><span class="type-badge type-symphony">Orquesta Sinfónica</span></div>
         <div>~€25 – €80<br><small>por persona</small></div>
-        <div>Manolo, Toño, Lorena, MariTere<br><small>Cookie + Andrés: cenan aparte</small></div>
+        
         <div><a href="https://www.koelner-philharmonie.de/en/events" target="_blank" class="link-btn">koelner-philharmonie.de ↗</a></div>
         <div><button class="music-select-btn" onclick="selectMusic('b')">Elegir ✓</button></div>
       </div>
@@ -1874,7 +1873,7 @@
         <div><strong>25 Abr (noche)</strong><br>Ámsterdam<br>Después del day trip ✅</div>
         <div><span class="type-badge type-student">Concierto Estudiantes</span></div>
         <div>Gratis – €15<br><small>por persona</small></div>
-        <div>Manolo + quien quiera<br><small>Muy accesible para todos</small></div>
+        
         <div><a href="https://www.conservatoriumvanamsterdam.nl/en/calendar/" target="_blank" class="link-btn">conservatoriumvanamsterdam.nl ↗</a></div>
         <div><button class="music-select-btn" onclick="selectMusic('c')">Elegir ✓</button></div>
       </div>
@@ -1929,22 +1928,40 @@
       <span class="confirm-block-icon">⛵</span>
       <div>
         <div class="confirm-block-title">Pueblo de Pescadores — Ámsterdam Day Trip</div>
-        <div class="confirm-block-sub">26 Abr — ya hay cuadro de decisión en el Itinerario</div>
+        <div class="confirm-block-sub">26 Abr tarde — después de Keukenhof y Zaanse Schans</div>
       </div>
     </div>
-    <div class="confirm-details">
-      <div class="confirm-detail-row">
-        <span class="cd-label">Opción A</span>
-        <span>Volendam — Puerto de pescadores, ~30 min de Zaanse Schans. Se combina en el mismo día. Todo a pie.</span>
+    <div class="pros-grid" style="grid-template-columns:repeat(2,1fr);margin-top:0">
+      <div class="pros-card" style="border-top:3px solid var(--sage)">
+        <div class="pros-title">⛵ Opción A — Volendam</div>
+        <div style="font-size:12px;color:var(--rust);font-weight:600;margin-bottom:8px">Puerto tradicional · ~30 min de Zaanse Schans</div>
+        <ul>
+          <li>✅ Encaja en el mismo día (Keukenhof + Zaanse Schans + Volendam)</li>
+          <li>✅ Todo a pie, sin coche adicional</li>
+          <li>✅ Ideal con Andrés — espacio abierto, barcas, animales</li>
+          <li>✅ Casas de colores, trajes típicos holandeses</li>
+          <li>✅ Pescado fresco y arenque en el puerto</li>
+          <li>⚠️ Más turístico y pequeño que Giethoorn</li>
+          <li>⚠️ Menos espectacular visualmente</li>
+        </ul>
       </div>
-      <div class="confirm-detail-row">
-        <span class="cd-label">Opción B</span>
-        <span>Giethoorn — "La Venecia holandesa", pueblo sin calles. Requiere día dedicado. Se rentan 2-3 botes para el grupo. ~1.5 hrs de Ámsterdam.</span>
+      <div class="pros-card" style="border-top:3px solid var(--gold)">
+        <div class="pros-title">🛤️ Opción B — Giethoorn</div>
+        <div style="font-size:12px;color:var(--rust);font-weight:600;margin-bottom:8px">"La Venecia holandesa" · ~1.5 hrs de Ámsterdam</div>
+        <ul>
+          <li>✅ Único en el mundo — pueblo sin calles, solo canales</li>
+          <li>✅ Rentar 2-3 lanchas eléctricas — muy divertido en grupo</li>
+          <li>✅ Mucho más fotogénico y memorable</li>
+          <li>✅ Experiencia auténtica, fuera del circuito masivo</li>
+          <li>⚠️ Requiere día dedicado — sin Keukenhof ni Zaanse Schans</li>
+          <li>⚠️ ~1.5 hrs en coche desde Ámsterdam (ida y vuelta)</li>
+          <li>⚠️ Necesitan organizar transporte</li>
+        </ul>
       </div>
-      <div class="confirm-detail-row">
-        <span class="cd-label">Ver opciones</span>
-        <span>El cuadro interactivo está en el <strong>Itinerario → Dom 26 Abr</strong></span>
-      </div>
+    </div>
+    <div style="margin-top:14px;background:var(--cream);border-radius:8px;padding:10px 14px;font-size:13px;display:flex;gap:12px">
+      <span class="cd-label">💡 Nota</span>
+      <span>El cuadro interactivo para seleccionar está en el <strong>Itinerario → Dom 26 Abr</strong></span>
     </div>
   </div>
 
