@@ -1838,6 +1838,176 @@
 
 </div><!-- /tab-documentos -->
 
+
+<!-- ===================== RESUMEN ===================== -->
+<div class="section" id="tab-resumen" style="display:none">
+
+  <div class="summary-grid">
+    <div class="summary-card">
+      <h3>✈️ Vuelos</h3>
+      <p>MEX→AMS 23 Abr · AM25 · Conf# KLFDOL (Guero) / FPRJKI (familia)<br>Regreso: AMS→MEX 10 May · AM26</p>
+    </div>
+    <div class="summary-card">
+      <h3>🏨 Hoteles</h3>
+      <p>Novotel Amsterdam · Novotel Köln · Leonardo Mainz · Ferienhaus Lenartz (Kliding) · Moxy Utrecht</p>
+    </div>
+    <div class="summary-card">
+      <h3>🚂 Trenes</h3>
+      <p>AMS→Köln 27 Abr · Köln→Mainz 30 Abr · Köln→Utrecht 8 May · Todos comprados ✅</p>
+    </div>
+    <div class="summary-card">
+      <h3>🚗 Coche</h3>
+      <p>Alamo · Mainz 4 May → Köln 8 May · Nissan Qashqai · Voucher 1210085 ✅</p>
+    </div>
+    <div class="summary-card">
+      <h3>👨‍👩‍👦 Grupo</h3>
+      <p>8 personas · Guero, Pao, Andrés (4 años 30 Abr), Cookie, Manolo, Toño, Lorena, MariTere</p>
+    </div>
+    <div class="summary-card">
+      <h3>📅 Fechas</h3>
+      <p>24 Abr – 10 May 2026 · 17 noches · Ámsterdam · Köln · Mainz · Kliding · Utrecht</p>
+    </div>
+  </div>
+
+  <div class="notes-area">
+    <h3>⚠️ Notas importantes</h3>
+    <ul style="padding-left:18px;line-height:2;font-size:14px;color:var(--light-ink)">
+      <li>1 Mayo es festivo en Alemania — tiendas cerradas, museos abiertos (verificar horarios Heidelberg)</li>
+      <li>Domingos en Alemania: tiendas cerradas, museos abiertos</li>
+      <li>Emergencias Europa: <strong>112</strong></li>
+      <li>Guero se separa del grupo el 3 Mayo en Frankfurt: vuela FRA→AMS→MEX</li>
+      <li>Familia regresa el 10 Mayo: Utrecht→Schiphol→MEX</li>
+      <li>Licencia de conducir internacional recomendada para el coche en Alemania</li>
+    </ul>
+  </div>
+
+</div><!-- /tab-resumen -->
+
+
+<!-- ===================== POR CONFIRMAR ===================== -->
+<div class="section" id="tab-porconfirmar" style="display:none">
+
+  <div class="alert">
+    <span class="alert-icon">📌</span>
+    <span>Estas opciones están <strong>pendientes de decisión grupal</strong>. Cuando confirmen cuál quieren, avísenle a Claude y se agrega al itinerario principal.</span>
+  </div>
+
+  <!-- TABLA COMPARATIVA MÚSICA -->
+  <div class="confirm-block">
+    <div class="confirm-block-header">
+      <span class="confirm-block-icon">🎵</span>
+      <div>
+        <div class="confirm-block-title">Música Clásica / Ópera para Manolo</div>
+        <div class="confirm-block-sub">Seleccionen una opción — las demás se descartan</div>
+      </div>
+    </div>
+
+    <div class="music-table">
+      <div class="music-row music-header">
+        <div>Opción</div>
+        <div>Fecha · Ciudad</div>
+        <div>Tipo</div>
+        <div>Precio est.</div>
+        <div>Link</div>
+        <div>Elegir</div>
+      </div>
+      <div class="music-row" id="mopt-a">
+        <div>
+          <div class="mopt-name">🎭 Ernani — Oper Köln</div>
+          <div class="mopt-desc">Ópera de Verdi en versión concierto. Drama de amor, poder y venganza. Dirección: Giuliano Carella. Tenor: Young Woo Kim.</div>
+        </div>
+        <div><strong>28 o 29 Abr</strong><br>Köln · StaatenHaus</div>
+        <div><span class="type-badge type-opera">Gran Ópera</span></div>
+        <div>€15 – €95<br><small>por persona</small></div>
+        <div><a href="https://www.oper.koeln/en/productions/ernani/1150" target="_blank" class="link-btn">oper.koeln ↗</a></div>
+        <div><button class="music-select-btn" onclick="selectMusic('a')">Elegir ✓</button></div>
+      </div>
+      <div class="music-row" id="mopt-b">
+        <div>
+          <div class="mopt-name">🎻 Kölner Philharmonie</div>
+          <div class="mopt-desc">Una de las 5 salas de concierto más importantes de Europa. WDR Sinfonieorchester o Gürzenich-Orchester Köln.</div>
+        </div>
+        <div><strong>28 Abr</strong><br>Köln · Philharmonie</div>
+        <div><span class="type-badge type-symphony">Orquesta Sinfónica</span></div>
+        <div>~€25 – €80<br><small>por persona</small></div>
+        <div><a href="https://www.koelner-philharmonie.de/en/events" target="_blank" class="link-btn">koelner-philharmonie.de ↗</a></div>
+        <div><button class="music-select-btn" onclick="selectMusic('b')">Elegir ✓</button></div>
+      </div>
+      <div class="music-row" id="mopt-c">
+        <div>
+          <div class="mopt-name">🎓 Conservatorium van Amsterdam</div>
+          <div class="mopt-desc">El conservatorio más grande de Países Bajos. Conciertos de estudiantes de élite — piano, música de cámara. Ambiente íntimo y auténtico.</div>
+        </div>
+        <div><strong>25 Abr (noche)</strong><br>Ámsterdam</div>
+        <div><span class="type-badge type-student">Concierto Estudiantes</span></div>
+        <div>Gratis – €15<br><small>por persona</small></div>
+        <div><a href="https://www.conservatoriumvanamsterdam.nl/en/calendar/" target="_blank" class="link-btn">conservatoriumvanamsterdam.nl ↗</a></div>
+        <div><button class="music-select-btn" onclick="selectMusic('c')">Elegir ✓</button></div>
+      </div>
+    </div>
+    <div class="music-decision-result" id="music-result" style="display:none"></div>
+
+    <div class="pros-grid">
+      <div class="pros-card">
+        <div class="pros-title">🎭 Ernani — Pros</div>
+        <ul>
+          <li>✅ Verdi en vivo — experiencia operística completa</li>
+          <li>✅ Cantantes de nivel internacional</li>
+          <li>✅ Encaja perfecto: noche libre en Köln</li>
+          <li>⚠️ Más caro del grupo</li>
+          <li>⚠️ ~3 hrs de duración</li>
+        </ul>
+      </div>
+      <div class="pros-card">
+        <div class="pros-title">🎻 Kölner Philharmonie — Pros</div>
+        <ul>
+          <li>✅ Sala icónica, acústica excepcional</li>
+          <li>✅ Más accesible para no-operáticos</li>
+          <li>✅ Precio más razonable</li>
+          <li>⚠️ Programa exacto aún sin confirmar</li>
+        </ul>
+      </div>
+      <div class="pros-card">
+        <div class="pros-title">🎓 Conservatorium — Pros</div>
+        <ul>
+          <li>✅ Exactamente lo que pidió Manolo</li>
+          <li>✅ Casi gratuito</li>
+          <li>✅ Ambiente auténtico, sin turistas</li>
+          <li>⚠️ Programa exacto se publica tarde</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin: 32px 0; border-top: 1px dashed rgba(26,26,46,0.15);"></div>
+
+  <!-- PUEBLO PESCADORES -->
+  <div class="confirm-block">
+    <div class="confirm-block-header">
+      <span class="confirm-block-icon">⛵</span>
+      <div>
+        <div class="confirm-block-title">Pueblo de Pescadores — Ámsterdam Day Trip</div>
+        <div class="confirm-block-sub">26 Abr — ya hay cuadro de decisión en el Itinerario</div>
+      </div>
+    </div>
+    <div class="confirm-details">
+      <div class="confirm-detail-row">
+        <span class="cd-label">Opción A</span>
+        <span>Volendam — Puerto de pescadores, ~30 min de Zaanse Schans. Se combina en el mismo día. Todo a pie.</span>
+      </div>
+      <div class="confirm-detail-row">
+        <span class="cd-label">Opción B</span>
+        <span>Giethoorn — "La Venecia holandesa", pueblo sin calles. Requiere día dedicado. Se rentan 2-3 botes. ~1.5 hrs de Ámsterdam.</span>
+      </div>
+      <div class="confirm-detail-row">
+        <span class="cd-label">💡 Nota</span>
+        <span>El cuadro interactivo para seleccionar está en el <strong>Itinerario → Dom 26 Abr</strong></span>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /porconfirmar -->
+
 <!-- MODAL EDICIÓN -->
 <div class="modal-overlay" id="modal">
   <div class="modal">
