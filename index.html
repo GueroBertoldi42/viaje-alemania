@@ -1767,240 +1767,75 @@
     </div>
   </div>
 
-  <div class="notes-area" style="margin-top:20px">
-    <h3>📄 Documentos de viaje</h3>
-    <div class="checklist">
-      <div class="check-item" style="cursor:default;align-items:flex-start;padding:12px 0">
-        <span style="font-size:1.4rem;margin-top:2px">🚗</span>
-        <label style="cursor:default">
-          <strong>Voucher Alamo — Coche rentado</strong><br>
-          <small>Voucher 1210085 · Conf. 1692359555 · Nissan Qashqai · Mainz 4 May → Köln 8 May · €294.58</small><br>
-          <a href="voucher-alamo.pdf" target="_blank" class="link-btn" style="margin-top:8px;display:inline-block">📥 Abrir / Descargar PDF ↗</a>
-        </label>
-      </div>
-      <div class="check-item" style="cursor:default;align-items:flex-start;padding:12px 0">
-        <span style="font-size:1.4rem;margin-top:2px">🚂</span>
-        <label style="cursor:default">
-          <strong>Boletos de Tren — 3 rutas confirmadas</strong><br>
-          <small>AMS→Köln 27 Abr (ICE 159) · Köln→Mainz 30 Abr (ICE 1644) · Köln→Utrecht 8 May (ICE 154)</small><br>
-          <a href="boletos-tren.pdf" target="_blank" class="link-btn" style="margin-top:8px;display:inline-block">📥 Abrir / Descargar PDF ↗</a>
-        </label>
-      </div>
-    </div>
-  </div>
-
-  <div class="notes-area" style="margin-top:20px">
-    <h3>Contactos y emergencias</h3>
-    <textarea placeholder="Seguro de viaje: ...&#10;Número de emergencias Europa: 112&#10;Embajada México en Países Bajos: +31 70 360 2900&#10;Embajada México en Alemania: +49 30 269 323 00"></textarea>
-  </div>
-</div>
-
-<!-- ===================== RESUMEN ===================== -->
-<div class="section" id="tab-resumen">
-  <div class="summary-grid">
-    <div class="summary-card">
-      <h3>🇳🇱 Ámsterdam</h3>
-      <p>24 – 27 Abr · 3 noches<br>Museos, canales, tulipanes, Volendam</p>
-    </div>
-    <div class="summary-card">
-      <h3>🇩🇪 Köln</h3>
-      <p>27 – 30 Abr · 3 noches<br>Dom, Kölsch, day trip a Bonn</p>
-    </div>
-    <div class="summary-card">
-      <h3>🇩🇪 Mainz</h3>
-      <p>30 Abr – 4 May · 4 noches<br>Altstadt, vino, Heidelberg, Frankfurt</p>
-    </div>
-    <div class="summary-card">
-      <h3>✈️ Regreso Guero</h3>
-      <p>3 May · 16:25 FRA → AMS → MEX<br>Sale Mainz ~12:00pm</p>
-    </div>
-    <div class="summary-card">
-      <h3>🚗 Familia Muégano</h3>
-      <p>4 May · Coche rentado → Lutzerath<br>Ferienhaus Lenartz · 4 noches</p>
-    </div>
-    <div class="summary-card">
-      <h3>🇳🇱 Utrecht</h3>
-      <p>8 – 10 May · Moxy Utrecht<br>Regreso CDMX el 10 a las 10pm</p>
-    </div>
-    <div class="summary-card">
-      <h3>📋 Pendientes</h3>
-      <p>Anne Frank (18 mar urgente)<br>Keukenhof · Rijksmuseum · Van Gogh · Heidelberg · Boat trip</p>
-    </div>
-  </div>
-
-  <div class="notes-area">
-    <h3>Tips generales</h3>
-    <ul style="font-size:14px;color:var(--light-ink);line-height:2;padding-left:20px">
-      <li>Transportes entre ciudades: reservar en <strong>thetrainline.com</strong></li>
-      <li>Bonn desde Köln: ~28 min, sin reserva, muy frecuente</li>
-      <li>Heidelberg desde Mainz: ~50 min, sin reserva</li>
-      <li>Frankfurt → Aeropuerto: S-Bahn S8 o S9, ~11 min</li>
-      <li>Emergencias Europa: <strong>112</strong></li>
-      <li>El 26 Abr necesitan coche rentado para el day trip (Keukenhof, Zaanse Schans, Volendam)</li>
-      <li>El 1 Mayo es festivo en Alemania — verificar horarios de museos y tiendas</li>
-    </ul>
-  </div>
-</div>
-
-</main>
-
-<!-- ===================== POR CONFIRMAR ===================== -->
-<div class="section" id="tab-porconfirmar" style="display:none">
-
-  <div class="alert">
-    <span class="alert-icon">📌</span>
-    <span>Estas opciones están <strong>pendientes de decisión grupal</strong>. Cuando confirmen cuál quieren, avísenle a Claude y se agrega al itinerario principal.</span>
-  </div>
-
-  <!-- TABLA COMPARATIVA MÚSICA -->
-  <div class="confirm-block">
-    <div class="confirm-block-header">
-      <span class="confirm-block-icon">🎵</span>
-      <div>
-        <div class="confirm-block-title">Música Clásica / Ópera para Manolo</div>
-        <div class="confirm-block-sub">Seleccionen una opción — las demás se descartan</div>
-      </div>
-    </div>
-
-    <div class="music-table">
-      <div class="music-row music-header">
-        <div>Opción</div>
-        <div>Fecha · Ciudad</div>
-        <div>Tipo</div>
-        <div>Precio est.</div>
-        <div>Link</div>
-        <div>Elegir</div>
-      </div>
-
-      <!-- OPCIÓN A -->
-      <div class="music-row" id="mopt-a">
-        <div>
-          <div class="mopt-name">🎭 Ernani — Oper Köln</div>
-          <div class="mopt-desc">Ópera de Verdi en versión concierto. Drama de amor, poder y venganza basado en Victor Hugo. Dirección: Giuliano Carella (uno de los mejores directores del repertorio italiano). Tenor: Young Woo Kim.</div>
-        </div>
-        <div><strong>28 o 29 Abr</strong><br>Köln · StaatenHaus<br>Noche libre ✅</div>
-        <div><span class="type-badge type-opera">Gran Ópera</span></div>
-        <div>€15 – €95<br><small>por persona</small></div>
-        <div><a href="https://www.oper.koeln/en/productions/ernani/1150" target="_blank" class="link-btn">oper.koeln ↗</a></div>
-        <div><button class="music-select-btn" onclick="selectMusic('a')">Elegir ✓</button></div>
-      </div>
-
-      <!-- OPCIÓN B -->
-      <div class="music-row" id="mopt-b">
-        <div>
-          <div class="mopt-name">🎻 Kölner Philharmonie</div>
-          <div class="mopt-desc">Una de las 5 salas de concierto más importantes de Europa. WDR Sinfonieorchester o Gürzenich-Orchester Köln. Programa exacto del 28 Abr por confirmar en su web — siempre hay función.</div>
-        </div>
-        <div><strong>28 Abr</strong><br>Köln · Philharmonie<br>Noche libre ✅</div>
-        <div><span class="type-badge type-symphony">Orquesta Sinfónica</span></div>
-        <div>~€25 – €80<br><small>por persona</small></div>
-        <div><a href="https://www.koelner-philharmonie.de/en/events" target="_blank" class="link-btn">koelner-philharmonie.de ↗</a></div>
-        <div><button class="music-select-btn" onclick="selectMusic('b')">Elegir ✓</button></div>
-      </div>
-
-      <!-- OPCIÓN C -->
-      <div class="music-row" id="mopt-c">
-        <div>
-          <div class="mopt-name">🎓 Conservatorium van Amsterdam</div>
-          <div class="mopt-desc">El conservatorio más grande de Países Bajos. Conciertos de estudiantes de élite — recitales de piano, música de cámara, música antigua. Ambiente íntimo y auténtico. Programa exacto disponible ~3 semanas antes.</div>
-        </div>
-        <div><strong>25 Abr (noche)</strong><br>Ámsterdam<br>Después del day trip ✅</div>
-        <div><span class="type-badge type-student">Concierto Estudiantes</span></div>
-        <div>Gratis – €15<br><small>por persona</small></div>
-        <div><a href="https://www.conservatoriumvanamsterdam.nl/en/calendar/" target="_blank" class="link-btn">conservatoriumvanamsterdam.nl ↗</a></div>
-        <div><button class="music-select-btn" onclick="selectMusic('c')">Elegir ✓</button></div>
-      </div>
-    </div>
-
-    <div class="music-decision-result" id="music-result" style="display:none"></div>
-
-    <!-- PROS/CONS -->
-    <div class="pros-grid">
-      <div class="pros-card">
-        <div class="pros-title">🎭 Ernani — Pros</div>
-        <ul>
-          <li>✅ Verdi en vivo — experiencia operística completa</li>
-          <li>✅ Cantantes de nivel internacional</li>
-          <li>✅ Encaja perfecto: noche libre en Köln</li>
-          <li>✅ Ópera raramente representada hoy</li>
-          <li>⚠️ Más caro del grupo</li>
-          <li>⚠️ ~3 hrs de duración</li>
-        </ul>
-      </div>
-      <div class="pros-card">
-        <div class="pros-title">🎻 Kölner Philharmonie — Pros</div>
-        <ul>
-          <li>✅ Sala icónica, acústica excepcional</li>
-          <li>✅ Experiencia más accesible para no-operáticos</li>
-          <li>✅ Misma noche, mismo día disponible</li>
-          <li>✅ Precio más razonable</li>
-          <li>⚠️ Programa exacto aún sin confirmar</li>
-          <li>⚠️ Más "convencional" que la ópera</li>
-        </ul>
-      </div>
-      <div class="pros-card">
-        <div class="pros-title">🎓 Conservatorium — Pros</div>
-        <ul>
-          <li>✅ Exactamente lo que pidió Manolo</li>
-          <li>✅ Casi gratuito</li>
-          <li>✅ Ambiente auténtico, sin turistas</li>
-          <li>✅ Más corto — no cansa al grupo</li>
-          <li>⚠️ Programa exacto se publica tarde</li>
-          <li>⚠️ Puede ser el día más cansado (day trip)</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <!-- SEPARADOR -->
-  <div style="margin: 32px 0; border-top: 1px dashed rgba(26,26,46,0.15);"></div>
-
-  <!-- OTRAS DECISIONES PENDIENTES -->
-  <div class="confirm-block">
-    <div class="confirm-block-header">
-      <span class="confirm-block-icon">⛵</span>
-      <div>
-        <div class="confirm-block-title">Pueblo de Pescadores — Ámsterdam Day Trip</div>
-        <div class="confirm-block-sub">26 Abr tarde — después de Keukenhof y Zaanse Schans</div>
-      </div>
-    </div>
-
-    <div class="pros-grid" style="grid-template-columns: repeat(2, 1fr); margin-top: 0;">
-      <div class="pros-card" style="border-top: 3px solid var(--sage);">
-        <div class="pros-title">⛵ Opción A — Volendam</div>
-        <div style="font-size:12px; color:var(--rust); font-weight:600; margin-bottom:8px;">Puerto de pescadores tradicional · ~30 min de Zaanse Schans</div>
-        <ul>
-          <li>✅ Encaja perfecto en el mismo día (Keukenhof + Zaanse Schans + Volendam)</li>
-          <li>✅ Todo a pie, sin coche adicional</li>
-          <li>✅ Ideal con Andrés — espacio abierto, barcas, animales</li>
-          <li>✅ Casas de madera de colores, trajes típicos holandeses</li>
-          <li>✅ Pescado fresco y arenque en el puerto</li>
-          <li>⚠️ Más turístico y pequeño que Giethoorn</li>
-          <li>⚠️ Menos espectacular visualmente</li>
-        </ul>
-      </div>
-      <div class="pros-card" style="border-top: 3px solid var(--gold);">
-        <div class="pros-title">🛶 Opción B — Giethoorn</div>
-        <div style="font-size:12px; color:var(--rust); font-weight:600; margin-bottom:8px;">"La Venecia holandesa" · ~1.5 hrs de Ámsterdam</div>
-        <ul>
-          <li>✅ Único en el mundo — pueblo sin calles, solo canales y puentes de madera</li>
-          <li>✅ Rentar 2-3 lanchas eléctricas para el grupo — muy divertido</li>
-          <li>✅ Mucho más fotogénico y memorable que Volendam</li>
-          <li>✅ Experiencia auténtica, fuera del circuito turístico masivo</li>
-          <li>⚠️ Requiere día dedicado — no se combina con tulipanes y molinos ese día</li>
-          <li>⚠️ ~1.5 hrs en coche desde Ámsterdam (ida y vuelta)</li>
-          <li>⚠️ Necesitan organizar transporte en coche</li>
-        </ul>
-      </div>
-    </div>
-    <div class="confirm-detail-row" style="margin-top:14px; background:var(--cream); border-radius:8px; padding:10px 14px; font-size:13px; display:flex; gap:12px;">
-      <span class="cd-label">💡 Nota</span>
-      <span>El cuadro interactivo para seleccionar está en el <strong>Itinerario → Dom 26 Abr</strong></span>
-    </div>
-  </div>
-  </div><!-- /tab-notas -->
+</div><!-- /tab-notas -->
 
 </div><!-- /porconfirmar -->
+
+
+<!-- ================= DOCUMENTOS ================= -->
+<div class="section" id="tab-documentos" style="display:none">
+
+  <div class="confirm-block">
+    <div class="confirm-block-header">
+      <span class="confirm-block-icon">🚗</span>
+      <div>
+        <div class="confirm-block-title">Voucher Alamo — Coche rentado</div>
+        <div class="confirm-block-sub">✅ Confirmado · Voucher 1210085 · Conf. 1692359555</div>
+      </div>
+    </div>
+    <div class="confirm-details">
+      <div class="confirm-detail-row">
+        <span class="cd-label">Vehículo</span>
+        <span>Nissan Qashqai · Automático · 5 pasajeros · €294.58 prepagado</span>
+      </div>
+      <div class="confirm-detail-row">
+        <span class="cd-label">Recogida</span>
+        <span>Wallstrasse 1, Mainz · 4 Mayo 11:00 AM</span>
+      </div>
+      <div class="confirm-detail-row">
+        <span class="cd-label">Devolución</span>
+        <span>Johannisstrasse 54, Köln · 8 Mayo 2:00 PM</span>
+      </div>
+      <div class="confirm-detail-row">
+        <span class="cd-label">⚠️ Mostrador</span>
+        <span>Depósito €545 · Tarjeta de crédito física (Visa/MC/Amex) · Licencia de conducir física con fecha de expiración</span>
+      </div>
+      <div class="confirm-detail-row" style="margin-top:8px">
+        <span class="cd-label">📥 PDF</span>
+        <span><a href="voucher-alamo.pdf" target="_blank" class="link-btn">Voucher Alamo ↗</a></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="confirm-block">
+    <div class="confirm-block-header">
+      <span class="confirm-block-icon">🚂</span>
+      <div>
+        <div class="confirm-block-title">Boletos de Tren — 3 rutas</div>
+        <div class="confirm-block-sub">✅ Todos comprados · ICE 2ª clase · Sin posibilidad de cancelación</div>
+      </div>
+    </div>
+    <div class="confirm-details">
+      <div class="confirm-detail-row">
+        <span class="cd-label">27 Abr</span>
+        <span>AMS → Köln · ICE 159 · Sale 16:01 · Llega 19:20 · <strong>Vagón 24 · Pl. 48,51-58,68</strong></span>
+      </div>
+      <div class="confirm-detail-row">
+        <span class="cd-label">30 Abr</span>
+        <span>Köln → Mainz · ICE 1644 · Sale 12:53 · Llega 14:39 · <strong>Vagón 1 · Pl. 31-34,37,42-44</strong></span>
+      </div>
+      <div class="confirm-detail-row">
+        <span class="cd-label">8 May</span>
+        <span>Köln → Utrecht · ICE 154 · Sale 14:50 · Llega 17:25 · <strong>Vagón 24 · Pl. 91,93-97,104</strong></span>
+      </div>
+      <div class="confirm-detail-row" style="margin-top:8px">
+        <span class="cd-label">📥 PDF</span>
+        <span><a href="boletos-tren.pdf" target="_blank" class="link-btn">Boletos de Tren ↗</a></span>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /tab-documentos -->
 
 <!-- MODAL EDICIÓN -->
 <div class="modal-overlay" id="modal">
