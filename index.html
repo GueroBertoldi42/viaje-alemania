@@ -761,7 +761,6 @@
 <div class="tabs-bar">
   <button class="tab-btn active" onclick="showTab('itinerario')">Itinerario</button>
   <button class="tab-btn" onclick="showTab('reservas')">Reservas</button>
-  <button class="tab-btn" onclick="showTab('notas')">Notas</button>
   <button class="tab-btn" onclick="showTab('resumen')">Resumen</button>
   <button class="tab-btn" onclick="showTab('porconfirmar')">⏳ Por Confirmar</button>
   <button class="tab-btn" onclick="showTab('documentos')">📄 Docs</button>
@@ -1661,123 +1660,6 @@
     </div>
   </div>
 
-<!-- ===================== NOTAS ===================== -->
-<div class="section" id="tab-notas" style="display:none">
-  <div class="notes-area">
-    <h3>Notas del viaje</h3>
-    <textarea id="notas-generales" placeholder="Apunta ideas, cambios de plan, recomendaciones que te den, restaurantes que quieras agregar...">✈️ MEX → AMS: AM25 · Sale 22:25 (23 Abr) · Llega 17:20 (24 Abr) · Conf# KLFDOL (Guero) · FPRJKI (familia)
-✈️ FRA → AMS: LH996 · Sale 16:25 (3 May) · Llega 17:35 · Conf# 85A7VN (Guero)
-✈️ AMS → MEX: AM26 · Sale 22:00 (3 May) · Llega 1:55 (+1) · Conf# KLFDOL (Guero)
-✈️ AMS → MEX: AM26 · Sale 22:00 (10 May) · Llega 1:55 (+1) · Conf# FPRJKI (familia)
-🚂 AMS → Köln: ICE 159 · Sale 16:01 (27 Abr) · Llega 19:20
-🚂 Köln → Mainz: ICE 1644 · Sale 12:53 (30 Abr) · Llega 14:39
-🚂 Mainz → Frankfurt: ~35 min regional (3 May)
-🚂 Frankfurt Hbf → Aeropuerto: ~11 min S-Bahn S8/S9
-🚂 Köln → Utrecht: ~2h30m (8 May) · por confirmar horario
-🚂 Utrecht → AMS Schiphol: ~30 min (10 May) · por confirmar</textarea>
-    <div style="display:flex;align-items:center;margin-top:10px">
-      <button class="save-note-btn" onclick="saveNote()">Guardar nota</button>
-      <span class="note-saved" id="note-saved">✓ Guardado</span>
-    </div>
-  </div>
-
-  <div class="notes-area" style="margin-top:20px">
-    <h3>🏨 Hoteles</h3>
-    <div class="hotel-list">
-      <div class="hotel-item">
-        <div class="hotel-flag">🇳🇱</div>
-        <div class="hotel-info">
-          <div class="hotel-name">Novotel Amsterdam City</div>
-          <div class="hotel-dates">24 – 27 Abr · 3 noches · Incluye desayuno</div>
-          <div class="hotel-address">Europaboulevard 10, Amsterdam · ⭐ 4.2</div>
-          <div class="hotel-phone">📞 +31 20 721 9179</div>
-        </div>
-        <div class="hotel-confirm">
-          <input type="text" placeholder="# Confirmación" class="confirm-input">
-        </div>
-      </div>
-      <div class="hotel-item">
-        <div class="hotel-flag">🇩🇪</div>
-        <div class="hotel-info">
-          <div class="hotel-name">Novotel Koeln City</div>
-          <div class="hotel-dates">27 – 30 Abr · 3 noches · Incluye desayuno</div>
-          <div class="hotel-address">Bayenstraße 51, Köln · ⭐ 4.3</div>
-          <div class="hotel-phone">📞 +49 221 801470</div>
-        </div>
-        <div class="hotel-confirm">
-          <input type="text" placeholder="# Confirmación" class="confirm-input">
-        </div>
-      </div>
-      <div class="hotel-item">
-        <div class="hotel-flag">🇩🇪</div>
-        <div class="hotel-info">
-          <div class="hotel-name">Leonardo Hotel Mainz</div>
-          <div class="hotel-dates">30 Abr – 4 May · 4 noches · Incluye desayuno</div>
-          <div class="hotel-address">Augustusstraße 6, Mainz · ⭐ 4.0</div>
-          <div class="hotel-phone">📞 +49 6131 9098100</div>
-        </div>
-        <div class="hotel-confirm">
-          <input type="text" placeholder="# Confirmación" class="confirm-input">
-        </div>
-      </div>
-      <div class="hotel-item">
-        <div class="hotel-flag">🇩🇪</div>
-        <div class="hotel-info">
-          <div class="hotel-name">Ferienhaus Lenartz</div>
-          <div class="hotel-dates">4 – 8 May · 4 noches · Casa completa (3 hab, 3 baños, cocina)</div>
-          <div class="hotel-address">Hauptstraße 9, Kliding (15 min de Lutzerath) · ⭐ 4.9</div>
-          <div class="hotel-phone">📞 +49 2677 1742</div>
-        </div>
-        <div class="hotel-confirm">
-          <input type="text" placeholder="# Confirmación" class="confirm-input">
-        </div>
-      </div>
-      <div class="hotel-item">
-        <div class="hotel-flag">🇳🇱</div>
-        <div class="hotel-info">
-          <div class="hotel-name">Moxy Utrecht</div>
-          <div class="hotel-dates">8 – 10 May · 2 noches</div>
-          <div class="hotel-address">Helling 1, Utrecht · ⭐ 4.3</div>
-          <div class="hotel-phone">📞 +31 30 808 0303</div>
-        </div>
-        <div class="hotel-confirm">
-          <input type="text" placeholder="# Confirmación" class="confirm-input">
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="notes-area" style="margin-top:20px">
-    <h3>🚗 Coches rentados</h3>
-    <div class="hotel-list">
-      <div class="hotel-item">
-        <span class="hotel-flag">🚗</span>
-        <div class="hotel-info">
-          <div class="hotel-name">Coche 1 — Nissan Qashqai · Jose Antonio Alcazar Coy</div>
-          <div class="hotel-dates">4 Mayo 11:00 AM → 8 Mayo 2:00 PM</div>
-          <div class="hotel-address">Recogida: Wallstrasse 1, Mainz · Devolución: Johannisstrasse 54, Köln</div>
-          <div class="hotel-phone">Voucher 1210085 · Conf. 1692359555 · €294.58 prepagado · Depósito €545</div>
-        </div>
-        <div class="hotel-confirm"><a href="voucher-alamo.pdf" target="_blank" class="link-btn">📥 PDF ↗</a></div>
-      </div>
-      <div class="hotel-item">
-        <span class="hotel-flag">🚗</span>
-        <div class="hotel-info">
-          <div class="hotel-name">Coche 2 — Ford Kuga · Lorena Mora Alcazar</div>
-          <div class="hotel-dates">4 Mayo 11:00 AM → 8 Mayo 2:00 PM</div>
-          <div class="hotel-address">Recogida: Wallstrasse 1, Mainz · Devolución: Johannisstrasse 54, Köln</div>
-          <div class="hotel-phone">Voucher 1210223 · Conf. 1692365071 · €309.30 prepagado · Depósito €559</div>
-        </div>
-        <div class="hotel-confirm"><a href="voucher-lorena.pdf" target="_blank" class="link-btn">📥 PDF ↗</a></div>
-      </div>
-    </div>
-  </div>
-</div><!-- /tab-notas -->
-
-</div><!-- /porconfirmar -->
-
-
 <!-- ================= DOCUMENTOS ================= -->
 <div class="section" id="tab-documentos" style="display:none">
 
@@ -1818,6 +1700,34 @@
 
 
 
+
+  <div class="confirm-block">
+    <div class="confirm-block-header">
+      <span class="confirm-block-icon">🚂</span>
+      <div>
+        <div class="confirm-block-title">Boletos de Tren — 3 rutas</div>
+        <div class="confirm-block-sub">✅ Todos comprados · ICE 2ª clase · Sin posibilidad de cancelación</div>
+      </div>
+    </div>
+    <div class="confirm-details">
+      <div class="confirm-detail-row">
+        <span class="cd-label">27 Abr</span>
+        <span>AMS → Köln · ICE 159 · 16:01→19:20 · <strong>Vagón 24 · Pl. 48,51-58,68</strong></span>
+      </div>
+      <div class="confirm-detail-row">
+        <span class="cd-label">30 Abr</span>
+        <span>Köln → Mainz · ICE 1644 · 12:53→14:39 · <strong>Vagón 1 · Pl. 31-34,37,42-44</strong></span>
+      </div>
+      <div class="confirm-detail-row">
+        <span class="cd-label">8 May</span>
+        <span>Köln → Utrecht · ICE 154 · 14:50→17:25 · <strong>Vagón 24 · Pl. 91,93-97,104</strong></span>
+      </div>
+      <div class="confirm-detail-row" style="margin-top:8px">
+        <span class="cd-label">📥 PDF</span>
+        <span><a href="boletos-tren.pdf" target="_blank" class="link-btn">Boletos de Tren ↗</a></span>
+      </div>
+    </div>
+  </div>
 </div><!-- /tab-documentos -->
 
 
