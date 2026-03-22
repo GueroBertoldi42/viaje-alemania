@@ -1376,7 +1376,7 @@
           <div class="stop-icon">🚗</div>
           <div class="stop-body">
             <div class="stop-title">Recogen coche rentado — Alamo Mainz</div>
-            <div class="stop-note">📍 Recogida: Wallstrasse 1, Mainz · Devolución: Johannisstrasse 54, Köln<br>✅ <strong>CONFIRMADO</strong> · Nissan Qashqai · Automático · €294.58 prepagado · Voucher 1210085<br>📍 Recogida: Wallstrasse 1, Mainz · 4 May 11:00 AM → Devolución: Johannisstrasse 54, Köln · 8 May 2:00 PM<br>⚠️ Depósito en mostrador: €545 · Traer tarjeta de crédito física</div>
+            <div class="stop-note">✅ <strong>2 coches confirmados</strong> · Recogida: Wallstrasse 1, Mainz · 4 May 11:00 AM · Devolución: Johannisstrasse 54, Köln · 8 May 2:00 PM<br>🚗 Coche 1: Nissan Qashqai · Jose Antonio Alcazar · Voucher 1210085 · €294.58<br>🚗 Coche 2: Ford Kuga · Lorena Mora Alcazar · Voucher 1210223 · €309.30<br>⚠️ Cada conductor presenta su voucher y tarjeta de crédito física en el mostrador</div>
           </div>
           <div class="stop-actions">
             <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
@@ -1606,11 +1606,11 @@
   <div class="notes-area" style="margin-top:20px">
     <h3>🚗 Coche rentado</h3>
     <div class="checklist">
-      <div class="check-item"><input type="checkbox" id="rc1" onchange="updateProgress()"><label for="rc1">🚗 Alamo · Nissan Qashqai · Automático · <strong>✅ CONFIRMADO</strong><br>
-      📍 Recogida: Wallstrasse 1, Mainz · 4 May 11:00 AM<br>
-      📍 Devolución: Johannisstrasse 54, Köln · 8 May 2:00 PM<br>
-      💰 €294.58 prepagado · Voucher 1210085 · Conf. 1692359555<br>
-      ⚠️ Depósito en mostrador: €545 · Traer tarjeta de crédito física</label></div>
+      <div class="check-item"><input type="checkbox" id="rc1" onchange="updateProgress()"><label for="rc1">🚗 Alamo · <strong>✅ 2 COCHES CONFIRMADOS</strong><br>
+      📍 Recogida: Wallstrasse 1, Mainz · 4 May 11:00 AM · Devolución: Johannisstrasse 54, Köln · 8 May 2:00 PM<br>
+      🚗 Coche 1: Nissan Qashqai · Jose Antonio Alcazar Coy · Voucher 1210085 · €294.58 · Depósito €545<br>
+      🚗 Coche 2: Ford Kuga · Lorena Mora Alcazar · Voucher 1210223 · €309.30 · Depósito €559<br>
+      ⚠️ Cada conductor: su voucher + tarjeta de crédito física + licencia de conducir física</label></div>
     </div>
   </div>
 
@@ -1780,33 +1780,35 @@
     <div class="confirm-block-header">
       <span class="confirm-block-icon">🚗</span>
       <div>
-        <div class="confirm-block-title">Voucher Alamo — Coche rentado</div>
+        <div class="confirm-block-title">Coche 1 — Jose Antonio Alcazar Coy</div>
         <div class="confirm-block-sub">✅ Confirmado · Voucher 1210085 · Conf. 1692359555</div>
       </div>
     </div>
     <div class="confirm-details">
-      <div class="confirm-detail-row">
-        <span class="cd-label">Vehículo</span>
-        <span>Nissan Qashqai · Automático · 5 pasajeros · €294.58 prepagado</span>
-      </div>
-      <div class="confirm-detail-row">
-        <span class="cd-label">Recogida</span>
-        <span>Wallstrasse 1, Mainz · 4 Mayo 11:00 AM</span>
-      </div>
-      <div class="confirm-detail-row">
-        <span class="cd-label">Devolución</span>
-        <span>Johannisstrasse 54, Köln · 8 Mayo 2:00 PM</span>
-      </div>
-      <div class="confirm-detail-row">
-        <span class="cd-label">⚠️ Mostrador</span>
-        <span>Depósito €545 · Tarjeta de crédito física (Visa/MC/Amex) · Licencia de conducir física con fecha de expiración</span>
-      </div>
-      <div class="confirm-detail-row" style="margin-top:8px">
-        <span class="cd-label">📥 PDF</span>
-        <span><a href="voucher-alamo.pdf" target="_blank" class="link-btn">Voucher Alamo ↗</a></span>
-      </div>
+      <div class="confirm-detail-row"><span class="cd-label">Vehículo</span><span>Nissan Qashqai · Automático · 5 pax · €294.58 prepagado</span></div>
+      <div class="confirm-detail-row"><span class="cd-label">Recogida</span><span>Wallstrasse 1, Mainz · 4 Mayo 11:00 AM</span></div>
+      <div class="confirm-detail-row"><span class="cd-label">Devolución</span><span>Johannisstrasse 54, Köln · 8 Mayo 2:00 PM</span></div>
+      <div class="confirm-detail-row"><span class="cd-label">⚠️ Mostrador</span><span>Depósito €545 · Tarjeta de crédito física · Licencia de conducir física</span></div>
+      <div class="confirm-detail-row" style="margin-top:8px"><span class="cd-label">📥 PDF</span><span><a href="voucher-alamo.pdf" target="_blank" class="link-btn">Voucher Coche 1 ↗</a></span></div>
     </div>
   </div>
+
+  <div class="confirm-block">
+    <div class="confirm-block-header">
+      <span class="confirm-block-icon">🚗</span>
+      <div>
+        <div class="confirm-block-title">Coche 2 — Lorena Mora Alcazar</div>
+        <div class="confirm-block-sub">✅ Confirmado · Voucher 1210223 · Conf. 1692365071</div>
+      </div>
+    </div>
+    <div class="confirm-details">
+      <div class="confirm-detail-row"><span class="cd-label">Vehículo</span><span>Ford Kuga · Automático · 5 pax · €309.30 prepagado</span></div>
+      <div class="confirm-detail-row"><span class="cd-label">Recogida</span><span>Wallstrasse 1, Mainz · 4 Mayo 11:00 AM</span></div>
+      <div class="confirm-detail-row"><span class="cd-label">Devolución</span><span>Johannisstrasse 54, Köln · 8 Mayo 2:00 PM</span></div>
+      <div class="confirm-detail-row"><span class="cd-label">⚠️ Mostrador</span><span>Depósito €559 · Tarjeta de crédito física · Licencia de conducir física</span></div>
+      <div class="confirm-detail-row" style="margin-top:8px"><span class="cd-label">📥 PDF</span><span><a href="voucher-lorena.pdf" target="_blank" class="link-btn">Voucher Coche 2 ↗</a></span></div>
+    </div>
+  </div></div>
 
   <div class="confirm-block">
     <div class="confirm-block-header">
@@ -1856,8 +1858,8 @@
       <p>AMS→Köln 27 Abr · Köln→Mainz 30 Abr · Köln→Utrecht 8 May · Todos comprados ✅</p>
     </div>
     <div class="summary-card">
-      <h3>🚗 Coche</h3>
-      <p>Alamo · Mainz 4 May → Köln 8 May · Nissan Qashqai · Voucher 1210085 ✅</p>
+      <h3>🚗 Coches (2)</h3>
+      <p>Alamo · Mainz 4 May → Köln 8 May<br>Coche 1: Nissan Qashqai · J.A. Alcazar · V.1210085 ✅<br>Coche 2: Ford Kuga · L. Mora · V.1210223 ✅</p>
     </div>
     <div class="summary-card">
       <h3>👨‍👩‍👦 Grupo</h3>
