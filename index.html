@@ -4,19 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Viaje a Alemania — Abr/May 2026</title>
-<!-- Favicon emoji -->
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>">
-
-<!-- Open Graph / WhatsApp preview -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://guerobertoldi42.github.io/viaje-alemania/">
-<meta property="og:title" content="✈️🇩🇪 Viaje a Alemania 2026">
-<meta property="og:description" content="Ámsterdam · Köln · Mainz · Lutzerath · Utrecht · 24 Abr – 10 May · 8 viajeros">
-<meta property="og:image" content="https://guerobertoldi42.github.io/viaje-alemania/preview.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -417,7 +404,7 @@
   .music-table { display: flex; flex-direction: column; gap: 2px; border-radius: 10px; overflow: hidden; margin-bottom: 20px; }
   .music-row {
     display: grid;
-    grid-template-columns: 2.5fr 1.2fr 1fr 0.8fr 1.5fr 0.6fr;
+    grid-template-columns: 2.5fr 1.2fr 1fr 0.8fr 1.5fr 0.8fr 0.6fr;
     gap: 10px;
     padding: 14px 16px;
     align-items: start;
@@ -761,9 +748,9 @@
 <div class="tabs-bar">
   <button class="tab-btn active" onclick="showTab('itinerario')">Itinerario</button>
   <button class="tab-btn" onclick="showTab('reservas')">Reservas</button>
+  <button class="tab-btn" onclick="showTab('notas')">Notas</button>
   <button class="tab-btn" onclick="showTab('resumen')">Resumen</button>
   <button class="tab-btn" onclick="showTab('porconfirmar')">⏳ Por Confirmar</button>
-  <button class="tab-btn" onclick="showTab('documentos')">📄 Docs</button>
 </div>
 
 <main>
@@ -876,14 +863,14 @@
     </div>
 
     <div class="day-block">
-      <div class="day-label">Dom 26 Abr · Day Trip: Keukenhof 🌷 + Zaanse Schans ⚙️</div>
+      <div class="day-label">Dom 26 Abr · Day Trip</div>
       <div class="stops">
         <div class="stop stop-type-nature">
           <div class="stop-time">10:00</div>
           <div class="stop-icon">🌷</div>
           <div class="stop-body">
-            <div class="stop-title">Keukenhof — Campos de Tulipanes 🌷</div>
-            <div class="stop-note">⏰ <strong>8:00</strong> Shuttle bus desde A'DAM Tower (ferry gratuito desde Amsterdam Central → 2 min caminando). ⏰ <strong>8:45–11:15</strong> Keukenhof (~2.5 hrs). ⏰ <strong>~11:30</strong> Bus de regreso a Ámsterdam.<br>⚠️ <strong>⏳ Por comprar</strong>: Combi-ticket shuttle + entrada · <a href="https://amsterdam-explorer.com/keukenhof-from-amsterdam/" target="_blank">Reservar aquí ↗</a> · ~€35–52.50 adultos · Andrés gratis (menor 4 años) · Asientos garantizados para 8.</div>
+            <div class="stop-title">Keukenhof — Campos de Tulipanes</div>
+            <div class="stop-note">El jardín de flores más famoso del mundo en pleno bloom. Reserva en <a href="https://keukenhof.nl" target="_blank">keukenhof.nl</a> — se agota. ⚠️ Para 8 personas: 2 coches o 1 van grande (rentar desde Ámsterdam). ~45 min desde ciudad. ~2 hrs en el jardín.</div>
           </div>
           <div class="stop-actions">
             <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
@@ -894,15 +881,58 @@
           <div class="stop-time">13:00</div>
           <div class="stop-icon">⚙️</div>
           <div class="stop-body">
-            <div class="stop-title">Zaanse Schans / Zaandam — Molinos de Viento ⚙️</div>
-            <div class="stop-note">⏰ <strong>12:15</strong> Almuerzo en Ámsterdam. ⏰ <strong>13:30</strong> Tren Amsterdam Central → Zaandijk-Zaanse Schans (17 min, cada 15 min). ⏰ <strong>13:50–16:30</strong> Zaanse Schans: molinos, zuecos, queso, fábrica de chocolate Verkade. ⏰ <strong>16:45</strong> Tren de regreso a Ámsterdam.<br>Andrés lo va a amar — animales, molinos y chocolate. Entrada libre, pago solo por atracciones individuales.</div>
+            <div class="stop-title">Zaanse Schans — Molinos de Viento</div>
+            <div class="stop-note">Pueblo histórico con molinos, demo de clogs y animales de granja. Andrés lo va a amar. Entrada libre al pueblo. ~1 hr de Keukenhof. ~1.5 hrs. Perfecto para el grupo — mucho espacio.</div>
           </div>
           <div class="stop-actions">
             <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
             <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
           </div>
         </div>
-
+        <!-- DECISION CARD -->
+        <div class="decision-card">
+          <div class="decision-header">
+            <span class="decision-badge">⏳ Por decidir</span>
+            <span class="decision-title">Tarde del 26 Abr — ¿Qué pueblo visitamos?</span>
+          </div>
+          <div class="decision-options">
+            <div class="decision-option" id="opt-volendam">
+              <div class="opt-top">
+                <span class="opt-icon">⛵</span>
+                <div class="opt-info">
+                  <div class="opt-name">Opción A · Volendam</div>
+                  <div class="opt-tag">Encaja en el mismo día · ~30 min de Zaanse Schans</div>
+                </div>
+                <button class="opt-select-btn" onclick="selectOption('volendam')">Elegir ✓</button>
+              </div>
+              <ul class="opt-pros">
+                <li>✅ Se combina perfecto con Keukenhof + Zaanse Schans</li>
+                <li>✅ Todo a pie — ideal para grupo grande y Andrés</li>
+                <li>✅ Puerto con barquitos, tienditas y comida de mar</li>
+                <li>⚠️ Más turístico y menos espectacular que Giethoorn</li>
+              </ul>
+            </div>
+            <div class="decision-divider">ó</div>
+            <div class="decision-option" id="opt-giethoorn">
+              <div class="opt-top">
+                <span class="opt-icon">🛶</span>
+                <div class="opt-info">
+                  <div class="opt-name">Opción B · Giethoorn</div>
+                  <div class="opt-tag">Día dedicado · "La Venecia holandesa"</div>
+                </div>
+                <button class="opt-select-btn" onclick="selectOption('giethoorn')">Elegir ✓</button>
+              </div>
+              <ul class="opt-pros">
+                <li>✅ Pueblo sin calles — solo canales y puentes de madera. Único en el mundo</li>
+                <li>✅ Se recorre rentando 2-3 lanchas eléctricas — muy divertido en grupo</li>
+                <li>✅ Mucho más fotogénico y memorable que Volendam</li>
+                <li>⚠️ Requiere día completo — no combina con tulipanes y molinos</li>
+                <li>⚠️ 1.5 hrs desde Ámsterdam, necesitan coche</li>
+              </ul>
+            </div>
+          </div>
+          <div class="decision-result" id="decision-result" style="display:none"></div>
+        </div>
       </div>
     </div>
 
@@ -1135,6 +1165,48 @@
     </div>
 
     <div class="day-block">
+      <div class="day-label">Sáb 2 May · Mainz a fondo</div>
+      <div class="stops">
+        <div class="stop stop-type-landmark">
+          <div class="stop-time">9:30</div>
+          <div class="stop-icon">⛪</div>
+          <div class="stop-body">
+            <div class="stop-title">Dom de Mainz con calma</div>
+            <div class="stop-note">Cripta, vidrieras modernas, capillas laterales. Tomarse el tiempo.</div>
+          </div>
+          <div class="stop-actions">
+            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+          </div>
+        </div>
+        <div class="stop stop-type-food">
+          <div class="stop-time">10:45</div>
+          <div class="stop-icon">🛒</div>
+          <div class="stop-body">
+            <div class="stop-title">Mercado en Marktplatz</div>
+            <div class="stop-note">Los jueves hay mercado activo — frutas, quesos, flores locales.</div>
+          </div>
+          <div class="stop-actions">
+            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+          </div>
+        </div>
+        <div class="stop stop-type-food">
+          <div class="stop-time">12:30</div>
+          <div class="stop-icon">🍷</div>
+          <div class="stop-body">
+            <div class="stop-title">Weinraumwohnung — Vinos de Rheinhessen</div>
+            <div class="stop-note">Bodega boutique 4.9⭐. Riesling y Spätburgunder locales. Abre jue-sáb desde 11am. ⚠️ Verificar si abre el 1 mayo (festivo).</div>
+          </div>
+          <div class="stop-actions">
+            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-block">
       <div class="day-label">Vie 1 May · Day Trip a Heidelberg</div>
       <div class="stops">
         <div class="stop stop-type-transport">
@@ -1167,48 +1239,6 @@
           <div class="stop-body">
             <div class="stop-title">Alte Brücke — Puente Viejo</div>
             <div class="stop-note">El puente más fotogénico de Alemania. Vistas del castillo y el Neckar. Busca el mono de bronce — foto obligada con Andrés.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="day-block">
-      <div class="day-label">Sáb 2 May · Mainz a fondo</div>
-      <div class="stops">
-        <div class="stop stop-type-landmark">
-          <div class="stop-time">9:30</div>
-          <div class="stop-icon">⛪</div>
-          <div class="stop-body">
-            <div class="stop-title">Dom de Mainz con calma</div>
-            <div class="stop-note">Cripta, vidrieras modernas, capillas laterales. Tomarse el tiempo.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-food">
-          <div class="stop-time">10:45</div>
-          <div class="stop-icon">🛒</div>
-          <div class="stop-body">
-            <div class="stop-title">Mercado en Marktplatz</div>
-            <div class="stop-note">Los jueves hay mercado activo — frutas, quesos, flores locales.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-food">
-          <div class="stop-time">12:30</div>
-          <div class="stop-icon">🍷</div>
-          <div class="stop-body">
-            <div class="stop-title">Weinraumwohnung — Vinos de Rheinhessen</div>
-            <div class="stop-note">Bodega boutique 4.9⭐. Riesling y Spätburgunder locales. Abre jue-sáb desde 11am. ✅ El 2 mayo es sábado — abre normal.</div>
           </div>
           <div class="stop-actions">
             <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
@@ -1278,7 +1308,7 @@
           <div class="stop-icon">🍽️</div>
           <div class="stop-body">
             <div class="stop-title">Último almuerzo juntos 🥂</div>
-            <div class="stop-note">Almuerzo en el Sachsenhausen o zona del río Main. Despedida de Guero.</div>
+            <div class="stop-note">Almuerzo en el Sachsenhausen o zona del río Main. Despedida de Guero con la Familia Muégano.</div>
           </div>
           <div class="stop-actions">
             <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
@@ -1313,7 +1343,7 @@
           <div class="stop-time">14:00</div>
           <div class="stop-icon">🗺️</div>
           <div class="stop-body">
-            <div class="stop-title">La familia sigue en Frankfurt 🎉</div>
+            <div class="stop-title">Familia Muégano sigue en Frankfurt 🎉</div>
             <div class="stop-note">Cookie, Manolo, Ana Paola, Andrés, Toño, Lorena y MariTere — tarde completa. Museo Städel (abierto dom 10-18h · €14), Senckenberg de dinosaurios para Andrés (abierto dom · €12), o simplemente callejear el Sachsenhausen. Regresan a Mainz en tren al final del día.</div>
           </div>
           <div class="stop-actions">
@@ -1325,14 +1355,14 @@
     </div>
 
     <div class="day-block">
-      <div class="day-label">Lun 4 May · Familia → Lutzerath 🚗</div>
+      <div class="day-label">Lun 4 May · Familia Muégano → Lutzerath 🚗</div>
       <div class="stops">
         <div class="stop stop-type-transport">
           <div class="stop-time">AM</div>
           <div class="stop-icon">🚗</div>
           <div class="stop-body">
             <div class="stop-title">Recogen coche rentado — Alamo Mainz</div>
-            <div class="stop-note">✅ <strong>2 coches confirmados</strong> · Recogida: Wallstrasse 1, Mainz · 4 May 11:00 AM · Devolución: Johannisstrasse 54, Köln · 8 May 2:00 PM<br>🚗 Coche 1: Nissan Qashqai · Jose Antonio Alcazar · Voucher 1210085 · €294.58<br>🚗 Coche 2: Ford Kuga · Lorena Mora Alcazar · Voucher 1210223 · €309.30<br>⚠️ Cada conductor presenta su voucher y tarjeta de crédito física en el mostrador</div>
+            <div class="stop-note">📍 Recogida: Wallstrasse 1, Mainz · Devolución: Johannisstrasse 54, Köln<br>⏳ Por confirmar: Nissan Qashqai o similar · Automático · 5 pax · MXN ~$6,609 / 4 días (Protección Básica incluida) — vía rentingcarz.com</div>
           </div>
           <div class="stop-actions">
             <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
@@ -1488,7 +1518,7 @@
           <div class="stop-icon">🍽️</div>
           <div class="stop-body">
             <div class="stop-title">Mercado y cena en Utrecht</div>
-            <div class="stop-note">Zona de Neude o Oudegracht para cenar. Última noche europea — celebrar. 🥂</div>
+            <div class="stop-note">Zona de Neude o Oudegracht para cenar. Última noche europea de la Familia Muégano — celebrar. 🥂</div>
           </div>
           <div class="stop-actions">
             <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
@@ -1532,7 +1562,7 @@
 </div><!-- /itinerario -->
 
 <!-- ===================== RESERVAS ===================== -->
-<div class="section" id="tab-reservas" style="display:none">
+<div class="section" id="tab-reservas">
   <div class="alert">
     <span class="alert-icon">⚠️</span>
     <span><strong>Urgente esta semana:</strong> Los boletos de Anne Frank House se liberan el martes 18 de marzo. ¡Pon una alarma!</span>
@@ -1560,31 +1590,16 @@
   </div>
 
   <div class="notes-area" style="margin-top:20px">
-    <h3>🚗 Coches rentados</h3>
-    <div style="display:flex;flex-direction:column;gap:10px;margin-top:8px">
-      <div style="background:white;border-radius:12px;padding:16px 20px;display:flex;align-items:center;gap:16px;border-left:3px solid var(--gold)">
-        <span style="font-size:1.4rem;">🚗</span>
-        <div style="flex:1">
-          <div style="font-weight:600;font-size:14px;color:var(--ink)">Jose Antonio Alcazar Coy</div>
-          <div style="font-size:12px;color:var(--light-ink);margin-top:2px">Nissan Qashqai · Voucher 1210085 · €294.58 · Depósito €545</div>
-          <div style="font-size:12px;color:var(--light-ink)">Mainz 4 May 11:00 AM → Köln 8 May 2:00 PM</div>
-        </div>
-        <a href="voucher-alamo.pdf" target="_blank" class="link-btn">📥 Voucher ↗</a>
-      </div>
-      <div style="background:white;border-radius:12px;padding:16px 20px;display:flex;align-items:center;gap:16px;border-left:3px solid var(--gold)">
-        <span style="font-size:1.4rem;">🚗</span>
-        <div style="flex:1">
-          <div style="font-weight:600;font-size:14px;color:var(--ink)">Lorena Mora Alcazar</div>
-          <div style="font-size:12px;color:var(--light-ink);margin-top:2px">Ford Kuga · Voucher 1210223 · €309.30 · Depósito €559</div>
-          <div style="font-size:12px;color:var(--light-ink)">Mainz 4 May 11:00 AM → Köln 8 May 2:00 PM</div>
-        </div>
-        <a href="voucher-lorena.pdf" target="_blank" class="link-btn">📥 Voucher ↗</a>
-      </div>
+    <h3>🚗 Coche rentado</h3>
+    <div class="checklist">
+      <div class="check-item"><input type="checkbox" id="rc1" onchange="updateProgress()"><label for="rc1">🚗 Alamo — Nissan Qashqai o similar · Automático · <strong>⏳ Por confirmar</strong><br>
+      📍 Recogida: Wallstrasse 1, Mainz (4 May AM) · Devolución: Johannisstrasse 54, Köln (8 May AM)<br>
+      💰 Desde MXN $6,609 / 4 días (Protección Básica) — vía <a href="https://rentingcarz.com" target="_blank">rentingcarz.com</a><br>
+      ⚠️ 1 coche = 5 pax máx — evaluar si se necesita un segundo vehículo</label></div>
     </div>
   </div>
 
-
-<div class="notes-area" style="margin-top:20px">
+  <div class="notes-area" style="margin-top:20px">
     <h3>🚂 Trenes — Estado de reservas</h3>
     <div class="train-table">
       <div class="train-row train-header">
@@ -1599,14 +1614,20 @@
       <div class="train-row confirmed">
         <div>🚂 AMS → Köln · ICE<br><small>4 Adultos + 3 Adultos +60 + 1 Niño</small></div>
         <div>27 Abr · 8 pax</div>
-        <div>16:01 → 19:20 · 3h19m<br><small style="color:#6B8F71">ICE 159 · Vagón 24 · Pl. 48,51-58,68</small></div>
+        <div>16:01 → 19:20 · 3h19m</div>
         <div><div class="badge-confirmed">✅ Comprado</div></div>
       </div>
       <div class="train-row confirmed">
         <div>🚂 Köln → Mainz · ICE<br><small>4 Adultos + 3 Adultos +60 + 1 Niño</small></div>
         <div>30 Abr · 8 pax</div>
-        <div>12:53 → 14:39 · 1h46m<br><small style="color:#6B8F71">ICE 1644 · Vagón 1 · Pl. 31-34,37,42-44</small></div>
+        <div>12:53 → 14:39 · 1h46m</div>
         <div><div class="badge-confirmed">✅ Comprado</div></div>
+      </div>
+      <div class="train-row pending">
+        <div>🚂 Mainz → Frankfurt · Regional<br><small>Guero + familia juntos, se separan en FRA</small></div>
+        <div>3 May · 8 pax</div>
+        <div>Sale ~9:00 · Llega ~9:35 · 35 min</div>
+        <div><span class="price-tag">~$15 × 8 = <strong>~$120</strong></span><br><div class="badge-pending">⏳ Por comprar</div></div>
       </div>
       <div class="train-row confirmed">
         <div>✈️ FRA → AMS · LH996<br><small>Conf# 85A7VN</small></div>
@@ -1623,14 +1644,8 @@
       <div class="train-row confirmed">
         <div>🚂 Köln → Utrecht · ICE<br><small>3 Adultos + 3 Adultos +60 + 1 Niño</small></div>
         <div>8 May · 7 pax</div>
-        <div>14:50 → 17:25 · 2h35m<br><small style="color:#6B8F71">ICE 154 · Vagón 24 · Pl. 91,93-97,104</small></div>
+        <div>14:50 → 17:25 · 2h35m</div>
         <div><div class="badge-confirmed">✅ Comprado</div></div>
-      </div>
-      <div class="train-row pending">
-        <div>🚂 Mainz → Frankfurt · Regional<br><small>Guero + familia juntos</small></div>
-        <div>3 May · 8 pax</div>
-        <div>Sale ~9:00 · Llega ~9:35 · 35 min</div>
-        <div><span class="price-tag">~$15 × 8 = <strong>~$120</strong></span><br><div class="badge-pending">⏳ Por comprar</div></div>
       </div>
       <div class="train-row pending">
         <div>🚂 Utrecht → AMS Schiphol · Regional</div>
@@ -1640,76 +1655,168 @@
       </div>
       <div class="train-row confirmed">
         <div>✈️ AMS → MEX · AM26<br><small>Conf# FPRJKI</small></div>
-        <div>10 May · 7 pax (familia)</div>
+        <div>10 May · 7 pax</div>
         <div>Sale 22:00 · Llega 1:55 (+1)</div>
         <div><div class="badge-confirmed">✅ Booked</div></div>
       </div>
     </div>
-    <div style="margin-top:16px;background:white;border-radius:12px;padding:16px 20px;display:flex;align-items:center;gap:16px;border-left:3px solid var(--sage);">
-    <span style="font-size:1.5rem;">🚂</span>
-    <div style="flex:1">
-      <div style="font-weight:600;font-size:14px;color:var(--ink)">Boletos de Tren — 3 rutas</div>
-
-  </div> -->
-
-      <div style="font-size:12px;color:var(--light-ink);margin-top:2px">AMS→Köln · Köln→Mainz · Köln→Utrecht · ICE 2ª clase ✅</div>
+    <div class="alert" style="margin-top:16px">
+      <span class="alert-icon">💰</span>
+      <span>Trenes pendientes de comprar: Mainz→Frankfurt <strong>~$120</strong> · Utrecht→Schiphol <strong>~$105</strong> · <strong>Total pendiente: ~$225 USD</strong> · Trenes ya comprados: AMS→Köln · Köln→Mainz · Köln→Utrecht ✅</span>
     </div>
-    <a href="boletos-tren.pdf" target="_blank" class="link-btn">📥 Descargar PDF ↗</a>
   </div>
-</div><!-- /tab-reservas -->
+</div>
+
+<!-- ===================== NOTAS ===================== -->
+<div class="section" id="tab-notas">
+  <div class="notes-area">
+    <h3>Notas del viaje</h3>
+    <textarea id="notas-generales" placeholder="Apunta ideas, cambios de plan, recomendaciones que te den, restaurantes que quieras agregar...">✈️ MEX → AMS: AM25 · Sale 22:25 (23 Abr) · Llega 17:20 (24 Abr) · Conf# KLFDOL (Guero) · FPRJKI (familia)
+✈️ FRA → AMS: LH996 · Sale 16:25 (3 May) · Llega 17:35 · Conf# 85A7VN (Guero)
+✈️ AMS → MEX: AM26 · Sale 22:00 (3 May) · Llega 1:55 (+1) · Conf# KLFDOL (Guero)
+✈️ AMS → MEX: AM26 · Sale 22:00 (10 May) · Llega 1:55 (+1) · Conf# FPRJKI (familia)
+🚂 AMS → Köln: ICE 159 · Sale 16:01 (27 Abr) · Llega 19:20
+🚂 Köln → Mainz: ICE 1644 · Sale 12:53 (30 Abr) · Llega 14:39
+🚂 Mainz → Frankfurt: ~35 min regional (3 May)
+🚂 Frankfurt Hbf → Aeropuerto: ~11 min S-Bahn S8/S9
+🚂 Köln → Utrecht: ~2h30m (8 May) · por confirmar horario
+🚂 Utrecht → AMS Schiphol: ~30 min (10 May) · por confirmar</textarea>
+    <div style="display:flex;align-items:center;margin-top:10px">
+      <button class="save-note-btn" onclick="saveNote()">Guardar nota</button>
+      <span class="note-saved" id="note-saved">✓ Guardado</span>
+    </div>
+  </div>
+
+  <div class="notes-area" style="margin-top:20px">
+    <h3>🏨 Hoteles</h3>
+    <div class="hotel-list">
+      <div class="hotel-item">
+        <div class="hotel-flag">🇳🇱</div>
+        <div class="hotel-info">
+          <div class="hotel-name">Novotel Amsterdam City</div>
+          <div class="hotel-dates">24 – 27 Abr · 3 noches · Incluye desayuno</div>
+          <div class="hotel-address">Europaboulevard 10, Amsterdam · ⭐ 4.2</div>
+          <div class="hotel-phone">📞 +31 20 721 9179</div>
+        </div>
+        <div class="hotel-confirm">
+          <input type="text" placeholder="# Confirmación" class="confirm-input">
+        </div>
+      </div>
+      <div class="hotel-item">
+        <div class="hotel-flag">🇩🇪</div>
+        <div class="hotel-info">
+          <div class="hotel-name">Novotel Koeln City</div>
+          <div class="hotel-dates">27 – 30 Abr · 3 noches · Incluye desayuno</div>
+          <div class="hotel-address">Bayenstraße 51, Köln · ⭐ 4.3</div>
+          <div class="hotel-phone">📞 +49 221 801470</div>
+        </div>
+        <div class="hotel-confirm">
+          <input type="text" placeholder="# Confirmación" class="confirm-input">
+        </div>
+      </div>
+      <div class="hotel-item">
+        <div class="hotel-flag">🇩🇪</div>
+        <div class="hotel-info">
+          <div class="hotel-name">Leonardo Hotel Mainz</div>
+          <div class="hotel-dates">30 Abr – 4 May · 4 noches · Incluye desayuno</div>
+          <div class="hotel-address">Augustusstraße 6, Mainz · ⭐ 4.0</div>
+          <div class="hotel-phone">📞 +49 6131 9098100</div>
+        </div>
+        <div class="hotel-confirm">
+          <input type="text" placeholder="# Confirmación" class="confirm-input">
+        </div>
+      </div>
+      <div class="hotel-item">
+        <div class="hotel-flag">🇩🇪</div>
+        <div class="hotel-info">
+          <div class="hotel-name">Ferienhaus Lenartz</div>
+          <div class="hotel-dates">4 – 8 May · 4 noches · Casa completa (3 hab, 3 baños, cocina)</div>
+          <div class="hotel-address">Hauptstraße 9, Kliding (15 min de Lutzerath) · ⭐ 4.9</div>
+          <div class="hotel-phone">📞 +49 2677 1742</div>
+        </div>
+        <div class="hotel-confirm">
+          <input type="text" placeholder="# Confirmación" class="confirm-input">
+        </div>
+      </div>
+      <div class="hotel-item">
+        <div class="hotel-flag">🇳🇱</div>
+        <div class="hotel-info">
+          <div class="hotel-name">Moxy Utrecht</div>
+          <div class="hotel-dates">8 – 10 May · 2 noches</div>
+          <div class="hotel-address">Helling 1, Utrecht · ⭐ 4.3</div>
+          <div class="hotel-phone">📞 +31 30 808 0303</div>
+        </div>
+        <div class="hotel-confirm">
+          <input type="text" placeholder="# Confirmación" class="confirm-input">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="notes-area" style="margin-top:20px">
+    <h3>Contactos y emergencias</h3>
+    <textarea placeholder="Seguro de viaje: ...&#10;Número de emergencias Europa: 112&#10;Embajada México en Países Bajos: +31 70 360 2900&#10;Embajada México en Alemania: +49 30 269 323 00"></textarea>
+  </div>
+</div>
 
 <!-- ===================== RESUMEN ===================== -->
-<div class="section" id="tab-resumen" style="display:none">
-
+<div class="section" id="tab-resumen">
   <div class="summary-grid">
     <div class="summary-card">
-      <h3>✈️ Vuelos</h3>
-      <p>MEX→AMS 23 Abr · AM25 · Conf# KLFDOL (Guero) / FPRJKI (familia)<br>Regreso: AMS→MEX 10 May · AM26</p>
+      <h3>🇳🇱 Ámsterdam</h3>
+      <p>24 – 27 Abr · 3 noches<br>Museos, canales, tulipanes, Volendam</p>
     </div>
     <div class="summary-card">
-      <h3>🏨 Hoteles</h3>
-      <p>Novotel Amsterdam · Novotel Köln · Leonardo Mainz · Ferienhaus Lenartz (Kliding) · Moxy Utrecht</p>
+      <h3>🇩🇪 Köln</h3>
+      <p>27 – 30 Abr · 3 noches<br>Dom, Kölsch, day trip a Bonn</p>
     </div>
     <div class="summary-card">
-      <h3>🚂 Trenes</h3>
-      <p>AMS→Köln 27 Abr · Köln→Mainz 30 Abr · Köln→Utrecht 8 May · Todos comprados ✅</p>
+      <h3>🇩🇪 Mainz</h3>
+      <p>30 Abr – 4 May · 4 noches<br>Altstadt, vino, Heidelberg, Frankfurt</p>
     </div>
     <div class="summary-card">
-      <h3>🚗 Coches (2)</h3>
-      <p>Alamo · Mainz 4 May → Köln 8 May<br>Coche 1: Nissan Qashqai · J.A. Alcazar · V.1210085 ✅<br>Coche 2: Ford Kuga · L. Mora · V.1210223 ✅</p>
+      <h3>✈️ Regreso Guero</h3>
+      <p>3 May · 16:25 FRA → AMS → MEX<br>Sale Mainz ~12:00pm</p>
     </div>
     <div class="summary-card">
-      <h3>👨‍👩‍👦 Grupo</h3>
-      <p>8 personas · Guero, Pao, Andrés (4 años 30 Abr), Cookie, Manolo, Toño, Lorena, MariTere</p>
+      <h3>🚗 Familia Muégano</h3>
+      <p>4 May · Coche rentado → Lutzerath<br>Ferienhaus Lenartz · 4 noches</p>
     </div>
     <div class="summary-card">
-      <h3>📅 Fechas</h3>
-      <p>24 Abr – 10 May 2026 · 17 noches · Ámsterdam · Köln · Mainz · Kliding · Utrecht</p>
+      <h3>🇳🇱 Utrecht</h3>
+      <p>8 – 10 May · Moxy Utrecht<br>Regreso CDMX el 10 a las 10pm</p>
+    </div>
+    <div class="summary-card">
+      <h3>📋 Pendientes</h3>
+      <p>Anne Frank (18 mar urgente)<br>Keukenhof · Rijksmuseum · Van Gogh · Heidelberg · Boat trip</p>
     </div>
   </div>
 
   <div class="notes-area">
-    <h3>⚠️ Notas importantes</h3>
-    <ul style="padding-left:18px;line-height:2;font-size:14px;color:var(--light-ink)">
-      <li>1 Mayo es festivo en Alemania — tiendas cerradas, museos abiertos (verificar horarios Heidelberg)</li>
-      <li>Domingos en Alemania: tiendas cerradas, museos abiertos</li>
+    <h3>Tips generales</h3>
+    <ul style="font-size:14px;color:var(--light-ink);line-height:2;padding-left:20px">
+      <li>Transportes entre ciudades: reservar en <strong>thetrainline.com</strong></li>
+      <li>Bonn desde Köln: ~28 min, sin reserva, muy frecuente</li>
+      <li>Heidelberg desde Mainz: ~50 min, sin reserva</li>
+      <li>Frankfurt → Aeropuerto: S-Bahn S8 o S9, ~11 min</li>
       <li>Emergencias Europa: <strong>112</strong></li>
-      <li>Guero se separa del grupo el 3 Mayo en Frankfurt: vuela FRA→AMS→MEX</li>
-      <li>Familia regresa el 10 Mayo: Utrecht→Schiphol→MEX</li>
-      <li>Licencia de conducir internacional recomendada para el coche en Alemania</li>
+      <li>El 26 Abr necesitan coche rentado para el day trip (Keukenhof, Zaanse Schans, Volendam)</li>
+      <li>El 1 Mayo es festivo en Alemania — verificar horarios de museos y tiendas</li>
     </ul>
   </div>
+</div>
 
-</div><!-- /tab-resumen -->
+</main>
 
 <!-- ===================== POR CONFIRMAR ===================== -->
 <div class="section" id="tab-porconfirmar" style="display:none">
 
   <div class="alert">
     <span class="alert-icon">📌</span>
-    <span>Estas opciones están <strong>pendientes de decisión grupal</strong>. Cuando confirmen cuál quieren, avísele a Claude y se agrega al itinerario principal.</span>
+    <span>Estas opciones están <strong>pendientes de decisión grupal</strong>. Cuando confirmen cuál quieren, avísenle a Claude y se agrega al itinerario principal.</span>
   </div>
 
+  <!-- TABLA COMPARATIVA MÚSICA -->
   <div class="confirm-block">
     <div class="confirm-block-header">
       <span class="confirm-block-icon">🎵</span>
@@ -1718,99 +1825,130 @@
         <div class="confirm-block-sub">Seleccionen una opción — las demás se descartan</div>
       </div>
     </div>
+
     <div class="music-table">
       <div class="music-row music-header">
-        <div>Opción</div><div>Fecha · Ciudad</div><div>Tipo</div><div>Precio est.</div><div>Link</div><div>Elegir</div>
+        <div>Opción</div>
+        <div>Fecha · Ciudad</div>
+        <div>Tipo</div>
+        <div>Precio est.</div>
+        <div>Ideal para</div>
+        <div>Link</div>
+        <div>Elegir</div>
       </div>
+
+      <!-- OPCIÓN A -->
       <div class="music-row" id="mopt-a">
-        <div><div class="mopt-name">🎭 Ernani — Oper Köln</div><div class="mopt-desc">Ópera de Verdi en versión concierto. Tenor: Young Woo Kim.</div></div>
-        <div><strong>28 o 29 Abr</strong><br>Köln · StaatenHaus</div>
+        <div>
+          <div class="mopt-name">🎭 Ernani — Oper Köln</div>
+          <div class="mopt-desc">Ópera de Verdi en versión concierto. Drama de amor, poder y venganza basado en Victor Hugo. Dirección: Giuliano Carella (uno de los mejores directores del repertorio italiano). Tenor: Young Woo Kim.</div>
+        </div>
+        <div><strong>28 o 29 Abr</strong><br>Köln · StaatenHaus<br>Noche libre ✅</div>
         <div><span class="type-badge type-opera">Gran Ópera</span></div>
         <div>€15 – €95<br><small>por persona</small></div>
+        <div>Manolo, Toño, Lorena, MariTere<br><small>Cookie + Andrés: cenan aparte</small></div>
         <div><a href="https://www.oper.koeln/en/productions/ernani/1150" target="_blank" class="link-btn">oper.koeln ↗</a></div>
         <div><button class="music-select-btn" onclick="selectMusic('a')">Elegir ✓</button></div>
       </div>
+
+      <!-- OPCIÓN B -->
       <div class="music-row" id="mopt-b">
-        <div><div class="mopt-name">🎻 Kölner Philharmonie</div><div class="mopt-desc">Una de las 5 salas más importantes de Europa.</div></div>
-        <div><strong>28 Abr</strong><br>Köln · Philharmonie</div>
+        <div>
+          <div class="mopt-name">🎻 Kölner Philharmonie</div>
+          <div class="mopt-desc">Una de las 5 salas de concierto más importantes de Europa. WDR Sinfonieorchester o Gürzenich-Orchester Köln. Programa exacto del 28 Abr por confirmar en su web — siempre hay función.</div>
+        </div>
+        <div><strong>28 Abr</strong><br>Köln · Philharmonie<br>Noche libre ✅</div>
         <div><span class="type-badge type-symphony">Orquesta Sinfónica</span></div>
         <div>~€25 – €80<br><small>por persona</small></div>
+        <div>Manolo, Toño, Lorena, MariTere<br><small>Cookie + Andrés: cenan aparte</small></div>
         <div><a href="https://www.koelner-philharmonie.de/en/events" target="_blank" class="link-btn">koelner-philharmonie.de ↗</a></div>
         <div><button class="music-select-btn" onclick="selectMusic('b')">Elegir ✓</button></div>
       </div>
+
+      <!-- OPCIÓN C -->
       <div class="music-row" id="mopt-c">
-        <div><div class="mopt-name">🎓 Conservatorium van Amsterdam</div><div class="mopt-desc">Conciertos de estudiantes de élite. Ambiente íntimo y auténtico.</div></div>
-        <div><strong>25 Abr (noche)</strong><br>Ámsterdam</div>
+        <div>
+          <div class="mopt-name">🎓 Conservatorium van Amsterdam</div>
+          <div class="mopt-desc">El conservatorio más grande de Países Bajos. Conciertos de estudiantes de élite — recitales de piano, música de cámara, música antigua. Ambiente íntimo y auténtico. Programa exacto disponible ~3 semanas antes.</div>
+        </div>
+        <div><strong>25 Abr (noche)</strong><br>Ámsterdam<br>Después del day trip ✅</div>
         <div><span class="type-badge type-student">Concierto Estudiantes</span></div>
         <div>Gratis – €15<br><small>por persona</small></div>
+        <div>Manolo + quien quiera<br><small>Muy accesible para todos</small></div>
         <div><a href="https://www.conservatoriumvanamsterdam.nl/en/calendar/" target="_blank" class="link-btn">conservatoriumvanamsterdam.nl ↗</a></div>
         <div><button class="music-select-btn" onclick="selectMusic('c')">Elegir ✓</button></div>
       </div>
     </div>
+
     <div class="music-decision-result" id="music-result" style="display:none"></div>
+
+    <!-- PROS/CONS -->
     <div class="pros-grid">
-      <div class="pros-card"><div class="pros-title">🎭 Ernani — Pros</div><ul><li>✅ Verdi en vivo</li><li>✅ Cantantes internacionales</li><li>✅ Noche libre en Köln</li><li>⚠️ Más caro</li></ul></div>
-      <div class="pros-card"><div class="pros-title">🎻 Kölner Philharmonie — Pros</div><ul><li>✅ Sala icónica</li><li>✅ Más accesible</li><li>✅ Precio razonable</li><li>⚠️ Programa sin confirmar</li></ul></div>
-      <div class="pros-card"><div class="pros-title">🎓 Conservatorium — Pros</div><ul><li>✅ Lo que pidió Manolo</li><li>✅ Casi gratuito</li><li>✅ Sin turistas</li><li>⚠️ Programa se publica tarde</li></ul></div>
+      <div class="pros-card">
+        <div class="pros-title">🎭 Ernani — Pros</div>
+        <ul>
+          <li>✅ Verdi en vivo — experiencia operística completa</li>
+          <li>✅ Cantantes de nivel internacional</li>
+          <li>✅ Encaja perfecto: noche libre en Köln</li>
+          <li>✅ Ópera raramente representada hoy</li>
+          <li>⚠️ Más caro del grupo</li>
+          <li>⚠️ ~3 hrs de duración</li>
+        </ul>
+      </div>
+      <div class="pros-card">
+        <div class="pros-title">🎻 Kölner Philharmonie — Pros</div>
+        <ul>
+          <li>✅ Sala icónica, acústica excepcional</li>
+          <li>✅ Experiencia más accesible para no-operáticos</li>
+          <li>✅ Misma noche, mismo día disponible</li>
+          <li>✅ Precio más razonable</li>
+          <li>⚠️ Programa exacto aún sin confirmar</li>
+          <li>⚠️ Más "convencional" que la ópera</li>
+        </ul>
+      </div>
+      <div class="pros-card">
+        <div class="pros-title">🎓 Conservatorium — Pros</div>
+        <ul>
+          <li>✅ Exactamente lo que pidió Manolo</li>
+          <li>✅ Casi gratuito</li>
+          <li>✅ Ambiente auténtico, sin turistas</li>
+          <li>✅ Más corto — no cansa al grupo</li>
+          <li>⚠️ Programa exacto se publica tarde</li>
+          <li>⚠️ Puede ser el día más cansado (day trip)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEPARADOR -->
+  <div style="margin: 32px 0; border-top: 1px dashed rgba(26,26,46,0.15);"></div>
+
+  <!-- OTRAS DECISIONES PENDIENTES -->
+  <div class="confirm-block">
+    <div class="confirm-block-header">
+      <span class="confirm-block-icon">⛵</span>
+      <div>
+        <div class="confirm-block-title">Pueblo de Pescadores — Ámsterdam Day Trip</div>
+        <div class="confirm-block-sub">26 Abr — ya hay cuadro de decisión en el Itinerario</div>
+      </div>
+    </div>
+    <div class="confirm-details">
+      <div class="confirm-detail-row">
+        <span class="cd-label">Opción A</span>
+        <span>Volendam — Puerto de pescadores, ~30 min de Zaanse Schans. Se combina en el mismo día. Todo a pie.</span>
+      </div>
+      <div class="confirm-detail-row">
+        <span class="cd-label">Opción B</span>
+        <span>Giethoorn — "La Venecia holandesa", pueblo sin calles. Requiere día dedicado. Se rentan 2-3 botes para el grupo. ~1.5 hrs de Ámsterdam.</span>
+      </div>
+      <div class="confirm-detail-row">
+        <span class="cd-label">Ver opciones</span>
+        <span>El cuadro interactivo está en el <strong>Itinerario → Dom 26 Abr</strong></span>
+      </div>
     </div>
   </div>
 
 </div><!-- /porconfirmar -->
-
-<!-- ================= DOCUMENTOS ================= -->
-<div class="section" id="tab-documentos" style="display:none">
-
-  <div class="confirm-block">
-    <div class="confirm-block-header">
-      <span class="confirm-block-icon">🚗</span>
-      <div>
-        <div class="confirm-block-title">Coche 1 — Jose Antonio Alcazar Coy</div>
-        <div class="confirm-block-sub">✅ Confirmado · Voucher 1210085 · Conf. 1692359555</div>
-      </div>
-    </div>
-    <div class="confirm-details">
-      <div class="confirm-detail-row"><span class="cd-label">Vehículo</span><span>Nissan Qashqai · Automático · 5 pax · €294.58 prepagado</span></div>
-      <div class="confirm-detail-row"><span class="cd-label">Recogida</span><span>Wallstrasse 1, Mainz · 4 Mayo 11:00 AM</span></div>
-      <div class="confirm-detail-row"><span class="cd-label">Devolución</span><span>Johannisstrasse 54, Köln · 8 Mayo 2:00 PM</span></div>
-      <div class="confirm-detail-row"><span class="cd-label">⚠️ Mostrador</span><span>Depósito €545 · Tarjeta de crédito física · Licencia física</span></div>
-      <div class="confirm-detail-row" style="margin-top:8px"><span class="cd-label">📥 PDF</span><span><a href="voucher-alamo.pdf" target="_blank" class="link-btn">Voucher Coche 1 ↗</a></span></div>
-    </div>
-  </div>
-
-  <div class="confirm-block">
-    <div class="confirm-block-header">
-      <span class="confirm-block-icon">🚗</span>
-      <div>
-        <div class="confirm-block-title">Coche 2 — Lorena Mora Alcazar</div>
-        <div class="confirm-block-sub">✅ Confirmado · Voucher 1210223 · Conf. 1692365071</div>
-      </div>
-    </div>
-    <div class="confirm-details">
-      <div class="confirm-detail-row"><span class="cd-label">Vehículo</span><span>Ford Kuga · Automático · 5 pax · €309.30 prepagado</span></div>
-      <div class="confirm-detail-row"><span class="cd-label">Recogida</span><span>Wallstrasse 1, Mainz · 4 Mayo 11:00 AM</span></div>
-      <div class="confirm-detail-row"><span class="cd-label">Devolución</span><span>Johannisstrasse 54, Köln · 8 Mayo 2:00 PM</span></div>
-      <div class="confirm-detail-row"><span class="cd-label">⚠️ Mostrador</span><span>Depósito €559 · Tarjeta de crédito física · Licencia física</span></div>
-      <div class="confirm-detail-row" style="margin-top:8px"><span class="cd-label">📥 PDF</span><span><a href="voucher-lorena.pdf" target="_blank" class="link-btn">Voucher Coche 2 ↗</a></span></div>
-    </div>
-  </div>
-
-  <div class="confirm-block">
-    <div class="confirm-block-header">
-      <span class="confirm-block-icon">🚂</span>
-      <div>
-        <div class="confirm-block-title">Boletos de Tren — 3 rutas</div>
-        <div class="confirm-block-sub">✅ Todos comprados · ICE 2ª clase · Sin posibilidad de cancelación</div>
-      </div>
-    </div>
-    <div class="confirm-details">
-      <div class="confirm-detail-row"><span class="cd-label">27 Abr</span><span>AMS → Köln · ICE 159 · 16:01→19:20 · <strong>Vagón 24 · Pl. 48,51-58,68</strong></span></div>
-      <div class="confirm-detail-row"><span class="cd-label">30 Abr</span><span>Köln → Mainz · ICE 1644 · 12:53→14:39 · <strong>Vagón 1 · Pl. 31-34,37,42-44</strong></span></div>
-      <div class="confirm-detail-row"><span class="cd-label">8 May</span><span>Köln → Utrecht · ICE 154 · 14:50→17:25 · <strong>Vagón 24 · Pl. 91,93-97,104</strong></span></div>
-      <div class="confirm-detail-row" style="margin-top:8px"><span class="cd-label">📥 PDF</span><span><a href="boletos-tren.pdf" target="_blank" class="link-btn">Boletos de Tren ↗</a></span></div>
-    </div>
-  </div>
-
-</div><!-- /tab-documentos -->
 
 <!-- MODAL EDICIÓN -->
 <div class="modal-overlay" id="modal">
