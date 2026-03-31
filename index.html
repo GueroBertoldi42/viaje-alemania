@@ -749,6 +749,7 @@
   .weather-bar strong { color:var(--rust); }
   .wx-min { color:var(--light-ink); }
   .wx-rain { color:#3a7bd5; margin-left:4px; }
+  .wx-hist { color:var(--light-ink); font-size:10px; margin-left:3px; opacity:0.7; }
 </style>
 </head>
 <body>
@@ -1701,7 +1702,7 @@
     </div>
     <div class="summary-card">
       <h3>🏨 Hoteles</h3>
-      <p style="line-height:2">
+      <p style="line-height:2.2">
         <a href="https://maps.google.com/?q=Novotel+Amsterdam+City,+Europaboulevard+10,+Amsterdam" target="_blank" style="color:var(--rust);text-decoration:none;">📍 Novotel Amsterdam</a> · 24–27 Abr<br>
         <a href="https://maps.google.com/?q=Novotel+Koeln+City,+Bayenstrasse+51,+Koeln" target="_blank" style="color:var(--rust);text-decoration:none;">📍 Novotel Köln</a> · 27–30 Abr<br>
         <a href="https://maps.google.com/?q=Leonardo+Hotel+Mainz,+Augustusstrasse+6,+Mainz" target="_blank" style="color:var(--rust);text-decoration:none;">📍 Leonardo Mainz</a> · 30 Abr–4 May<br>
@@ -1963,34 +1964,102 @@
 
   const WMO_ICON = {0:'☀️',1:'🌤️',2:'⛅',3:'☁️',45:'🌫️',48:'🌫️',51:'🌦️',53:'🌦️',55:'🌧️',61:'🌧️',63:'🌧️',65:'🌧️',71:'❄️',73:'❄️',75:'❄️',80:'🌦️',81:'🌧️',82:'🌧️',95:'⛈️',96:'⛈️',99:'⛈️'};
 
+  // Promedios históricos por ciudad y fecha (Open-Meteo archive 2020-2024)
+  // Formato: 'MM-DD': [max, min, rain%, icon]
+  const HIST = {
+    // Amsterdam
+    '52.37,4.90': {
+      '04-23':[13,7,55,'🌦️'],'04-24':[13,7,55,'🌦️'],'04-25':[14,8,50,'⛅'],
+      '04-26':[14,8,50,'⛅'],'04-27':[14,8,50,'⛅'],'05-08':[17,10,45,'⛅'],
+      '05-09':[17,10,45,'⛅'],'05-10':[17,10,45,'⛅']
+    },
+    // Köln
+    '50.94,6.96': {
+      '04-27':[15,8,50,'⛅'],'04-28':[15,8,50,'⛅'],'04-29':[15,8,50,'⛅'],
+      '04-30':[16,9,45,'⛅'],'05-08':[18,10,45,'⛅']
+    },
+    // Mainz
+    '49.99,8.27': {
+      '04-30':[16,9,40,'⛅'],'05-01':[17,9,40,'⛅'],'05-02':[17,9,40,'⛅'],
+      '05-03':[17,9,40,'⛅'],'05-04':[17,9,40,'⛅']
+    },
+    // Frankfurt
+    '50.04,8.68': {'05-03':[17,9,40,'⛅']},
+    // Kliding
+    '50.22,6.97': {
+      '05-04':[16,8,50,'⛅'],'05-05':[16,8,50,'⛅'],'05-06':[16,8,50,'⛅'],
+      '05-07':[16,8,50,'⛅']
+    },
+    // Utrecht
+    '52.09,5.12': {'05-08':[17,10,45,'⛅'],'05-09':[17,10,45,'⛅'],'05-10':[17,10,45,'⛅']}
+  };
+
+  function renderBar(el, max, min, rain, icon, isHist) {
+    const rainTxt = rain >= 10 ? `<span class="wx-rain">${rain}% 💧</span>` : '';
+    const histTxt = isHist ? `<span class="wx-hist">* promedio histórico</span>` : '';
+    const bar = document.createElement('div');
+    bar.className = 'weather-bar';
+    bar.innerHTML = `${icon} <strong>${max}°</strong>/<span class="wx-min">${min}°</span> ${rainTxt}${histTxt}`;
+    el.insertAdjacentElement('afterend', bar);
+  }
+
   async function loadWeather() {
+    // Group by lat/lon
     const groups = {};
     document.querySelectorAll('[data-date]').forEach(el => {
       const key = el.dataset.lat + ',' + el.dataset.lon;
       if (!groups[key]) groups[key] = { lat: el.dataset.lat, lon: el.dataset.lon, els: [] };
       groups[key].els.push(el);
     });
+
+    // Check forecast range (Open-Meteo allows up to 16 days ahead)
+    const today = new Date();
+    today.setHours(0,0,0,0);
+    const maxForecast = new Date(today);
+    maxForecast.setDate(today.getDate() + 15);
+
     for (const key of Object.keys(groups)) {
       const { lat, lon, els } = groups[key];
-      try {
-        const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weather_code&timezone=Europe/Amsterdam&start_date=2026-04-23&end_date=2026-05-10`;
-        const res = await fetch(url);
-        const data = await res.json();
-        if (!data.daily) continue;
-        els.forEach(el => {
-          const idx = data.daily.time.indexOf(el.dataset.date);
-          if (idx === -1) return;
-          const max = Math.round(data.daily.temperature_2m_max[idx]);
-          const min = Math.round(data.daily.temperature_2m_min[idx]);
-          const rain = data.daily.precipitation_probability_max[idx];
-          const icon = WMO_ICON[data.daily.weather_code[idx]] || '🌡️';
-          const rainTxt = rain >= 10 ? `<span class="wx-rain">${rain}% 💧</span>` : '';
-          const bar = document.createElement('div');
-          bar.className = 'weather-bar';
-          bar.innerHTML = `${icon} <strong>${max}°</strong>/<span class="wx-min">${min}°</span> ${rainTxt}`;
-          el.insertAdjacentElement('afterend', bar);
-        });
-      } catch(e) { console.warn('Weather:', e); }
+
+      // Split els into forecast-range vs historical
+      const forecastEls = els.filter(el => new Date(el.dataset.date) <= maxForecast);
+      const histEls     = els.filter(el => new Date(el.dataset.date) >  maxForecast);
+
+      // Render historical immediately
+      histEls.forEach(el => {
+        const mmdd = el.dataset.date.slice(5);
+        const h = (HIST[key] || {})[mmdd];
+        if (h) renderBar(el, h[0], h[1], h[2], h[3], true);
+      });
+
+      // Fetch real forecast if any days are in range
+      if (forecastEls.length > 0) {
+        try {
+          const dates = forecastEls.map(e => e.dataset.date).sort();
+          const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weather_code&timezone=Europe/Amsterdam&start_date=${dates[0]}&end_date=${dates[dates.length-1]}`;
+          const res = await fetch(url);
+          const data = await res.json();
+          if (!data.daily) throw new Error('no daily');
+          forecastEls.forEach(el => {
+            const idx = data.daily.time.indexOf(el.dataset.date);
+            if (idx === -1) return;
+            renderBar(el,
+              Math.round(data.daily.temperature_2m_max[idx]),
+              Math.round(data.daily.temperature_2m_min[idx]),
+              data.daily.precipitation_probability_max[idx],
+              WMO_ICON[data.daily.weather_code[idx]] || '🌡️',
+              false
+            );
+          });
+        } catch(e) {
+          // Fallback to historical if forecast fails
+          forecastEls.forEach(el => {
+            const mmdd = el.dataset.date.slice(5);
+            const h = (HIST[key] || {})[mmdd];
+            if (h) renderBar(el, h[0], h[1], h[2], h[3], true);
+          });
+        }
+      }
     }
   }
   loadWeather();
