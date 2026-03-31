@@ -745,18 +745,10 @@
     .city-name { font-size: 1.4rem; }
   }
 
-  /* WEATHER BAR */
-  .weather-bar {
-    font-size: 12px;
-    color: var(--light-ink);
-    margin-bottom: 10px;
-    margin-top: -4px;
-    padding-left: 2px;
-    letter-spacing: 0.2px;
-  }
-  .weather-bar strong { color: var(--rust); }
-  .wx-min { color: var(--light-ink); }
-  .wx-rain { color: #3a7bd5; margin-left: 4px; }
+  .weather-bar { font-size:12px; color:var(--light-ink); margin-bottom:10px; margin-top:-4px; padding-left:2px; }
+  .weather-bar strong { color:var(--rust); }
+  .wx-min { color:var(--light-ink); }
+  .wx-rain { color:#3a7bd5; margin-left:4px; }
 </style>
 </head>
 <body>
@@ -803,8 +795,8 @@
             <div class="stop-note">⏳ <strong>Transporte por confirmar:</strong> eBus o camioneta privada hacia AICM. Salir a las 4:00 PM para llegar con tiempo al aeropuerto.</div>
           </div>
           <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+            <button class="btn-done" onclick="toggleDone(this)">✓</button>
+            <button class="btn-edit" onclick="openEdit(this)">✏️</button>
           </div>
         </div>
         <div class="stop stop-type-transport">
@@ -815,8 +807,8 @@
             <div class="stop-note">Sale 22:25 CDMX · Llega 17:20 (+1) Ámsterdam · Conf# <strong>KLFDOL</strong> (Guero) / <strong>FPRJKI</strong> (familia) · ~10h55m sin escalas.</div>
           </div>
           <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+            <button class="btn-done" onclick="toggleDone(this)">✓</button>
+            <button class="btn-edit" onclick="openEdit(this)">✏️</button>
           </div>
         </div>
       </div>
@@ -830,7 +822,7 @@
           <div class="stop-icon">✈️</div>
           <div class="stop-body">
             <div class="stop-title">Llegada a Ámsterdam Schiphol · 17:20</div>
-            <div class="stop-note">🚇 <strong>Al hotel:</strong> Metro 52 desde Schiphol Plaza → RAI (~15 min, ~€4) + 5 min caminando al Novotel. Total ~25 min. <a href="https://www.google.com/maps/dir/Amsterdam+Airport+Schiphol/Hotel+Novotel+Amsterdam+City,+Europaboulevard+10,+1083+AD+Amsterdam" target="_blank">Ver ruta ↗</a><br>Check-in hotel. Noche tranquila para recuperarse del vuelo.</div>
+            <div class="stop-note">🚇 <strong>Al hotel:</strong> Metro 52 desde Schiphol Plaza → RAI (~15 min, ~€4) + 5 min caminando al Novotel. <a href="https://www.google.com/maps/dir/Amsterdam+Airport+Schiphol/Hotel+Novotel+Amsterdam+City,+Europaboulevard+10,+1083+AD+Amsterdam" target="_blank">Ver ruta ↗</a><br>Check-in hotel. Noche tranquila para recuperarse del vuelo.</div>
           </div>
           <div class="stop-actions">
             <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
@@ -1709,12 +1701,12 @@
     </div>
     <div class="summary-card">
       <h3>🏨 Hoteles</h3>
-      <p>
-        <a href="https://maps.google.com/?q=Novotel+Amsterdam+City,+Europaboulevard+10,+1083+AD+Amsterdam" target="_blank" style="color:var(--rust);text-decoration:none;">📍 Novotel Amsterdam</a> · 24–27 Abr<br>
-        <a href="https://maps.google.com/?q=Novotel+Koeln+City,+Bayenstra%C3%9Fe+51,+50678+K%C3%B6ln" target="_blank" style="color:var(--rust);text-decoration:none;">📍 Novotel Köln</a> · 27–30 Abr<br>
-        <a href="https://maps.google.com/?q=Leonardo+Hotel+Mainz,+Augustusstra%C3%9Fe+6,+55131+Mainz" target="_blank" style="color:var(--rust);text-decoration:none;">📍 Leonardo Mainz</a> · 30 Abr–4 May<br>
-        <a href="https://maps.google.com/?q=Hauptstra%C3%9Fe+9,+56761+Kliding" target="_blank" style="color:var(--rust);text-decoration:none;">📍 Ferienhaus Lenartz</a> · 4–8 May<br>
-        <a href="https://maps.google.com/?q=Moxy+Utrecht,+Helling+1,+3523+SB+Utrecht" target="_blank" style="color:var(--rust);text-decoration:none;">📍 Moxy Utrecht</a> · 8–10 May
+      <p style="line-height:2">
+        <a href="https://maps.google.com/?q=Novotel+Amsterdam+City,+Europaboulevard+10,+Amsterdam" target="_blank" style="color:var(--rust);text-decoration:none;">📍 Novotel Amsterdam</a> · 24–27 Abr<br>
+        <a href="https://maps.google.com/?q=Novotel+Koeln+City,+Bayenstrasse+51,+Koeln" target="_blank" style="color:var(--rust);text-decoration:none;">📍 Novotel Köln</a> · 27–30 Abr<br>
+        <a href="https://maps.google.com/?q=Leonardo+Hotel+Mainz,+Augustusstrasse+6,+Mainz" target="_blank" style="color:var(--rust);text-decoration:none;">📍 Leonardo Mainz</a> · 30 Abr–4 May<br>
+        <a href="https://maps.google.com/?q=Hauptstrasse+9,+56761+Kliding" target="_blank" style="color:var(--rust);text-decoration:none;">📍 Ferienhaus Lenartz</a> · 4–8 May<br>
+        <a href="https://maps.google.com/?q=Moxy+Utrecht,+Helling+1,+Utrecht" target="_blank" style="color:var(--rust);text-decoration:none;">📍 Moxy Utrecht</a> · 8–10 May
       </p>
     </div>
     <div class="summary-card">
@@ -1969,16 +1961,7 @@
   }
 
 
-  // ── Open-Meteo Weather ──────────────────────────────────────────────────
-  const WMO_ICON = {
-    0:'☀️',1:'🌤️',2:'⛅',3:'☁️',
-    45:'🌫️',48:'🌫️',
-    51:'🌦️',53:'🌦️',55:'🌧️',
-    61:'🌧️',63:'🌧️',65:'🌧️',
-    71:'❄️',73:'❄️',75:'❄️',
-    80:'🌦️',81:'🌧️',82:'🌧️',
-    95:'⛈️',96:'⛈️',99:'⛈️'
-  };
+  const WMO_ICON = {0:'☀️',1:'🌤️',2:'⛅',3:'☁️',45:'🌫️',48:'🌫️',51:'🌦️',53:'🌦️',55:'🌧️',61:'🌧️',63:'🌧️',65:'🌧️',71:'❄️',73:'❄️',75:'❄️',80:'🌦️',81:'🌧️',82:'🌧️',95:'⛈️',96:'⛈️',99:'⛈️'};
 
   async function loadWeather() {
     const groups = {};
@@ -1990,7 +1973,7 @@
     for (const key of Object.keys(groups)) {
       const { lat, lon, els } = groups[key];
       try {
-        const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weather_code&timezone=Europe/Amsterdam&forecast_days=16&start_date=2026-04-23&end_date=2026-05-10`;
+        const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weather_code&timezone=Europe/Amsterdam&start_date=2026-04-23&end_date=2026-05-10`;
         const res = await fetch(url);
         const data = await res.json();
         if (!data.daily) continue;
@@ -2004,7 +1987,7 @@
           const rainTxt = rain >= 10 ? `<span class="wx-rain">${rain}% 💧</span>` : '';
           const bar = document.createElement('div');
           bar.className = 'weather-bar';
-          bar.innerHTML = `${icon} <strong>${max}°</strong>/<span class="wx-min">${min}°</span>${rainTxt}`;
+          bar.innerHTML = `${icon} <strong>${max}°</strong>/<span class="wx-min">${min}°</span> ${rainTxt}`;
           el.insertAdjacentElement('afterend', bar);
         });
       } catch(e) { console.warn('Weather:', e); }
