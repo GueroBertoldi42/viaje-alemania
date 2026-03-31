@@ -744,6 +744,19 @@
     .tabs-bar { padding: 0 20px; }
     .city-name { font-size: 1.4rem; }
   }
+
+  /* WEATHER BAR */
+  .weather-bar {
+    font-size: 12px;
+    color: var(--light-ink);
+    margin-bottom: 10px;
+    margin-top: -4px;
+    padding-left: 2px;
+    letter-spacing: 0.2px;
+  }
+  .weather-bar strong { color: var(--rust); }
+  .wx-min { color: var(--light-ink); }
+  .wx-rain { color: #3a7bd5; margin-left: 4px; }
 </style>
 </head>
 <body>
@@ -759,11 +772,11 @@
 </header>
 
 <div class="tabs-bar">
-  <button class="tab-btn active" onclick=\"showTab('itinerario', this)\">Itinerario</button>
-  <button class="tab-btn" onclick=\"showTab('reservas', this)\">Reservas</button>
-  <button class="tab-btn" onclick=\"showTab('resumen', this)\">Resumen</button>
-  <button class="tab-btn" onclick=\"showTab('porconfirmar', this)\">⏳ Por Confirmar</button>
-  <button class="tab-btn" onclick=\"showTab('documentos', this)\">📄 Docs</button>
+  <button class="tab-btn active" onclick="showTab('itinerario', this)">Itinerario</button>
+  <button class="tab-btn" onclick="showTab('reservas', this)">Reservas</button>
+  <button class="tab-btn" onclick="showTab('resumen', this)">Resumen</button>
+  <button class="tab-btn" onclick="showTab('porconfirmar', this)">⏳ Por Confirmar</button>
+  <button class="tab-btn" onclick="showTab('documentos', this)">📄 Docs</button>
 </div>
 
 <main>
@@ -780,14 +793,26 @@
     </div>
 
     <div class="day-block">
-      <div class="day-label">Vie 24 Abr · Llegada</div>
+      <div class="day-label" data-date="2026-04-23" data-lat="52.37" data-lon="4.90">Jue 23 Abr · Salida desde Puebla ✈️</div>
       <div class="stops">
-        <div class="stop stop-type-transport" id="stop-am1">
-          <div class="stop-time">17:20</div>
+        <div class="stop stop-type-transport">
+          <div class="stop-time">16:00</div>
+          <div class="stop-icon">🚐</div>
+          <div class="stop-body">
+            <div class="stop-title">Salida de Puebla</div>
+            <div class="stop-note">⏳ <strong>Transporte por confirmar:</strong> eBus o camioneta privada hacia AICM. Salir a las 4:00 PM para llegar con tiempo al aeropuerto.</div>
+          </div>
+          <div class="stop-actions">
+            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+          </div>
+        </div>
+        <div class="stop stop-type-transport">
+          <div class="stop-time">22:25</div>
           <div class="stop-icon">✈️</div>
           <div class="stop-body">
-            <div class="stop-title">Llegada a Ámsterdam Schiphol</div>
-            <div class="stop-note">Check-in hotel. Noche tranquila para recuperarse del vuelo.</div>
+            <div class="stop-title">Vuelo MEX → AMS · AM25</div>
+            <div class="stop-note">Sale 22:25 CDMX · Llega 17:20 (+1) Ámsterdam · Conf# <strong>KLFDOL</strong> (Guero) / <strong>FPRJKI</strong> (familia) · ~10h55m sin escalas.</div>
           </div>
           <div class="stop-actions">
             <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
@@ -798,7 +823,25 @@
     </div>
 
     <div class="day-block">
-      <div class="day-label">Sáb 25 Abr · Ciudad</div>
+      <div class="day-label" data-date="2026-04-24" data-lat="52.37" data-lon="4.90">Vie 24 Abr · Llegada</div>
+      <div class="stops">
+        <div class="stop stop-type-transport" id="stop-am1">
+          <div class="stop-time">17:20</div>
+          <div class="stop-icon">✈️</div>
+          <div class="stop-body">
+            <div class="stop-title">Llegada a Ámsterdam Schiphol · 17:20</div>
+            <div class="stop-note">🚇 <strong>Al hotel:</strong> Metro 52 desde Schiphol Plaza → RAI (~15 min, ~€4) + 5 min caminando al Novotel. Total ~25 min. <a href="https://www.google.com/maps/dir/Amsterdam+Airport+Schiphol/Hotel+Novotel+Amsterdam+City,+Europaboulevard+10,+1083+AD+Amsterdam" target="_blank">Ver ruta ↗</a><br>Check-in hotel. Noche tranquila para recuperarse del vuelo.</div>
+          </div>
+          <div class="stop-actions">
+            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-label" data-date="2026-04-25" data-lat="52.37" data-lon="4.90">Sáb 25 Abr · Ciudad</div>
       <div class="stops">
         <div class="stop stop-type-museum" id="stop-am2">
           <div class="stop-time">9:00</div>
@@ -876,7 +919,7 @@
     </div>
 
     <div class="day-block">
-      <div class="day-label">Dom 26 Abr · Day Trip: Keukenhof 🌷 + Zaanse Schans ⚙️</div>
+      <div class="day-label" data-date="2026-04-26" data-lat="52.37" data-lon="4.90">Dom 26 Abr · Day Trip: Keukenhof 🌷 + Zaanse Schans ⚙️</div>
       <div class="stops">
         <div class="stop stop-type-nature">
           <div class="stop-time">10:00</div>
@@ -907,7 +950,7 @@
     </div>
 
     <div class="day-block">
-      <div class="day-label">Lun 27 Abr · Salida a Köln</div>
+      <div class="day-label" data-date="2026-04-27" data-lat="52.37" data-lon="4.90">Lun 27 Abr · Salida a Köln</div>
       <div class="stops">
         <div class="stop stop-type-food">
           <div class="stop-time">9:00</div>
@@ -958,7 +1001,7 @@
     </div>
 
     <div class="day-block">
-      <div class="day-label">Mar 28 Abr · Köln</div>
+      <div class="day-label" data-date="2026-04-28" data-lat="50.94" data-lon="6.96">Mar 28 Abr · Köln</div>
       <div class="stops">
         <div class="stop stop-type-landmark">
           <div class="stop-time">9:30</div>
@@ -1000,7 +1043,7 @@
     </div>
 
     <div class="day-block">
-      <div class="day-label">Mié 29 Abr · Day Trip a Bonn</div>
+      <div class="day-label" data-date="2026-04-29" data-lat="50.94" data-lon="6.96">Mié 29 Abr · Day Trip a Bonn</div>
       <div class="stops">
         <div class="stop stop-type-transport">
           <div class="stop-time">9:00</div>
@@ -1054,7 +1097,7 @@
     </div>
 
     <div class="day-block">
-      <div class="day-label">Jue 30 Abr · Salida a Mainz</div>
+      <div class="day-label" data-date="2026-04-30" data-lat="50.94" data-lon="6.96">Jue 30 Abr · Salida a Mainz</div>
       <div class="stops">
         <div class="stop stop-type-food">
           <div class="stop-time">9:00</div>
@@ -1093,7 +1136,7 @@
     </div>
 
     <div class="day-block">
-      <div class="day-label">Jue 30 Abr · Llegada + 🎂 Cumpleaños Andrés</div>
+      <div class="day-label" data-date="2026-04-30" data-lat="50.94" data-lon="6.96">Jue 30 Abr · Llegada + 🎂 Cumpleaños Andrés</div>
       <div class="stops">
         <div class="stop stop-type-transport">
           <div class="stop-time">14:39</div>
@@ -1135,7 +1178,7 @@
     </div>
 
     <div class="day-block">
-      <div class="day-label">Vie 1 May · Day Trip a Heidelberg</div>
+      <div class="day-label" data-date="2026-05-01" data-lat="49.99" data-lon="8.27">Vie 1 May · Day Trip a Heidelberg</div>
       <div class="stops">
         <div class="stop stop-type-transport">
           <div class="stop-time">9:00</div>
@@ -1177,7 +1220,7 @@
     </div>
 
     <div class="day-block">
-      <div class="day-label">Sáb 2 May · Mainz a fondo</div>
+      <div class="day-label" data-date="2026-05-02" data-lat="49.99" data-lon="8.27">Sáb 2 May · Mainz a fondo</div>
       <div class="stops">
         <div class="stop stop-type-landmark">
           <div class="stop-time">9:30</div>
@@ -1219,7 +1262,7 @@
     </div>
 
     <div class="day-block">
-      <div class="day-label">Dom 3 May · Frankfurt — Guero regresa 🇲🇽</div>
+      <div class="day-label" data-date="2026-05-03" data-lat="50.04" data-lon="8.68">Dom 3 May · Frankfurt — Guero regresa 🇲🇽</div>
       <div class="alert">
         <span class="alert-icon">⏰</span>
         <span>Guero: vuelo 16:25 Frankfurt → Ámsterdam → México. Recoger maleta del locker y salir al aeropuerto a las <strong>13:40</strong>. S-Bahn S8/S9 desde Frankfurt Hbf → aeropuerto = <strong>~11 min</strong>. Llegas ~14:00 — 2h25 antes del vuelo, perfecto.</span>
@@ -1325,7 +1368,7 @@
     </div>
 
     <div class="day-block">
-      <div class="day-label">Lun 4 May · Familia → Lutzerath 🚗</div>
+      <div class="day-label" data-date="2026-05-04" data-lat="49.99" data-lon="8.27">Lun 4 May · Familia → Lutzerath 🚗</div>
       <div class="stops">
         <div class="stop stop-type-transport">
           <div class="stop-time">AM</div>
@@ -1376,7 +1419,7 @@
     </div>
 
     <div class="day-block">
-      <div class="day-label">Mar 5 May · Crucero Mosel</div>
+      <div class="day-label" data-date="2026-05-05" data-lat="50.22" data-lon="6.97">Mar 5 May · Crucero Mosel</div>
       <div class="stops">
         <div class="stop stop-type-walk">
           <div class="stop-time">AM</div>
@@ -1394,7 +1437,7 @@
     </div>
 
     <div class="day-block">
-      <div class="day-label">Mié 6 May · Thier</div>
+      <div class="day-label" data-date="2026-05-06" data-lat="50.22" data-lon="6.97">Mié 6 May · Thier</div>
       <div class="stops">
         <div class="stop stop-type-walk">
           <div class="stop-time">AM</div>
@@ -1412,7 +1455,7 @@
     </div>
 
     <div class="day-block">
-      <div class="day-label">Jue 7 May · Día libre en Lutzerath</div>
+      <div class="day-label" data-date="2026-05-07" data-lat="50.22" data-lon="6.97">Jue 7 May · Día libre en Lutzerath</div>
       <div class="stops">
         <div class="stop stop-type-walk">
           <div class="stop-time">Todo el día</div>
@@ -1430,7 +1473,7 @@
     </div>
 
     <div class="day-block">
-      <div class="day-label">Vie 8 May · Lutzerath → Köln (coche) → Utrecht (tren)</div>
+      <div class="day-label" data-date="2026-05-08" data-lat="50.94" data-lon="6.96">Vie 8 May · Lutzerath → Köln (coche) → Utrecht (tren)</div>
       <div class="stops">
         <div class="stop stop-type-transport">
           <div class="stop-time">AM</div>
@@ -1469,7 +1512,7 @@
     </div>
 
     <div class="day-block">
-      <div class="day-label">Sáb 9 May · Utrecht</div>
+      <div class="day-label" data-date="2026-05-09" data-lat="52.09" data-lon="5.12">Sáb 9 May · Utrecht</div>
       <div class="stops">
         <div class="stop stop-type-walk">
           <div class="stop-time">AM</div>
@@ -1499,7 +1542,7 @@
     </div>
 
     <div class="day-block">
-      <div class="day-label">Dom 10 May · Utrecht → Ámsterdam → CDMX ✈️</div>
+      <div class="day-label" data-date="2026-05-10" data-lat="52.09" data-lon="5.12">Dom 10 May · Utrecht → Ámsterdam → CDMX ✈️</div>
       <div class="stops">
         <div class="stop stop-type-transport">
           <div class="stop-time">AM</div>
@@ -1646,15 +1689,13 @@
       </div>
     </div>
     <div style="margin-top:16px;background:white;border-radius:12px;padding:16px 20px;display:flex;align-items:center;gap:16px;border-left:3px solid var(--sage);">
-    <span style="font-size:1.5rem;">🚂</span>
-    <div style="flex:1">
-      <div style="font-weight:600;font-size:14px;color:var(--ink)">Boletos de Tren — 3 rutas</div>
-
-  </div> -->
-
-      <div style="font-size:12px;color:var(--light-ink);margin-top:2px">AMS→Köln · Köln→Mainz · Köln→Utrecht · ICE 2ª clase ✅</div>
+      <span style="font-size:1.5rem;">🚂</span>
+      <div style="flex:1">
+        <div style="font-weight:600;font-size:14px;color:var(--ink)">Boletos de Tren — 3 rutas</div>
+        <div style="font-size:12px;color:var(--light-ink);margin-top:2px">AMS→Köln · Köln→Mainz · Köln→Utrecht · ICE 2ª clase ✅</div>
+      </div>
+      <a href="boletos-tren.pdf" target="_blank" class="link-btn">📥 Descargar PDF ↗</a>
     </div>
-    <a href="boletos-tren.pdf" target="_blank" class="link-btn">📥 Descargar PDF ↗</a>
   </div>
 </div><!-- /tab-reservas -->
 
@@ -1668,7 +1709,13 @@
     </div>
     <div class="summary-card">
       <h3>🏨 Hoteles</h3>
-      <p>Novotel Amsterdam · Novotel Köln · Leonardo Mainz · Ferienhaus Lenartz (Kliding) · Moxy Utrecht</p>
+      <p>
+        <a href="https://maps.google.com/?q=Novotel+Amsterdam+City,+Europaboulevard+10,+1083+AD+Amsterdam" target="_blank" style="color:var(--rust);text-decoration:none;">📍 Novotel Amsterdam</a> · 24–27 Abr<br>
+        <a href="https://maps.google.com/?q=Novotel+Koeln+City,+Bayenstra%C3%9Fe+51,+50678+K%C3%B6ln" target="_blank" style="color:var(--rust);text-decoration:none;">📍 Novotel Köln</a> · 27–30 Abr<br>
+        <a href="https://maps.google.com/?q=Leonardo+Hotel+Mainz,+Augustusstra%C3%9Fe+6,+55131+Mainz" target="_blank" style="color:var(--rust);text-decoration:none;">📍 Leonardo Mainz</a> · 30 Abr–4 May<br>
+        <a href="https://maps.google.com/?q=Hauptstra%C3%9Fe+9,+56761+Kliding" target="_blank" style="color:var(--rust);text-decoration:none;">📍 Ferienhaus Lenartz</a> · 4–8 May<br>
+        <a href="https://maps.google.com/?q=Moxy+Utrecht,+Helling+1,+3523+SB+Utrecht" target="_blank" style="color:var(--rust);text-decoration:none;">📍 Moxy Utrecht</a> · 8–10 May
+      </p>
     </div>
     <div class="summary-card">
       <h3>🚂 Trenes</h3>
@@ -1920,6 +1967,50 @@
       result.textContent = '✅ Elegido: Giethoorn — el 26 será día dedicado a Giethoorn. Keukenhof + Zaanse Schans se reorganizan sin pueblo de pescadores.';
     }
   }
+
+
+  // ── Open-Meteo Weather ──────────────────────────────────────────────────
+  const WMO_ICON = {
+    0:'☀️',1:'🌤️',2:'⛅',3:'☁️',
+    45:'🌫️',48:'🌫️',
+    51:'🌦️',53:'🌦️',55:'🌧️',
+    61:'🌧️',63:'🌧️',65:'🌧️',
+    71:'❄️',73:'❄️',75:'❄️',
+    80:'🌦️',81:'🌧️',82:'🌧️',
+    95:'⛈️',96:'⛈️',99:'⛈️'
+  };
+
+  async function loadWeather() {
+    const groups = {};
+    document.querySelectorAll('[data-date]').forEach(el => {
+      const key = el.dataset.lat + ',' + el.dataset.lon;
+      if (!groups[key]) groups[key] = { lat: el.dataset.lat, lon: el.dataset.lon, els: [] };
+      groups[key].els.push(el);
+    });
+    for (const key of Object.keys(groups)) {
+      const { lat, lon, els } = groups[key];
+      try {
+        const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weather_code&timezone=Europe/Amsterdam&forecast_days=16&start_date=2026-04-23&end_date=2026-05-10`;
+        const res = await fetch(url);
+        const data = await res.json();
+        if (!data.daily) continue;
+        els.forEach(el => {
+          const idx = data.daily.time.indexOf(el.dataset.date);
+          if (idx === -1) return;
+          const max = Math.round(data.daily.temperature_2m_max[idx]);
+          const min = Math.round(data.daily.temperature_2m_min[idx]);
+          const rain = data.daily.precipitation_probability_max[idx];
+          const icon = WMO_ICON[data.daily.weather_code[idx]] || '🌡️';
+          const rainTxt = rain >= 10 ? `<span class="wx-rain">${rain}% 💧</span>` : '';
+          const bar = document.createElement('div');
+          bar.className = 'weather-bar';
+          bar.innerHTML = `${icon} <strong>${max}°</strong>/<span class="wx-min">${min}°</span>${rainTxt}`;
+          el.insertAdjacentElement('afterend', bar);
+        });
+      } catch(e) { console.warn('Weather:', e); }
+    }
+  }
+  loadWeather();
 
   document.getElementById('modal').addEventListener('click', function(e) {
     if (e.target === this) closeModal();
