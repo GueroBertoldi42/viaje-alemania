@@ -823,7 +823,19 @@
           <div class="stop-icon">✈️</div>
           <div class="stop-body">
             <div class="stop-title">Llegada a Ámsterdam Schiphol · 17:20</div>
-            <div class="stop-note">🚇 <strong>Al hotel:</strong> Metro 52 desde Schiphol Plaza → RAI (~15 min, ~€4) + 5 min caminando al Novotel. <a href="https://www.google.com/maps/dir/Amsterdam+Airport+Schiphol/Hotel+Novotel+Amsterdam+City,+Europaboulevard+10,+1083+AD+Amsterdam" target="_blank">Ver ruta ↗</a><br>Check-in hotel. Noche tranquila para recuperarse del vuelo.</div>
+            <div class="stop-note">🚇 <strong>Al hotel:</strong> Metro 52 desde Schiphol Plaza → RAI (~15 min, ~€4) + 5 min caminando al Novotel. <a href="https://www.google.com/maps/dir/Amsterdam+Airport+Schiphol/Hotel+Novotel+Amsterdam+City,+Europaboulevard+10,+1083+AD+Amsterdam" target="_blank">Ver ruta ↗</a><br>Check-in hotel.</div>
+          </div>
+          <div class="stop-actions">
+            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+          </div>
+        </div>
+        <div class="stop stop-type-walk">
+          <div class="stop-time">19:00</div>
+          <div class="stop-icon">🌿</div>
+          <div class="stop-body">
+            <div class="stop-title">Caminata al Molino De Riekermolen</div>
+            <div class="stop-note">Molino de viento histórico de 1636 a orillas del río Amstel — a ~20 min caminando del hotel por el parque. Ideal para estirar las piernas después del vuelo y ver el atardecer. <a href="https://www.google.com/maps/place/De+Riekermolen+(1636)/@52.3240849,4.8937802,17z" target="_blank">📍 Ver en Maps ↗</a></div>
           </div>
           <div class="stop-actions">
             <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
@@ -872,12 +884,12 @@
             <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
           </div>
         </div>
-        <div class="stop stop-type-museum">
+        <div class="stop stop-type-landmark">
           <div class="stop-time">14:30</div>
-          <div class="stop-icon">🎨</div>
+          <div class="stop-icon">🏙️</div>
           <div class="stop-body">
-            <div class="stop-title">Rijksmuseum</div>
-            <div class="stop-note">Rembrandt, Vermeer, La Ronda de Noche. ~2 hrs. ⚠️ 8 boletos por separado en <a href="https://rijksmuseum.nl" target="_blank">rijksmuseum.nl</a> — no hay reserva grupal online, comprar individualmente. Descarga la app gratuita.</div>
+            <div class="stop-title">A'DAM Tower — Mirador</div>
+            <div class="stop-note">Mirador 360° con vistas panorámicas de Ámsterdam desde 22 pisos. Incluye el columpio sobre el vacío "Over the Edge" (~€5 extra). <a href="https://www.google.com/maps/search/A'DAM+Tower,+Overhoeksplein+1,+1031+KS+Amsterdam" target="_blank">📍 Overhoeksplein 1 · Maps ↗</a> · Reservar en <a href="https://adamtower.nl" target="_blank">adamtower.nl</a> · ~1.5 hrs.</div>
           </div>
           <div class="stop-actions">
             <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
@@ -1174,11 +1186,11 @@
       <div class="day-label" data-date="2026-05-01" data-lat="49.99" data-lon="8.27">Vie 1 May · Day Trip a Heidelberg</div>
       <div class="stops">
         <div class="stop stop-type-transport">
-          <div class="stop-time">9:00</div>
+          <div class="stop-time">9:13</div>
           <div class="stop-icon">🚆</div>
           <div class="stop-body">
-            <div class="stop-title">Tren Mainz → Heidelberg</div>
-            <div class="stop-note">~50 min, sin reserva necesaria. Salir temprano para aprovechar el día. Regional con espacio de sobra para el grupo.</div>
+            <div class="stop-title">Tren Mainz → Heidelberg · con escala en Mannheim</div>
+            <div class="stop-note">Sale Mainz 9:13 · Escala 20 min en Mannheim · Llega Heidelberg 10:38 · Tren regional (cubierto por Deutschland Ticket)<br>🎫 <strong>Deutschland Ticket — €63/persona:</strong> Cubre todo el transporte público en Alemania (trenes regionales, metro, bus) durante el mes. Conviene vs pagar trenes por separado: Heidelberg ida/vuelta + Frankfurt + Rüdesheim. Comprar en <a href="https://www.bahn.de/angebot/regio/deutschland-ticket" target="_blank">bahn.de ↗</a> o en la app DB Navigator.</div>
           </div>
           <div class="stop-actions">
             <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
@@ -1186,7 +1198,7 @@
           </div>
         </div>
         <div class="stop stop-type-landmark">
-          <div class="stop-time">10:00</div>
+          <div class="stop-time">10:45</div>
           <div class="stop-icon">🏰</div>
           <div class="stop-body">
             <div class="stop-title">Castillo de Heidelberg</div>
@@ -1587,7 +1599,7 @@
     <div class="checklist" id="checklist-reservas">
       <div class="check-item" id="ci-1"><input type="checkbox" id="r1" onchange="updateProgress()"><label for="r1">🎟️ Anne Frank House — <a href="https://annefrank.org" target="_blank">annefrank.org</a> · <strong>⚠️ Martes 18 mar — urgente</strong></label></div>
       <div class="check-item" id="ci-2"><input type="checkbox" id="r2" onchange="updateProgress()"><label for="r2">🌷 Keukenhof Tulipanes — <a href="https://keukenhof.nl" target="_blank">keukenhof.nl</a> · 8 boletos</label></div>
-      <div class="check-item" id="ci-3"><input type="checkbox" id="r3" onchange="updateProgress()"><label for="r3">🎨 Rijksmuseum — <a href="https://rijksmuseum.nl" target="_blank">rijksmuseum.nl</a> · 8 boletos individuales</label></div>
+      <div class="check-item" id="ci-3"><input type="checkbox" id="r3" onchange="updateProgress()"><label for="r3">🏙️ A'DAM Tower Mirador — <a href="https://adamtower.nl" target="_blank">adamtower.nl</a> · 8 boletos</label></div>
       <div class="check-item" id="ci-4"><input type="checkbox" id="r4" onchange="updateProgress()"><label for="r4">🌻 Van Gogh Museum — <a href="https://vangoghmuseum.nl" target="_blank">vangoghmuseum.nl</a> · 8 boletos</label></div>
       <div class="check-item" id="ci-5"><input type="checkbox" id="r5" onchange="updateProgress()"><label for="r5">🏰 Castillo de Heidelberg — <a href="https://schloss-heidelberg.de" target="_blank">schloss-heidelberg.de</a></label></div>
       <div class="check-item" id="ci-6"><input type="checkbox" id="r6" onchange="updateProgress()"><label for="r6">⛵ Amsterdam Boat Trips (tour privado 8 pax) — <a href="https://amsterdamboattrips.com" target="_blank">amsterdamboattrips.com</a></label></div>
