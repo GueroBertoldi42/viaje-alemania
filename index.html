@@ -750,6 +750,7 @@
   .wx-min { color:var(--light-ink); }
   .wx-rain { color:#3a7bd5; margin-left:4px; }
   .wx-hist { color:var(--light-ink); font-size:10px; margin-left:3px; opacity:0.7; }
+  .wx-sun { font-size:11px; color:var(--light-ink); opacity:0.8; }
 </style>
 </head>
 <body>
@@ -931,7 +932,7 @@
           <div class="stop-icon">🌷</div>
           <div class="stop-body">
             <div class="stop-title">Keukenhof — Campos de Tulipanes 🌷</div>
-            <div class="stop-note">⏰ <strong>8:00</strong> Shuttle bus desde A'DAM Tower (ferry gratuito desde Amsterdam Central → 2 min caminando). ⏰ <strong>8:45–11:15</strong> Keukenhof (~2.5 hrs). ⏰ <strong>~11:30</strong> Bus de regreso a Ámsterdam.<br>⚠️ <strong>⏳ Por comprar</strong>: Combi-ticket shuttle + entrada · <a href="https://amsterdam-explorer.com/keukenhof-from-amsterdam/" target="_blank">Reservar aquí ↗</a> · ~€35–52.50 adultos · Andrés gratis (menor 4 años) · Asientos garantizados para 8.</div>
+            <div class="stop-note">🚇 <strong>Desde el Novotel:</strong> Metro 52 → Amsterdam Centraal (~10 min) + ferry gratuito F3 "Buiksloterweg" desde Central (~5 min) + 2 min caminando a <strong>This is Holland, Overhoeksplein 51</strong> (junto a A'DAM Tower). Salir del hotel a las <strong>7:30</strong> para llegar cómodos a las 8:00.<br>⏰ <strong>8:00</strong> Shuttle desde This is Holland → Keukenhof (~45 min). ⏰ <strong>8:45–13:00</strong> Keukenhof. ⏰ Regreso flexible — buses cada 30 min, último a las 18:30.<br>⚠️ <strong>⏳ Por comprar</strong>: Combi-ticket shuttle + entrada · <a href="https://www.getyourguide.com/amsterdam-l36/amsterdam-keukenhof-entry-shuttlebus-with-flexible-return-t85542/" target="_blank">GetYourGuide ↗</a> o <a href="https://amsterdam-explorer.com/keukenhof-transfer-bus/" target="_blank">amsterdam-explorer.com ↗</a> · €38.50 adultos · €17.50 niños (4–17) · Andrés gratis · Asientos garantizados.</div>
           </div>
           <div class="stop-actions">
             <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
@@ -2006,12 +2007,15 @@
     '52.09,5.12': {'05-08':[17,10,45,'⛅'],'05-09':[17,10,45,'⛅'],'05-10':[17,10,45,'⛅']}
   };
 
-  function renderBar(el, max, min, rain, icon, isHist) {
+  function renderBar(el, max, min, rain, icon, isHist, sunrise, sunset) {
     const rainTxt = rain >= 10 ? `<span class="wx-rain">${rain}% 💧</span>` : '';
-    const histTxt = isHist ? `<span class="wx-hist">* promedio histórico</span>` : '';
+    const histTxt = isHist ? `<span class="wx-hist">* prom. histórico</span>` : '';
+    const sunTxt = (sunrise && sunset)
+      ? `<span class="wx-sun">🌅 ${sunrise} · 🌇 ${sunset}</span>`
+      : '';
     const bar = document.createElement('div');
     bar.className = 'weather-bar';
-    bar.innerHTML = `${icon} <strong>${max}°</strong>/<span class="wx-min">${min}°</span> ${rainTxt}${histTxt}`;
+    bar.innerHTML = `${icon} <strong>${max}°</strong>/<span class="wx-min">${min}°</span> ${rainTxt}${histTxt}${sunTxt ? '<br>' + sunTxt : ''}`;
     el.insertAdjacentElement('afterend', bar);
   }
 
@@ -2041,26 +2045,31 @@
       histEls.forEach(el => {
         const mmdd = el.dataset.date.slice(5);
         const h = (HIST[key] || {})[mmdd];
-        if (h) renderBar(el, h[0], h[1], h[2], h[3], true);
+        // Avg sunrise/sunset for Apr-May in NL/DE
+        const month = parseInt(el.dataset.date.slice(5,7));
+        const avgSun = month === 4 ? ['06:45','20:45'] : ['05:55','21:20'];
+        if (h) renderBar(el, h[0], h[1], h[2], h[3], true, avgSun[0], avgSun[1]);
       });
 
       // Fetch real forecast if any days are in range
       if (forecastEls.length > 0) {
         try {
           const dates = forecastEls.map(e => e.dataset.date).sort();
-          const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weather_code&timezone=Europe/Amsterdam&start_date=${dates[0]}&end_date=${dates[dates.length-1]}`;
+          const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weather_code,sunrise,sunset&timezone=Europe/Amsterdam&start_date=${dates[0]}&end_date=${dates[dates.length-1]}`;
           const res = await fetch(url);
           const data = await res.json();
           if (!data.daily) throw new Error('no daily');
           forecastEls.forEach(el => {
             const idx = data.daily.time.indexOf(el.dataset.date);
             if (idx === -1) return;
+            const sr = data.daily.sunrise?.[idx]?.slice(11,16) || '';
+            const ss = data.daily.sunset?.[idx]?.slice(11,16) || '';
             renderBar(el,
               Math.round(data.daily.temperature_2m_max[idx]),
               Math.round(data.daily.temperature_2m_min[idx]),
               data.daily.precipitation_probability_max[idx],
               WMO_ICON[data.daily.weather_code[idx]] || '🌡️',
-              false
+              false, sr, ss
             );
           });
         } catch(e) {
@@ -2068,7 +2077,9 @@
           forecastEls.forEach(el => {
             const mmdd = el.dataset.date.slice(5);
             const h = (HIST[key] || {})[mmdd];
-            if (h) renderBar(el, h[0], h[1], h[2], h[3], true);
+            const month = parseInt(el.dataset.date.slice(5,7));
+            const avgSun = month === 4 ? ['06:45','20:45'] : ['05:55','21:20'];
+            if (h) renderBar(el, h[0], h[1], h[2], h[3], true, avgSun[0], avgSun[1]);
           });
         }
       }
