@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -12,6 +13,7 @@
 <meta name="apple-mobile-web-app-title" content="Viaje 🇩🇪">
 
 <!-- Open Graph / WhatsApp preview -->
+
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://guerobertoldi42.github.io/viaje-alemania/">
 <meta property="og:title" content="✈️🇩🇪 Viaje a Alemania 2026">
@@ -33,729 +35,730 @@
     --light-ink: #4A4A6A;
   }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+- { margin: 0; padding: 0; box-sizing: border-box; }
 
-  body {
-    background: var(--cream);
-    color: var(--ink);
-    font-family: 'DM Sans', sans-serif;
-    min-height: 100vh;
-  }
+body {
+background: var(–cream);
+color: var(–ink);
+font-family: ‘DM Sans’, sans-serif;
+min-height: 100vh;
+}
 
-  /* HEADER */
-  header {
-    background: var(--ink);
-    color: var(--cream);
-    padding: 48px 40px 36px;
-    position: relative;
-    overflow: hidden;
-  }
-  header::before {
-    content: '';
-    position: absolute;
-    top: -60px; right: -60px;
-    width: 280px; height: 280px;
-    border-radius: 50%;
-    border: 2px solid rgba(212,168,83,0.2);
-  }
-  header::after {
-    content: '';
-    position: absolute;
-    bottom: -40px; left: 30%;
-    width: 160px; height: 160px;
-    border-radius: 50%;
-    border: 1px solid rgba(196,98,45,0.15);
-  }
-  .header-label {
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 10px;
-    font-weight: 500;
-  }
-  header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2rem, 5vw, 3.2rem);
-    line-height: 1.15;
-    margin-bottom: 10px;
-  }
-  header h1 em {
-    font-style: italic;
-    color: var(--gold);
-  }
-  .header-meta {
-    font-size: 13px;
-    color: rgba(245,240,232,0.55);
-    letter-spacing: 0.5px;
-    margin-top: 16px;
-    display: flex;
-    gap: 24px;
-    flex-wrap: wrap;
-  }
-  .header-meta span { display: flex; align-items: center; gap: 6px; }
+/* HEADER */
+header {
+background: var(–ink);
+color: var(–cream);
+padding: 48px 40px 36px;
+position: relative;
+overflow: hidden;
+}
+header::before {
+content: ‘’;
+position: absolute;
+top: -60px; right: -60px;
+width: 280px; height: 280px;
+border-radius: 50%;
+border: 2px solid rgba(212,168,83,0.2);
+}
+header::after {
+content: ‘’;
+position: absolute;
+bottom: -40px; left: 30%;
+width: 160px; height: 160px;
+border-radius: 50%;
+border: 1px solid rgba(196,98,45,0.15);
+}
+.header-label {
+font-size: 11px;
+letter-spacing: 3px;
+text-transform: uppercase;
+color: var(–gold);
+margin-bottom: 10px;
+font-weight: 500;
+}
+header h1 {
+font-family: ‘Playfair Display’, serif;
+font-size: clamp(2rem, 5vw, 3.2rem);
+line-height: 1.15;
+margin-bottom: 10px;
+}
+header h1 em {
+font-style: italic;
+color: var(–gold);
+}
+.header-meta {
+font-size: 13px;
+color: rgba(245,240,232,0.55);
+letter-spacing: 0.5px;
+margin-top: 16px;
+display: flex;
+gap: 24px;
+flex-wrap: wrap;
+}
+.header-meta span { display: flex; align-items: center; gap: 6px; }
 
-  /* TABS */
-  .tabs-bar {
-    background: var(--ink);
-    padding: 0 40px;
-    display: flex;
-    gap: 0;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    overflow-x: auto;
-  }
-  .tab-btn {
-    background: none;
-    border: none;
-    color: rgba(245,240,232,0.45);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    padding: 14px 20px;
-    cursor: pointer;
-    border-bottom: 2px solid transparent;
-    white-space: nowrap;
-    transition: all 0.2s;
-  }
-  .tab-btn:hover { color: rgba(245,240,232,0.75); }
-  .tab-btn.active {
-    color: var(--gold);
-    border-bottom-color: var(--gold);
-  }
+/* TABS */
+.tabs-bar {
+background: var(–ink);
+padding: 0 40px;
+display: flex;
+gap: 0;
+border-top: 1px solid rgba(255,255,255,0.08);
+overflow-x: auto;
+}
+.tab-btn {
+background: none;
+border: none;
+color: rgba(245,240,232,0.45);
+font-family: ‘DM Sans’, sans-serif;
+font-size: 12px;
+font-weight: 500;
+letter-spacing: 1px;
+text-transform: uppercase;
+padding: 14px 20px;
+cursor: pointer;
+border-bottom: 2px solid transparent;
+white-space: nowrap;
+transition: all 0.2s;
+}
+.tab-btn:hover { color: rgba(245,240,232,0.75); }
+.tab-btn.active {
+color: var(–gold);
+border-bottom-color: var(–gold);
+}
 
-  /* MAIN */
-  main { padding: 40px; max-width: 1000px; margin: 0 auto; }
+/* MAIN */
+main { padding: 40px; max-width: 1000px; margin: 0 auto; }
 
-  /* SECTION */
-  .section { display: none; }
-  .section.active { display: block; }
+/* SECTION */
+.section { display: none; }
+.section.active { display: block; }
 
-  /* CITY BLOCK */
-  .city-block { margin-bottom: 48px; }
-  .city-header {
-    display: flex;
-    align-items: baseline;
-    gap: 16px;
-    margin-bottom: 24px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid rgba(26,26,46,0.12);
-  }
-  .city-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.7rem;
-    color: var(--ink);
-  }
-  .city-dates {
-    font-size: 12px;
-    color: var(--rust);
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-  .city-flag { font-size: 1.2rem; }
+/* CITY BLOCK */
+.city-block { margin-bottom: 48px; }
+.city-header {
+display: flex;
+align-items: baseline;
+gap: 16px;
+margin-bottom: 24px;
+padding-bottom: 12px;
+border-bottom: 1px solid rgba(26,26,46,0.12);
+}
+.city-name {
+font-family: ‘Playfair Display’, serif;
+font-size: 1.7rem;
+color: var(–ink);
+}
+.city-dates {
+font-size: 12px;
+color: var(–rust);
+font-weight: 500;
+letter-spacing: 1px;
+text-transform: uppercase;
+}
+.city-flag { font-size: 1.2rem; }
 
-  /* DAY */
-  .day-block { margin-bottom: 28px; }
-  .day-label {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--light-ink);
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .day-label::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: rgba(26,26,46,0.1);
-  }
+/* DAY */
+.day-block { margin-bottom: 28px; }
+.day-label {
+font-size: 11px;
+font-weight: 500;
+letter-spacing: 2px;
+text-transform: uppercase;
+color: var(–light-ink);
+margin-bottom: 12px;
+display: flex;
+align-items: center;
+gap: 8px;
+}
+.day-label::after {
+content: ‘’;
+flex: 1;
+height: 1px;
+background: rgba(26,26,46,0.1);
+}
 
-  /* STOP CARD */
-  .stops { display: flex; flex-direction: column; gap: 10px; }
-  .stop {
-    background: white;
-    border-radius: 12px;
-    padding: 16px 20px;
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    border-left: 3px solid transparent;
-    transition: all 0.2s;
-    position: relative;
-  }
-  .stop:hover { box-shadow: 0 4px 20px rgba(26,26,46,0.08); }
-  .stop.done { opacity: 0.5; }
-  .stop.done .stop-title { text-decoration: line-through; }
-  .stop-type-museum { border-left-color: var(--sage); }
-  .stop-type-food { border-left-color: var(--rust); }
-  .stop-type-nature { border-left-color: #7DB87D; }
-  .stop-type-landmark { border-left-color: var(--gold); }
-  .stop-type-transport { border-left-color: var(--light-ink); }
-  .stop-type-walk { border-left-color: #9BB5C5; }
+/* STOP CARD */
+.stops { display: flex; flex-direction: column; gap: 10px; }
+.stop {
+background: white;
+border-radius: 12px;
+padding: 16px 20px;
+display: flex;
+align-items: flex-start;
+gap: 16px;
+border-left: 3px solid transparent;
+transition: all 0.2s;
+position: relative;
+}
+.stop:hover { box-shadow: 0 4px 20px rgba(26,26,46,0.08); }
+.stop.done { opacity: 0.5; }
+.stop.done .stop-title { text-decoration: line-through; }
+.stop-type-museum { border-left-color: var(–sage); }
+.stop-type-food { border-left-color: var(–rust); }
+.stop-type-nature { border-left-color: #7DB87D; }
+.stop-type-landmark { border-left-color: var(–gold); }
+.stop-type-transport { border-left-color: var(–light-ink); }
+.stop-type-walk { border-left-color: #9BB5C5; }
 
-  .stop-time {
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--light-ink);
-    min-width: 44px;
-    padding-top: 2px;
-    letter-spacing: 0.5px;
-  }
-  .stop-icon { font-size: 1.3rem; min-width: 28px; text-align: center; padding-top: 1px; }
-  .stop-body { flex: 1; }
-  .stop-title {
-    font-weight: 500;
-    font-size: 15px;
-    color: var(--ink);
-    margin-bottom: 3px;
-  }
-  .stop-note {
-    font-size: 13px;
-    color: var(--light-ink);
-    line-height: 1.5;
-  }
-  .stop-note a { color: var(--rust); text-decoration: none; }
-  .stop-note a:hover { text-decoration: underline; }
+.stop-time {
+font-size: 11px;
+font-weight: 600;
+color: var(–light-ink);
+min-width: 44px;
+padding-top: 2px;
+letter-spacing: 0.5px;
+}
+.stop-icon { font-size: 1.3rem; min-width: 28px; text-align: center; padding-top: 1px; }
+.stop-body { flex: 1; }
+.stop-title {
+font-weight: 500;
+font-size: 15px;
+color: var(–ink);
+margin-bottom: 3px;
+}
+.stop-note {
+font-size: 13px;
+color: var(–light-ink);
+line-height: 1.5;
+}
+.stop-note a { color: var(–rust); text-decoration: none; }
+.stop-note a:hover { text-decoration: underline; }
 
-  .stop-actions { display: flex; gap: 8px; align-items: center; }
-  .btn-done {
-    background: none;
-    border: 1.5px solid rgba(26,26,46,0.15);
-    border-radius: 6px;
-    width: 28px; height: 28px;
-    cursor: pointer;
-    font-size: 13px;
-    display: flex; align-items: center; justify-content: center;
-    transition: all 0.2s;
-    color: var(--light-ink);
-  }
-  .btn-done:hover { border-color: var(--sage); color: var(--sage); }
-  .stop.done .btn-done { background: var(--sage); border-color: var(--sage); color: white; }
+.stop-actions { display: flex; gap: 8px; align-items: center; }
+.btn-done {
+background: none;
+border: 1.5px solid rgba(26,26,46,0.15);
+border-radius: 6px;
+width: 28px; height: 28px;
+cursor: pointer;
+font-size: 13px;
+display: flex; align-items: center; justify-content: center;
+transition: all 0.2s;
+color: var(–light-ink);
+}
+.btn-done:hover { border-color: var(–sage); color: var(–sage); }
+.stop.done .btn-done { background: var(–sage); border-color: var(–sage); color: white; }
 
-  .btn-edit {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 13px;
-    color: rgba(26,26,46,0.3);
-    padding: 4px;
-    border-radius: 4px;
-    transition: color 0.2s;
-  }
-  .btn-edit:hover { color: var(--rust); }
+.btn-edit {
+background: none;
+border: none;
+cursor: pointer;
+font-size: 13px;
+color: rgba(26,26,46,0.3);
+padding: 4px;
+border-radius: 4px;
+transition: color 0.2s;
+}
+.btn-edit:hover { color: var(–rust); }
 
-  /* ALERT */
-  .alert {
-    background: #FFF8ED;
-    border: 1px solid var(--gold);
-    border-radius: 10px;
-    padding: 14px 18px;
-    font-size: 13px;
-    color: #7A5A1A;
-    margin-bottom: 20px;
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
-    line-height: 1.5;
-  }
-  .alert-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+/* ALERT */
+.alert {
+background: #FFF8ED;
+border: 1px solid var(–gold);
+border-radius: 10px;
+padding: 14px 18px;
+font-size: 13px;
+color: #7A5A1A;
+margin-bottom: 20px;
+display: flex;
+gap: 10px;
+align-items: flex-start;
+line-height: 1.5;
+}
+.alert-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
 
-  /* RESUMEN */
-  .summary-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 16px;
-    margin-bottom: 32px;
-  }
-  .summary-card {
-    background: white;
-    border-radius: 14px;
-    padding: 20px;
-    border-top: 3px solid var(--gold);
-  }
-  .summary-card h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.1rem;
-    margin-bottom: 6px;
-    color: var(--ink);
-  }
-  .summary-card p { font-size: 13px; color: var(--light-ink); line-height: 1.5; }
+/* RESUMEN */
+.summary-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+gap: 16px;
+margin-bottom: 32px;
+}
+.summary-card {
+background: white;
+border-radius: 14px;
+padding: 20px;
+border-top: 3px solid var(–gold);
+}
+.summary-card h3 {
+font-family: ‘Playfair Display’, serif;
+font-size: 1.1rem;
+margin-bottom: 6px;
+color: var(–ink);
+}
+.summary-card p { font-size: 13px; color: var(–light-ink); line-height: 1.5; }
 
-  /* NOTES SECTION */
-  .notes-area {
-    background: white;
-    border-radius: 14px;
-    padding: 24px;
-    margin-top: 16px;
-  }
-  .notes-area h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.1rem;
-    margin-bottom: 12px;
-    color: var(--ink);
-  }
-  .notes-area textarea {
-    width: 100%;
-    min-height: 120px;
-    border: 1.5px solid rgba(26,26,46,0.12);
-    border-radius: 8px;
-    padding: 12px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    color: var(--ink);
-    resize: vertical;
-    transition: border-color 0.2s;
-    background: var(--cream);
-  }
-  .notes-area textarea:focus { outline: none; border-color: var(--gold); }
-  .save-note-btn {
-    margin-top: 10px;
-    background: var(--ink);
-    color: var(--cream);
-    border: none;
-    border-radius: 8px;
-    padding: 8px 20px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-  .save-note-btn:hover { background: var(--rust); }
-  .note-saved { font-size: 12px; color: var(--sage); margin-left: 10px; display: none; }
+/* NOTES SECTION */
+.notes-area {
+background: white;
+border-radius: 14px;
+padding: 24px;
+margin-top: 16px;
+}
+.notes-area h3 {
+font-family: ‘Playfair Display’, serif;
+font-size: 1.1rem;
+margin-bottom: 12px;
+color: var(–ink);
+}
+.notes-area textarea {
+width: 100%;
+min-height: 120px;
+border: 1.5px solid rgba(26,26,46,0.12);
+border-radius: 8px;
+padding: 12px;
+font-family: ‘DM Sans’, sans-serif;
+font-size: 14px;
+color: var(–ink);
+resize: vertical;
+transition: border-color 0.2s;
+background: var(–cream);
+}
+.notes-area textarea:focus { outline: none; border-color: var(–gold); }
+.save-note-btn {
+margin-top: 10px;
+background: var(–ink);
+color: var(–cream);
+border: none;
+border-radius: 8px;
+padding: 8px 20px;
+font-family: ‘DM Sans’, sans-serif;
+font-size: 13px;
+cursor: pointer;
+transition: background 0.2s;
+}
+.save-note-btn:hover { background: var(–rust); }
+.note-saved { font-size: 12px; color: var(–sage); margin-left: 10px; display: none; }
 
-  /* CHECKLIST */
-  .checklist { margin-top: 8px; }
-  .check-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 8px 0;
-    border-bottom: 1px solid rgba(26,26,46,0.06);
-    font-size: 14px;
-    cursor: pointer;
-  }
-  .check-item:last-child { border-bottom: none; }
-  .check-item input[type=checkbox] { width: 16px; height: 16px; cursor: pointer; accent-color: var(--rust); }
-  .check-item label { cursor: pointer; flex: 1; }
-  .check-item.checked label { text-decoration: line-through; color: var(--light-ink); }
+/* CHECKLIST */
+.checklist { margin-top: 8px; }
+.check-item {
+display: flex;
+align-items: center;
+gap: 10px;
+padding: 8px 0;
+border-bottom: 1px solid rgba(26,26,46,0.06);
+font-size: 14px;
+cursor: pointer;
+}
+.check-item:last-child { border-bottom: none; }
+.check-item input[type=checkbox] { width: 16px; height: 16px; cursor: pointer; accent-color: var(–rust); }
+.check-item label { cursor: pointer; flex: 1; }
+.check-item.checked label { text-decoration: line-through; color: var(–light-ink); }
 
-  /* PROGRESS BAR */
-  .progress-wrap { margin-bottom: 32px; }
-  .progress-label { font-size: 12px; color: var(--light-ink); margin-bottom: 6px; display: flex; justify-content: space-between; }
-  .progress-bar { height: 6px; background: rgba(26,26,46,0.1); border-radius: 99px; overflow: hidden; }
-  .progress-fill { height: 100%; background: linear-gradient(90deg, var(--sage), var(--gold)); border-radius: 99px; transition: width 0.4s ease; }
+/* PROGRESS BAR */
+.progress-wrap { margin-bottom: 32px; }
+.progress-label { font-size: 12px; color: var(–light-ink); margin-bottom: 6px; display: flex; justify-content: space-between; }
+.progress-bar { height: 6px; background: rgba(26,26,46,0.1); border-radius: 99px; overflow: hidden; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, var(–sage), var(–gold)); border-radius: 99px; transition: width 0.4s ease; }
 
-  /* EDIT MODAL */
-  .modal-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(26,26,46,0.5);
-    z-index: 100;
-    align-items: center;
-    justify-content: center;
-  }
-  .modal-overlay.open { display: flex; }
-  .modal {
-    background: var(--cream);
-    border-radius: 16px;
-    padding: 32px;
-    max-width: 480px;
-    width: 90%;
-    position: relative;
-  }
-  .modal h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-  }
-  .modal label { font-size: 12px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; color: var(--light-ink); display: block; margin-bottom: 6px; margin-top: 14px; }
-  .modal input, .modal textarea, .modal select {
-    width: 100%;
-    padding: 10px 12px;
-    border: 1.5px solid rgba(26,26,46,0.15);
-    border-radius: 8px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    background: white;
-    color: var(--ink);
-  }
-  .modal input:focus, .modal textarea:focus { outline: none; border-color: var(--gold); }
-  .modal-actions { display: flex; gap: 10px; margin-top: 20px; justify-content: flex-end; }
-  .btn-save { background: var(--ink); color: var(--cream); border: none; border-radius: 8px; padding: 10px 24px; cursor: pointer; font-family: 'DM Sans', sans-serif; font-size: 14px; transition: background 0.2s; }
-  .btn-save:hover { background: var(--rust); }
-  .btn-cancel { background: none; border: 1.5px solid rgba(26,26,46,0.2); border-radius: 8px; padding: 10px 20px; cursor: pointer; font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--light-ink); }
-  .btn-close-modal { position: absolute; top: 16px; right: 16px; background: none; border: none; font-size: 18px; cursor: pointer; color: var(--light-ink); }
+/* EDIT MODAL */
+.modal-overlay {
+display: none;
+position: fixed;
+inset: 0;
+background: rgba(26,26,46,0.5);
+z-index: 100;
+align-items: center;
+justify-content: center;
+}
+.modal-overlay.open { display: flex; }
+.modal {
+background: var(–cream);
+border-radius: 16px;
+padding: 32px;
+max-width: 480px;
+width: 90%;
+position: relative;
+}
+.modal h3 {
+font-family: ‘Playfair Display’, serif;
+font-size: 1.3rem;
+margin-bottom: 20px;
+}
+.modal label { font-size: 12px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; color: var(–light-ink); display: block; margin-bottom: 6px; margin-top: 14px; }
+.modal input, .modal textarea, .modal select {
+width: 100%;
+padding: 10px 12px;
+border: 1.5px solid rgba(26,26,46,0.15);
+border-radius: 8px;
+font-family: ‘DM Sans’, sans-serif;
+font-size: 14px;
+background: white;
+color: var(–ink);
+}
+.modal input:focus, .modal textarea:focus { outline: none; border-color: var(–gold); }
+.modal-actions { display: flex; gap: 10px; margin-top: 20px; justify-content: flex-end; }
+.btn-save { background: var(–ink); color: var(–cream); border: none; border-radius: 8px; padding: 10px 24px; cursor: pointer; font-family: ‘DM Sans’, sans-serif; font-size: 14px; transition: background 0.2s; }
+.btn-save:hover { background: var(–rust); }
+.btn-cancel { background: none; border: 1.5px solid rgba(26,26,46,0.2); border-radius: 8px; padding: 10px 20px; cursor: pointer; font-family: ‘DM Sans’, sans-serif; font-size: 14px; color: var(–light-ink); }
+.btn-close-modal { position: absolute; top: 16px; right: 16px; background: none; border: none; font-size: 18px; cursor: pointer; color: var(–light-ink); }
 
-  /* POR CONFIRMAR SECTION */
-  .confirm-block {
-    background: white;
-    border-radius: 16px;
-    padding: 24px;
-    margin-bottom: 24px;
-  }
-  .confirm-block-header {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    margin-bottom: 20px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid rgba(26,26,46,0.08);
-  }
-  .confirm-block-icon { font-size: 1.8rem; flex-shrink: 0; }
-  .confirm-block-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
-    color: var(--ink);
-    margin-bottom: 3px;
-  }
-  .confirm-block-sub { font-size: 12px; color: var(--light-ink); }
+/* POR CONFIRMAR SECTION */
+.confirm-block {
+background: white;
+border-radius: 16px;
+padding: 24px;
+margin-bottom: 24px;
+}
+.confirm-block-header {
+display: flex;
+align-items: flex-start;
+gap: 14px;
+margin-bottom: 20px;
+padding-bottom: 16px;
+border-bottom: 1px solid rgba(26,26,46,0.08);
+}
+.confirm-block-icon { font-size: 1.8rem; flex-shrink: 0; }
+.confirm-block-title {
+font-family: ‘Playfair Display’, serif;
+font-size: 1.2rem;
+color: var(–ink);
+margin-bottom: 3px;
+}
+.confirm-block-sub { font-size: 12px; color: var(–light-ink); }
 
-  /* MUSIC TABLE */
-  .music-table { display: flex; flex-direction: column; gap: 2px; border-radius: 10px; overflow: hidden; margin-bottom: 20px; }
-  .music-row {
-    display: grid;
-    grid-template-columns: 2.5fr 1.2fr 1fr 0.8fr 1.5fr 0.6fr;
-    gap: 10px;
-    padding: 14px 16px;
-    align-items: start;
-    font-size: 13px;
-  }
-  .music-header {
-    background: var(--ink);
-    color: var(--cream);
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    border-radius: 8px 8px 0 0;
-    align-items: center;
-  }
-  .music-row:not(.music-header) { background: var(--cream); border-bottom: 1px solid rgba(26,26,46,0.06); }
-  .music-row:not(.music-header):hover { background: #F0F4F8; }
-  .music-row.selected-music { background: #F0F7F1 !important; border-left: 3px solid var(--sage); }
-  .mopt-name { font-weight: 600; color: var(--ink); margin-bottom: 5px; font-size: 14px; }
-  .mopt-desc { font-size: 12px; color: var(--light-ink); line-height: 1.5; }
-  .type-badge {
-    display: inline-block;
-    padding: 3px 8px;
-    border-radius: 99px;
-    font-size: 11px;
-    font-weight: 600;
-  }
-  .type-opera { background: #F5E6F0; color: #8B2F6E; }
-  .type-symphony { background: #E6EEF5; color: #1F4E79; }
-  .type-student { background: #EBF5EB; color: #2D6A2D; }
-  .link-btn {
-    display: inline-block;
-    background: var(--ink);
-    color: var(--cream);
-    padding: 5px 10px;
-    border-radius: 6px;
-    font-size: 11px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background 0.2s;
-  }
-  .link-btn:hover { background: var(--rust); }
-  .music-select-btn {
-    background: none;
-    border: 1.5px solid var(--ink);
-    border-radius: 8px;
-    padding: 6px 10px;
-    font-size: 12px;
-    font-family: 'DM Sans', sans-serif;
-    cursor: pointer;
-    color: var(--ink);
-    transition: all 0.2s;
-    white-space: nowrap;
-  }
-  .music-select-btn:hover { background: var(--sage); border-color: var(--sage); color: white; }
-  .selected-music .music-select-btn { background: var(--sage); border-color: var(--sage); color: white; }
-  .music-decision-result {
-    padding: 12px 16px;
-    background: #F0F7F1;
-    border-radius: 10px;
-    font-size: 14px;
-    color: var(--sage);
-    font-weight: 500;
-    margin-top: 8px;
-  }
+/* MUSIC TABLE */
+.music-table { display: flex; flex-direction: column; gap: 2px; border-radius: 10px; overflow: hidden; margin-bottom: 20px; }
+.music-row {
+display: grid;
+grid-template-columns: 2.5fr 1.2fr 1fr 0.8fr 1.5fr 0.6fr;
+gap: 10px;
+padding: 14px 16px;
+align-items: start;
+font-size: 13px;
+}
+.music-header {
+background: var(–ink);
+color: var(–cream);
+font-size: 11px;
+font-weight: 600;
+letter-spacing: 1px;
+text-transform: uppercase;
+border-radius: 8px 8px 0 0;
+align-items: center;
+}
+.music-row:not(.music-header) { background: var(–cream); border-bottom: 1px solid rgba(26,26,46,0.06); }
+.music-row:not(.music-header):hover { background: #F0F4F8; }
+.music-row.selected-music { background: #F0F7F1 !important; border-left: 3px solid var(–sage); }
+.mopt-name { font-weight: 600; color: var(–ink); margin-bottom: 5px; font-size: 14px; }
+.mopt-desc { font-size: 12px; color: var(–light-ink); line-height: 1.5; }
+.type-badge {
+display: inline-block;
+padding: 3px 8px;
+border-radius: 99px;
+font-size: 11px;
+font-weight: 600;
+}
+.type-opera { background: #F5E6F0; color: #8B2F6E; }
+.type-symphony { background: #E6EEF5; color: #1F4E79; }
+.type-student { background: #EBF5EB; color: #2D6A2D; }
+.link-btn {
+display: inline-block;
+background: var(–ink);
+color: var(–cream);
+padding: 5px 10px;
+border-radius: 6px;
+font-size: 11px;
+text-decoration: none;
+font-weight: 500;
+transition: background 0.2s;
+}
+.link-btn:hover { background: var(–rust); }
+.music-select-btn {
+background: none;
+border: 1.5px solid var(–ink);
+border-radius: 8px;
+padding: 6px 10px;
+font-size: 12px;
+font-family: ‘DM Sans’, sans-serif;
+cursor: pointer;
+color: var(–ink);
+transition: all 0.2s;
+white-space: nowrap;
+}
+.music-select-btn:hover { background: var(–sage); border-color: var(–sage); color: white; }
+.selected-music .music-select-btn { background: var(–sage); border-color: var(–sage); color: white; }
+.music-decision-result {
+padding: 12px 16px;
+background: #F0F7F1;
+border-radius: 10px;
+font-size: 14px;
+color: var(–sage);
+font-weight: 500;
+margin-top: 8px;
+}
 
-  /* PROS GRID */
-  .pros-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
-    margin-top: 16px;
-  }
-  .pros-card {
-    background: var(--cream);
-    border-radius: 10px;
-    padding: 14px;
-  }
-  .pros-title {
-    font-weight: 600;
-    font-size: 13px;
-    color: var(--ink);
-    margin-bottom: 10px;
-  }
-  .pros-card ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-  .pros-card li { font-size: 12px; color: var(--light-ink); line-height: 1.4; }
+/* PROS GRID */
+.pros-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 14px;
+margin-top: 16px;
+}
+.pros-card {
+background: var(–cream);
+border-radius: 10px;
+padding: 14px;
+}
+.pros-title {
+font-weight: 600;
+font-size: 13px;
+color: var(–ink);
+margin-bottom: 10px;
+}
+.pros-card ul {
+list-style: none;
+display: flex;
+flex-direction: column;
+gap: 5px;
+}
+.pros-card li { font-size: 12px; color: var(–light-ink); line-height: 1.4; }
 
-  /* CONFIRM DETAILS */
-  .confirm-details { display: flex; flex-direction: column; gap: 10px; }
-  .confirm-detail-row {
-    display: flex;
-    gap: 12px;
-    font-size: 13px;
-    padding: 10px 14px;
-    background: var(--cream);
-    border-radius: 8px;
-    align-items: flex-start;
-  }
-  .cd-label {
-    font-weight: 600;
-    color: var(--rust);
-    font-size: 12px;
-    min-width: 80px;
-    padding-top: 1px;
-    flex-shrink: 0;
-  }
+/* CONFIRM DETAILS */
+.confirm-details { display: flex; flex-direction: column; gap: 10px; }
+.confirm-detail-row {
+display: flex;
+gap: 12px;
+font-size: 13px;
+padding: 10px 14px;
+background: var(–cream);
+border-radius: 8px;
+align-items: flex-start;
+}
+.cd-label {
+font-weight: 600;
+color: var(–rust);
+font-size: 12px;
+min-width: 80px;
+padding-top: 1px;
+flex-shrink: 0;
+}
 
-  @media (max-width: 700px) {
-    .music-row { grid-template-columns: 1fr; }
-    .music-header { display: none; }
-    .pros-grid { grid-template-columns: 1fr; }
-  }
+@media (max-width: 700px) {
+.music-row { grid-template-columns: 1fr; }
+.music-header { display: none; }
+.pros-grid { grid-template-columns: 1fr; }
+}
 
-  /* TRAIN TABLE */
-  .train-table { display: flex; flex-direction: column; gap: 2px; margin-top: 8px; border-radius: 10px; overflow: hidden; }
-  .train-row {
-    display: grid;
-    grid-template-columns: 2fr 1fr 2fr 1fr;
-    gap: 8px;
-    padding: 10px 14px;
-    font-size: 13px;
-    align-items: center;
-  }
-  .train-header {
-    background: var(--ink);
-    color: var(--cream);
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    border-radius: 8px 8px 0 0;
-  }
-  .train-row.confirmed { background: #F0F7F1; }
-  .train-row.pending { background: #FFF8ED; }
-  .badge-confirmed {
-    background: var(--sage);
-    color: white;
-    font-size: 11px;
-    font-weight: 600;
-    padding: 3px 8px;
-    border-radius: 99px;
-    text-align: center;
-    white-space: nowrap;
-  }
-  .badge-pending {
-    background: var(--gold);
-    color: #5A3A00;
-    font-size: 11px;
-    font-weight: 600;
-    padding: 3px 8px;
-    border-radius: 99px;
-    text-align: center;
-    white-space: nowrap;
-  }
-  @media (max-width: 640px) {
-    .train-row { grid-template-columns: 1fr 1fr; gap: 4px; }
-    .train-header div:nth-child(3), .train-row div:nth-child(3) { display: none; }
-  }
+/* TRAIN TABLE */
+.train-table { display: flex; flex-direction: column; gap: 2px; margin-top: 8px; border-radius: 10px; overflow: hidden; }
+.train-row {
+display: grid;
+grid-template-columns: 2fr 1fr 2fr 1fr;
+gap: 8px;
+padding: 10px 14px;
+font-size: 13px;
+align-items: center;
+}
+.train-header {
+background: var(–ink);
+color: var(–cream);
+font-size: 11px;
+font-weight: 600;
+letter-spacing: 1px;
+text-transform: uppercase;
+border-radius: 8px 8px 0 0;
+}
+.train-row.confirmed { background: #F0F7F1; }
+.train-row.pending { background: #FFF8ED; }
+.badge-confirmed {
+background: var(–sage);
+color: white;
+font-size: 11px;
+font-weight: 600;
+padding: 3px 8px;
+border-radius: 99px;
+text-align: center;
+white-space: nowrap;
+}
+.badge-pending {
+background: var(–gold);
+color: #5A3A00;
+font-size: 11px;
+font-weight: 600;
+padding: 3px 8px;
+border-radius: 99px;
+text-align: center;
+white-space: nowrap;
+}
+@media (max-width: 640px) {
+.train-row { grid-template-columns: 1fr 1fr; gap: 4px; }
+.train-header div:nth-child(3), .train-row div:nth-child(3) { display: none; }
+}
 
-  .price-tag {
-    font-size: 12px;
-    color: var(--ink);
-    display: block;
-    margin-bottom: 4px;
-  }
-  .price-tag strong { color: var(--rust); }
-  .train-row small { font-size: 11px; color: var(--light-ink); }
+.price-tag {
+font-size: 12px;
+color: var(–ink);
+display: block;
+margin-bottom: 4px;
+}
+.price-tag strong { color: var(–rust); }
+.train-row small { font-size: 11px; color: var(–light-ink); }
 
-  /* HOTEL LIST */
-  .hotel-list { display: flex; flex-direction: column; gap: 12px; margin-top: 4px; }
-  .hotel-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 14px;
-    background: var(--cream);
-    border-radius: 10px;
-    border-left: 3px solid var(--gold);
-  }
-  .hotel-flag { font-size: 1.4rem; flex-shrink: 0; }
-  .hotel-info { flex: 1; }
-  .hotel-name { font-weight: 600; font-size: 14px; color: var(--ink); margin-bottom: 3px; }
-  .hotel-dates { font-size: 12px; color: var(--rust); font-weight: 500; margin-bottom: 3px; }
-  .hotel-address { font-size: 12px; color: var(--light-ink); margin-bottom: 2px; }
-  .hotel-phone { font-size: 12px; color: var(--light-ink); }
-  .hotel-confirm { flex-shrink: 0; }
-  .confirm-input {
-    border: 1.5px solid rgba(26,26,46,0.15);
-    border-radius: 8px;
-    padding: 6px 10px;
-    font-size: 12px;
-    font-family: "DM Sans", sans-serif;
-    color: var(--ink);
-    background: white;
-    width: 150px;
-  }
-  .confirm-input:focus { outline: none; border-color: var(--gold); }
-  @media (max-width: 600px) {
-    .hotel-item { flex-wrap: wrap; }
-    .confirm-input { width: 100%; }
-  }
+/* HOTEL LIST */
+.hotel-list { display: flex; flex-direction: column; gap: 12px; margin-top: 4px; }
+.hotel-item {
+display: flex;
+align-items: flex-start;
+gap: 12px;
+padding: 14px;
+background: var(–cream);
+border-radius: 10px;
+border-left: 3px solid var(–gold);
+}
+.hotel-flag { font-size: 1.4rem; flex-shrink: 0; }
+.hotel-info { flex: 1; }
+.hotel-name { font-weight: 600; font-size: 14px; color: var(–ink); margin-bottom: 3px; }
+.hotel-dates { font-size: 12px; color: var(–rust); font-weight: 500; margin-bottom: 3px; }
+.hotel-address { font-size: 12px; color: var(–light-ink); margin-bottom: 2px; }
+.hotel-phone { font-size: 12px; color: var(–light-ink); }
+.hotel-confirm { flex-shrink: 0; }
+.confirm-input {
+border: 1.5px solid rgba(26,26,46,0.15);
+border-radius: 8px;
+padding: 6px 10px;
+font-size: 12px;
+font-family: “DM Sans”, sans-serif;
+color: var(–ink);
+background: white;
+width: 150px;
+}
+.confirm-input:focus { outline: none; border-color: var(–gold); }
+@media (max-width: 600px) {
+.hotel-item { flex-wrap: wrap; }
+.confirm-input { width: 100%; }
+}
 
-  /* DECISION CARD */
-  .decision-card {
-    background: white;
-    border-radius: 14px;
-    padding: 20px;
-    border: 2px dashed var(--gold);
-    margin-top: 4px;
-  }
-  .decision-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 16px;
-  }
-  .decision-badge {
-    background: #FFF8ED;
-    border: 1px solid var(--gold);
-    color: #7A5A1A;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    padding: 3px 10px;
-    border-radius: 99px;
-    white-space: nowrap;
-  }
-  .decision-title {
-    font-weight: 500;
-    font-size: 14px;
-    color: var(--ink);
-  }
-  .decision-options {
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-  }
-  .decision-option {
-    flex: 1;
-    background: var(--cream);
-    border-radius: 10px;
-    padding: 14px;
-    border: 2px solid transparent;
-    transition: all 0.2s;
-  }
-  .decision-option.selected {
-    border-color: var(--sage);
-    background: #F0F7F1;
-  }
-  .opt-top {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-  .opt-icon { font-size: 1.4rem; flex-shrink: 0; }
-  .opt-info { flex: 1; }
-  .opt-name {
-    font-weight: 600;
-    font-size: 14px;
-    color: var(--ink);
-    margin-bottom: 2px;
-  }
-  .opt-tag {
-    font-size: 11px;
-    color: var(--light-ink);
-    line-height: 1.4;
-  }
-  .opt-select-btn {
-    background: var(--ink);
-    color: var(--cream);
-    border: none;
-    border-radius: 8px;
-    padding: 6px 12px;
-    font-size: 12px;
-    font-family: "DM Sans", sans-serif;
-    cursor: pointer;
-    white-space: nowrap;
-    transition: background 0.2s;
-    flex-shrink: 0;
-  }
-  .opt-select-btn:hover { background: var(--sage); }
-  .decision-option.selected .opt-select-btn { background: var(--sage); }
-  .opt-pros {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-  .opt-pros li {
-    font-size: 12px;
-    color: var(--light-ink);
-    line-height: 1.4;
-  }
-  .decision-divider {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--light-ink);
-    padding-top: 40px;
-    flex-shrink: 0;
-  }
-  .decision-result {
-    margin-top: 14px;
-    padding: 10px 14px;
-    background: #F0F7F1;
-    border-radius: 8px;
-    font-size: 13px;
-    color: var(--sage);
-    font-weight: 500;
-  }
-  @media (max-width: 640px) {
-    .decision-options { flex-direction: column; }
-    .decision-divider { padding-top: 0; text-align: center; }
-  }
+/* DECISION CARD */
+.decision-card {
+background: white;
+border-radius: 14px;
+padding: 20px;
+border: 2px dashed var(–gold);
+margin-top: 4px;
+}
+.decision-header {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-bottom: 16px;
+}
+.decision-badge {
+background: #FFF8ED;
+border: 1px solid var(–gold);
+color: #7A5A1A;
+font-size: 11px;
+font-weight: 600;
+letter-spacing: 0.5px;
+padding: 3px 10px;
+border-radius: 99px;
+white-space: nowrap;
+}
+.decision-title {
+font-weight: 500;
+font-size: 14px;
+color: var(–ink);
+}
+.decision-options {
+display: flex;
+gap: 12px;
+align-items: flex-start;
+}
+.decision-option {
+flex: 1;
+background: var(–cream);
+border-radius: 10px;
+padding: 14px;
+border: 2px solid transparent;
+transition: all 0.2s;
+}
+.decision-option.selected {
+border-color: var(–sage);
+background: #F0F7F1;
+}
+.opt-top {
+display: flex;
+align-items: flex-start;
+gap: 10px;
+margin-bottom: 10px;
+}
+.opt-icon { font-size: 1.4rem; flex-shrink: 0; }
+.opt-info { flex: 1; }
+.opt-name {
+font-weight: 600;
+font-size: 14px;
+color: var(–ink);
+margin-bottom: 2px;
+}
+.opt-tag {
+font-size: 11px;
+color: var(–light-ink);
+line-height: 1.4;
+}
+.opt-select-btn {
+background: var(–ink);
+color: var(–cream);
+border: none;
+border-radius: 8px;
+padding: 6px 12px;
+font-size: 12px;
+font-family: “DM Sans”, sans-serif;
+cursor: pointer;
+white-space: nowrap;
+transition: background 0.2s;
+flex-shrink: 0;
+}
+.opt-select-btn:hover { background: var(–sage); }
+.decision-option.selected .opt-select-btn { background: var(–sage); }
+.opt-pros {
+list-style: none;
+display: flex;
+flex-direction: column;
+gap: 5px;
+}
+.opt-pros li {
+font-size: 12px;
+color: var(–light-ink);
+line-height: 1.4;
+}
+.decision-divider {
+font-size: 13px;
+font-weight: 600;
+color: var(–light-ink);
+padding-top: 40px;
+flex-shrink: 0;
+}
+.decision-result {
+margin-top: 14px;
+padding: 10px 14px;
+background: #F0F7F1;
+border-radius: 8px;
+font-size: 13px;
+color: var(–sage);
+font-weight: 500;
+}
+@media (max-width: 640px) {
+.decision-options { flex-direction: column; }
+.decision-divider { padding-top: 0; text-align: center; }
+}
 
-  @media (max-width: 600px) {
-    main { padding: 20px; }
-    header { padding: 32px 20px 24px; }
-    .tabs-bar { padding: 0 20px; }
-    .city-name { font-size: 1.4rem; }
-  }
+@media (max-width: 600px) {
+main { padding: 20px; }
+header { padding: 32px 20px 24px; }
+.tabs-bar { padding: 0 20px; }
+.city-name { font-size: 1.4rem; }
+}
 
-  .weather-bar { font-size:12px; color:var(--light-ink); margin-bottom:10px; margin-top:-4px; padding-left:2px; }
-  .weather-bar strong { color:var(--rust); }
-  .wx-min { color:var(--light-ink); }
-  .wx-rain { color:#3a7bd5; margin-left:4px; }
-  .wx-hist { color:var(--light-ink); font-size:10px; margin-left:3px; opacity:0.7; }
-  .wx-sun { font-size:11px; color:var(--light-ink); opacity:0.8; }
+.weather-bar { font-size:12px; color:var(–light-ink); margin-bottom:10px; margin-top:-4px; padding-left:2px; }
+.weather-bar strong { color:var(–rust); }
+.wx-min { color:var(–light-ink); }
+.wx-rain { color:#3a7bd5; margin-left:4px; }
+.wx-hist { color:var(–light-ink); font-size:10px; margin-left:3px; opacity:0.7; }
+.wx-sun { font-size:11px; color:var(–light-ink); opacity:0.8; }
 </style>
+
 </head>
 <body>
 
@@ -780,9 +783,11 @@
 <main>
 
 <!-- ===================== ITINERARIO ===================== -->
+
 <div class="section active" id="tab-itinerario">
 
   <!-- AMSTERDAM -->
+
   <div class="city-block">
     <div class="city-header">
       <span class="city-flag">🇳🇱</span>
@@ -790,219 +795,223 @@
       <span class="city-dates">24 – 27 Abr</span>
     </div>
 
-    <div class="day-block">
-      <div class="day-label" data-date="2026-04-23" data-lat="52.37" data-lon="4.90">Jue 23 Abr · Salida desde Puebla ✈️</div>
-      <div class="stops">
-        <div class="stop stop-type-transport">
-          <div class="stop-time">15:00</div>
-          <div class="stop-icon">🚐</div>
-          <div class="stop-body">
-            <div class="stop-title">Salida desde casa de Cookie — Drivers Puebla</div>
-            <div class="stop-note">✅ <strong>Confirmado:</strong> Drivers Puebla · Salida 3:00 PM desde casa de Cookie hacia AICM · <a href="https://wa.me/522225044307" target="_blank">📱 WhatsApp +52 222 504 4307 ↗</a></div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-transport">
-          <div class="stop-time">22:25</div>
-          <div class="stop-icon">✈️</div>
-          <div class="stop-body">
-            <div class="stop-title">Vuelo MEX → AMS · AM25</div>
-            <div class="stop-note">Sale 22:25 CDMX · Llega 17:20 (+1) Ámsterdam · Conf# <strong>KLFDOL</strong> (Guero) / <strong>FPRJKI</strong> (familia) · ~10h55m sin escalas.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)">✏️</button>
-          </div>
-        </div>
+```
+<div class="day-block">
+  <div class="day-label" data-date="2026-04-23" data-lat="52.37" data-lon="4.90">Jue 23 Abr · Salida desde Puebla ✈️</div>
+  <div class="stops">
+    <div class="stop stop-type-transport">
+      <div class="stop-time">15:00</div>
+      <div class="stop-icon">🚐</div>
+      <div class="stop-body">
+        <div class="stop-title">Salida desde casa de Cookie — Drivers Puebla</div>
+        <div class="stop-note">✅ <strong>Confirmado:</strong> Drivers Puebla · Salida 3:00 PM desde casa de Cookie hacia AICM · <a href="https://wa.me/522225044307" target="_blank">📱 WhatsApp +52 222 504 4307 ↗</a></div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)">✏️</button>
       </div>
     </div>
-
-    <div class="day-block">
-      <div class="day-label" data-date="2026-04-24" data-lat="52.37" data-lon="4.90">Vie 24 Abr · Llegada</div>
-      <div class="stops">
-        <div class="stop stop-type-transport" id="stop-am1">
-          <div class="stop-time">17:20</div>
-          <div class="stop-icon">✈️</div>
-          <div class="stop-body">
-            <div class="stop-title">Llegada a Ámsterdam Schiphol · 17:20</div>
-            <div class="stop-note">🚇 <strong>Al hotel:</strong> Metro 52 desde Schiphol Plaza → RAI (~15 min, ~€4) + 5 min caminando al Novotel. <a href="https://www.google.com/maps/dir/Amsterdam+Airport+Schiphol/Hotel+Novotel+Amsterdam+City,+Europaboulevard+10,+1083+AD+Amsterdam" target="_blank">Ver ruta ↗</a><br>Check-in hotel.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-walk">
-          <div class="stop-time">19:00</div>
-          <div class="stop-icon">🌿</div>
-          <div class="stop-body">
-            <div class="stop-title">Caminata al Molino De Riekermolen</div>
-            <div class="stop-note">Molino de viento histórico de 1636 a orillas del río Amstel — a ~20 min caminando del hotel por el parque. Ideal para estirar las piernas después del vuelo y ver el atardecer. <a href="https://www.google.com/maps/place/De+Riekermolen+(1636)/@52.3240849,4.8937802,17z" target="_blank">📍 Ver en Maps ↗</a></div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
+    <div class="stop stop-type-transport">
+      <div class="stop-time">22:25</div>
+      <div class="stop-icon">✈️</div>
+      <div class="stop-body">
+        <div class="stop-title">Vuelo MEX → AMS · AM25</div>
+        <div class="stop-note">Sale 22:25 CDMX · Llega 17:20 (+1) Ámsterdam · Conf# <strong>KLFDOL</strong> (Guero) / <strong>FPRJKI</strong> (familia) · ~10h55m sin escalas.</div>
       </div>
-    </div>
-
-    <div class="day-block">
-      <div class="day-label" data-date="2026-04-25" data-lat="52.37" data-lon="4.90">Sáb 25 Abr · Ciudad</div>
-      <div class="stops">
-        <div class="stop stop-type-walk" id="stop-am2">
-          <div class="stop-time">9:30</div>
-          <div class="stop-icon">🚶</div>
-          <div class="stop-body">
-            <div class="stop-title">Caminata por el Jordaan — Anne Frank House y alrededores</div>
-            <div class="stop-note">Pasear por el Prinsengracht, pasar por afuera de la <strong>Casa de Anne Frank</strong> (Prinsengracht 263) y explorar el barrio Jordaan — canales, callejuelas, terrazas de café. Sin prisa, sin reserva. <a href="https://www.google.com/maps/dir/Novotel+Amsterdam+City,+Europaboulevard+10,+Amsterdam/Anne+Frank+House,+Prinsengracht+263,+Amsterdam" target="_blank">📍 Cómo llegar desde el hotel ↗</a><br>📅 <strong>Última oportunidad para boletos:</strong> Si quieren intentar entrar, los boletos se liberan cada <strong>martes a las 10:00 AM hora de Ámsterdam</strong> en <a href="https://annefrank.org" target="_blank">annefrank.org</a>. El <strong>martes 21 de abril a las 3:00 AM hora México</strong> sería la última oportunidad para el sábado 25 de abril — se agotan en minutos.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-walk">
-          <div class="stop-time">10:45</div>
-          <div class="stop-icon">🌿</div>
-          <div class="stop-body">
-            <div class="stop-title">Barrio Jordaan</div>
-            <div class="stop-note">A 5 min caminando de Anne Frank. Brunch en algún café de canal.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-walk">
-          <div class="stop-time">12:30</div>
-          <div class="stop-icon">⛵</div>
-          <div class="stop-body">
-            <div class="stop-title">Tour en barco — Amsterdam Boat Trips</div>
-            <div class="stop-note">4.9⭐ con 5,000+ reseñas, open bar, ~1hr. ⚠️ Para 8 personas: reservar tour privado o asegurarse de que quepan juntos — contactar antes en <a href="https://amsterdamboattrips.com" target="_blank">amsterdamboattrips.com</a></div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-landmark">
-          <div class="stop-time">14:30</div>
-          <div class="stop-icon">🏙️</div>
-          <div class="stop-body">
-            <div class="stop-title">A'DAM Tower — Mirador</div>
-            <div class="stop-note">Mirador 360° con vistas panorámicas de Ámsterdam desde 22 pisos. Incluye el columpio sobre el vacío "Over the Edge" (~€5 extra). <a href="https://www.google.com/maps/search/A'DAM+Tower,+Overhoeksplein+1,+1031+KS+Amsterdam" target="_blank">📍 Overhoeksplein 1 · Maps ↗</a> · Reservar en <a href="https://adamtower.nl" target="_blank">adamtower.nl</a> · ~1.5 hrs.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-museum">
-          <div class="stop-time">17:00</div>
-          <div class="stop-icon">🌻</div>
-          <div class="stop-body">
-            <div class="stop-title">Van Gogh Museum</div>
-            <div class="stop-note">A 2 min del Rijksmuseum. ~1.5 hrs. Audio guide vale la pena (~€4). Reserva en <a href="https://vangoghmuseum.nl" target="_blank">vangoghmuseum.nl</a></div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-food">
-          <div class="stop-time">19:00</div>
-          <div class="stop-icon">🍽️</div>
-          <div class="stop-body">
-            <div class="stop-title">Cena en De Pijp</div>
-            <div class="stop-note">Barrio del Albert Cuyp Market — ambiente local, precios accesibles, varios restaurantes.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="day-block">
-      <div class="day-label" data-date="2026-04-26" data-lat="52.37" data-lon="4.90">Dom 26 Abr · Day Trip: Keukenhof 🌷 + Zaanse Schans ⚙️</div>
-      <div class="stops">
-        <div class="stop stop-type-nature">
-          <div class="stop-time">9:45</div>
-          <div class="stop-icon">🌷</div>
-          <div class="stop-body">
-            <div class="stop-title">Keukenhof — Campos de Tulipanes 🌷</div>
-            <div class="stop-note">✅ <strong>Boletos comprados</strong> · 7 Adultos + 1 Niño · Ref. 855408302 · <a href="Boletos_tulipanes.pdf" target="_blank">📥 Ver voucher ↗</a><br>🚇 <strong>Desde el Novotel:</strong> Salir a las <strong>9:15</strong> · Metro 52 → Amsterdam Centraal (~10 min) + ferry gratuito F3 "Buiksloterweg" (~5 min) + 2 min caminando a <strong>This is Holland, Overhoeksplein 51</strong>. <a href="https://www.google.com/maps/dir/Novotel+Amsterdam+City,+Europaboulevard+10,+Amsterdam/This+is+Holland,+Overhoeksplein+51,+Amsterdam" target="_blank">📍 Cómo llegar ↗</a><br>⏰ <strong>Llegar a las 9:30</strong> (15 min antes) · Bus sale a las <strong>9:45</strong> → Keukenhof (~45 min) · Regreso flexible, buses cada 30 min, último a las 18:30.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-landmark">
-          <div class="stop-time">13:00</div>
-          <div class="stop-icon">⚙️</div>
-          <div class="stop-body">
-            <div class="stop-title">Zaanse Schans / Zaandam — Molinos de Viento ⚙️</div>
-            <div class="stop-note">⏰ <strong>12:15</strong> Almuerzo en Ámsterdam. ⏰ <strong>13:30</strong> Tren Amsterdam Central → Zaandijk-Zaanse Schans (17 min, cada 15 min). <a href="https://www.google.com/maps/dir/Amsterdam+Centraal/Zaandijk-Zaanse+Schans" target="_blank">📍 Ruta en tren ↗</a> ⏰ <strong>13:50–16:30</strong> Zaanse Schans: molinos, zuecos, queso, fábrica de chocolate Verkade. ⏰ <strong>16:45</strong> Tren de regreso a Ámsterdam.<br>Andrés lo va a amar — animales, molinos y chocolate. Entrada libre, pago solo por atracciones individuales.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="day-block">
-      <div class="day-label" data-date="2026-04-27" data-lat="52.37" data-lon="4.90">Lun 27 Abr · Salida a Köln</div>
-      <div class="stops">
-        <div class="stop stop-type-food">
-          <div class="stop-time">9:00</div>
-          <div class="stop-icon">☕</div>
-          <div class="stop-body">
-            <div class="stop-title">Desayuno en Jordaan</div>
-            <div class="stop-note">Mañana tranquila, último café holandés.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-food">
-          <div class="stop-time">10:00</div>
-          <div class="stop-icon">🧀</div>
-          <div class="stop-body">
-            <div class="stop-title">Albert Cuyp Markt</div>
-            <div class="stop-note">Mercado callejero, stroopwafels frescos, queso. Abre 9:30am.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-transport">
-          <div class="stop-time">16:01</div>
-          <div class="stop-icon">🚂</div>
-          <div class="stop-body">
-            <div class="stop-title">Tren a Köln — ICE 159</div>
-            <div class="stop-note">Amsterdam Centraal → Köln Hbf · 3h19m · Sin cambios · Llega 19:20</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)">✏️</button>
       </div>
     </div>
   </div>
+</div>
+
+<div class="day-block">
+  <div class="day-label" data-date="2026-04-24" data-lat="52.37" data-lon="4.90">Vie 24 Abr · Llegada</div>
+  <div class="stops">
+    <div class="stop stop-type-transport" id="stop-am1">
+      <div class="stop-time">17:20</div>
+      <div class="stop-icon">✈️</div>
+      <div class="stop-body">
+        <div class="stop-title">Llegada a Ámsterdam Schiphol · 17:20</div>
+        <div class="stop-note">🚇 <strong>Al hotel:</strong> Metro 52 desde Schiphol Plaza → RAI (~15 min, ~€4) + 5 min caminando al Novotel. <a href="https://www.google.com/maps/dir/Amsterdam+Airport+Schiphol/Hotel+Novotel+Amsterdam+City,+Europaboulevard+10,+1083+AD+Amsterdam" target="_blank">Ver ruta ↗</a><br>Check-in hotel.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+    <div class="stop stop-type-walk">
+      <div class="stop-time">19:00</div>
+      <div class="stop-icon">🌿</div>
+      <div class="stop-body">
+        <div class="stop-title">Caminata al Molino De Riekermolen</div>
+        <div class="stop-note">Molino de viento histórico de 1636 a orillas del río Amstel — a ~20 min caminando del hotel por el parque. Ideal para estirar las piernas después del vuelo y ver el atardecer. <a href="https://www.google.com/maps/place/De+Riekermolen+(1636)/@52.3240849,4.8937802,17z" target="_blank">📍 Ver en Maps ↗</a></div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="day-block">
+  <div class="day-label" data-date="2026-04-25" data-lat="52.37" data-lon="4.90">Sáb 25 Abr · Ciudad</div>
+  <div class="stops">
+    <div class="stop stop-type-walk" id="stop-am2">
+      <div class="stop-time">9:30</div>
+      <div class="stop-icon">🚶</div>
+      <div class="stop-body">
+        <div class="stop-title">Caminata por el Jordaan — Anne Frank House y alrededores</div>
+        <div class="stop-note">Pasear por el Prinsengracht, pasar por afuera de la <strong>Casa de Anne Frank</strong> (Prinsengracht 263) y explorar el barrio Jordaan — canales, callejuelas, terrazas de café. Sin prisa, sin reserva. <a href="https://www.google.com/maps/dir/Novotel+Amsterdam+City,+Europaboulevard+10,+Amsterdam/Anne+Frank+House,+Prinsengracht+263,+Amsterdam" target="_blank">📍 Cómo llegar desde el hotel ↗</a><br>📅 <strong>Última oportunidad para boletos:</strong> Si quieren intentar entrar, los boletos se liberan cada <strong>martes a las 10:00 AM hora de Ámsterdam</strong> en <a href="https://annefrank.org" target="_blank">annefrank.org</a>. El <strong>martes 21 de abril a las 3:00 AM hora México</strong> sería la última oportunidad para el sábado 25 de abril — se agotan en minutos.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+    <div class="stop stop-type-walk">
+      <div class="stop-time">10:45</div>
+      <div class="stop-icon">🌿</div>
+      <div class="stop-body">
+        <div class="stop-title">Barrio Jordaan</div>
+        <div class="stop-note">A 5 min caminando de Anne Frank. Brunch en algún café de canal.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+    <div class="stop stop-type-walk">
+      <div class="stop-time">12:30</div>
+      <div class="stop-icon">⛵</div>
+      <div class="stop-body">
+        <div class="stop-title">Tour en barco — Amsterdam Boat Trips</div>
+        <div class="stop-note">4.9⭐ con 5,000+ reseñas, open bar, ~1hr. ⚠️ Para 8 personas: reservar tour privado o asegurarse de que quepan juntos — contactar antes en <a href="https://amsterdamboattrips.com" target="_blank">amsterdamboattrips.com</a></div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+    <div class="stop stop-type-landmark">
+      <div class="stop-time">14:30</div>
+      <div class="stop-icon">🏙️</div>
+      <div class="stop-body">
+        <div class="stop-title">A'DAM Tower — Mirador</div>
+        <div class="stop-note">Mirador 360° con vistas panorámicas de Ámsterdam desde 22 pisos. Incluye el columpio sobre el vacío "Over the Edge" (~€5 extra). <a href="https://www.google.com/maps/search/A'DAM+Tower,+Overhoeksplein+1,+1031+KS+Amsterdam" target="_blank">📍 Overhoeksplein 1 · Maps ↗</a> · Reservar en <a href="https://adamtower.nl" target="_blank">adamtower.nl</a> · ~1.5 hrs.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+    <div class="stop stop-type-museum">
+      <div class="stop-time">17:00</div>
+      <div class="stop-icon">🌻</div>
+      <div class="stop-body">
+        <div class="stop-title">Van Gogh Museum</div>
+        <div class="stop-note">A 2 min del Rijksmuseum. ~1.5 hrs. Audio guide vale la pena (~€4). Reserva en <a href="https://vangoghmuseum.nl" target="_blank">vangoghmuseum.nl</a></div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+    <div class="stop stop-type-food">
+      <div class="stop-time">19:00</div>
+      <div class="stop-icon">🍽️</div>
+      <div class="stop-body">
+        <div class="stop-title">Cena en De Pijp</div>
+        <div class="stop-note">Barrio del Albert Cuyp Market — ambiente local, precios accesibles, varios restaurantes.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="day-block">
+  <div class="day-label" data-date="2026-04-26" data-lat="52.37" data-lon="4.90">Dom 26 Abr · Day Trip: Keukenhof 🌷 + Zaanse Schans ⚙️</div>
+  <div class="stops">
+    <div class="stop stop-type-nature">
+      <div class="stop-time">9:45</div>
+      <div class="stop-icon">🌷</div>
+      <div class="stop-body">
+        <div class="stop-title">Keukenhof — Campos de Tulipanes 🌷</div>
+        <div class="stop-note">✅ <strong>Boletos comprados</strong> · 7 Adultos + 1 Niño · Ref. 855408302 · <a href="Boletos_tulipanes.pdf" target="_blank">📥 Ver voucher ↗</a><br>🚇 <strong>Desde el Novotel:</strong> Salir a las <strong>9:15</strong> · Metro 52 → Amsterdam Centraal (~10 min) + ferry gratuito F3 "Buiksloterweg" (~5 min) + 2 min caminando a <strong>This is Holland, Overhoeksplein 51</strong>. <a href="https://www.google.com/maps/dir/Novotel+Amsterdam+City,+Europaboulevard+10,+Amsterdam/This+is+Holland,+Overhoeksplein+51,+Amsterdam" target="_blank">📍 Cómo llegar ↗</a><br>⏰ <strong>Llegar a las 9:30</strong> (15 min antes) · Bus sale a las <strong>9:45</strong> → Keukenhof (~45 min) · Regreso flexible, buses cada 30 min, último a las 18:30.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+    <div class="stop stop-type-landmark">
+      <div class="stop-time">13:00</div>
+      <div class="stop-icon">⚙️</div>
+      <div class="stop-body">
+        <div class="stop-title">Zaanse Schans / Zaandam — Molinos de Viento ⚙️</div>
+        <div class="stop-note">⏰ <strong>12:15</strong> Almuerzo en Ámsterdam. ⏰ <strong>13:30</strong> Tren Amsterdam Central → Zaandijk-Zaanse Schans (17 min, cada 15 min). <a href="https://www.google.com/maps/dir/Amsterdam+Centraal/Zaandijk-Zaanse+Schans" target="_blank">📍 Ruta en tren ↗</a> ⏰ <strong>13:50–16:30</strong> Zaanse Schans: molinos, zuecos, queso, fábrica de chocolate Verkade. ⏰ <strong>16:45</strong> Tren de regreso a Ámsterdam.<br>Andrés lo va a amar — animales, molinos y chocolate. Entrada libre, pago solo por atracciones individuales.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="day-block">
+  <div class="day-label" data-date="2026-04-27" data-lat="52.37" data-lon="4.90">Lun 27 Abr · Salida a Köln</div>
+  <div class="stops">
+    <div class="stop stop-type-food">
+      <div class="stop-time">9:00</div>
+      <div class="stop-icon">☕</div>
+      <div class="stop-body">
+        <div class="stop-title">Desayuno en Jordaan</div>
+        <div class="stop-note">Mañana tranquila, último café holandés.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+    <div class="stop stop-type-food">
+      <div class="stop-time">10:00</div>
+      <div class="stop-icon">🧀</div>
+      <div class="stop-body">
+        <div class="stop-title">Albert Cuyp Markt</div>
+        <div class="stop-note">Mercado callejero, stroopwafels frescos, queso. Abre 9:30am.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+    <div class="stop stop-type-transport">
+      <div class="stop-time">16:01</div>
+      <div class="stop-icon">🚂</div>
+      <div class="stop-body">
+        <div class="stop-title">Tren a Köln — ICE 159</div>
+        <div class="stop-note">Amsterdam Centraal → Köln Hbf · 3h19m · Sin cambios · Llega 19:20</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+  </div>
 
   <!-- KÖLN -->
+
   <div class="city-block">
     <div class="city-header">
       <span class="city-flag">🇩🇪</span>
@@ -1010,134 +1019,138 @@
       <span class="city-dates">27 – 30 Abr</span>
     </div>
 
-    <div class="day-block">
-      <div class="day-label" data-date="2026-04-28" data-lat="50.94" data-lon="6.96">Mar 28 Abr · Köln</div>
-      <div class="stops">
-        <div class="stop stop-type-landmark">
-          <div class="stop-time">9:30</div>
-          <div class="stop-icon">⛪</div>
-          <div class="stop-body">
-            <div class="stop-title">Cologne Cathedral (Dom)</div>
-            <div class="stop-note">Catedral gótica más grande del mundo. Entrada gratis. Sube la torre (~€6, 533 escalones) para vistas del Rin. ~1.5 hrs.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-walk">
-          <div class="stop-time">11:15</div>
-          <div class="stop-icon">🏘️</div>
-          <div class="stop-body">
-            <div class="stop-title">Altstadt y orillas del Rin</div>
-            <div class="stop-note">Casco antiguo adoquinado a orillas del río. Callejear y explorar.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-food">
-          <div class="stop-time">13:00</div>
-          <div class="stop-icon">🍺</div>
-          <div class="stop-body">
-            <div class="stop-title">Brauhaus Früh am Dom</div>
-            <div class="stop-note">Brauhaus icónico desde 1904, a 2 min del Dom. Kölsch €2.50, prueba el Käsespätzle. ⚠️ Para 8 personas: <strong>reservar mesa con anticipación</strong> en <a href="https://frueh-am-dom.de" target="_blank">frueh-am-dom.de</a> — grupos grandes necesitan reserva.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
+```
+<div class="day-block">
+  <div class="day-label" data-date="2026-04-28" data-lat="50.94" data-lon="6.96">Mar 28 Abr · Köln</div>
+  <div class="stops">
+    <div class="stop stop-type-landmark">
+      <div class="stop-time">9:30</div>
+      <div class="stop-icon">⛪</div>
+      <div class="stop-body">
+        <div class="stop-title">Cologne Cathedral (Dom)</div>
+        <div class="stop-note">Catedral gótica más grande del mundo. Entrada gratis. Sube la torre (~€6, 533 escalones) para vistas del Rin. ~1.5 hrs.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
       </div>
     </div>
-
-    <div class="day-block">
-      <div class="day-label" data-date="2026-04-29" data-lat="50.94" data-lon="6.96">Mié 29 Abr · Day Trip a Bonn</div>
-      <div class="stops">
-        <div class="stop stop-type-transport">
-          <div class="stop-time">9:00</div>
-          <div class="stop-icon">🚆</div>
-          <div class="stop-body">
-            <div class="stop-title">Tren Köln → Bonn</div>
-            <div class="stop-note">~28 min, muy frecuente. Sin reserva necesaria — el tren regional tiene suficiente capacidad para el grupo.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-museum">
-          <div class="stop-time">10:00</div>
-          <div class="stop-icon">🎵</div>
-          <div class="stop-body">
-            <div class="stop-title">Beethoven-Haus Bonn</div>
-            <div class="stop-note">Casa natal de Beethoven. Instrumentos originales, manuscritos. €14/persona (€112 total grupo). Descarga la app para audio guide gratis. ~1.5 hrs. ⚠️ Espacio íntimo — el grupo entra en turnos, no todo junto. ✅ Abierto los miércoles.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-food">
-          <div class="stop-time">12:00</div>
-          <div class="stop-icon">🏛️</div>
-          <div class="stop-body">
-            <div class="stop-title">Marktplatz Bonn — Lunch</div>
-            <div class="stop-note">Plaza central con Ayuntamiento barroco. Terrazas y cafés.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-walk">
-          <div class="stop-time">13:45</div>
-          <div class="stop-icon">🌊</div>
-          <div class="stop-body">
-            <div class="stop-title">Rheinuferpromenade Bonn</div>
-            <div class="stop-note">Paseo a orillas del Rin. Espacio para que Andrés corra. Continúa al Rheinaue Park si hay energía.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
+    <div class="stop stop-type-walk">
+      <div class="stop-time">11:15</div>
+      <div class="stop-icon">🏘️</div>
+      <div class="stop-body">
+        <div class="stop-title">Altstadt y orillas del Rin</div>
+        <div class="stop-note">Casco antiguo adoquinado a orillas del río. Callejear y explorar.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
       </div>
     </div>
-
-    <div class="day-block">
-      <div class="day-label" data-date="2026-04-30" data-lat="50.94" data-lon="6.96">Jue 30 Abr · Salida a Mainz</div>
-      <div class="stops">
-        <div class="stop stop-type-food">
-          <div class="stop-time">9:00</div>
-          <div class="stop-icon">☕</div>
-          <div class="stop-body">
-            <div class="stop-title">Desayuno y última vuelta por Köln</div>
-            <div class="stop-note">Mañana libre antes del tren. Compras o regreso al Dom.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-transport">
-          <div class="stop-time">13:53</div>
-          <div class="stop-icon">🚂</div>
-          <div class="stop-body">
-            <div class="stop-title">Tren a Mainz</div>
-            <div class="stop-note">Köln Hbf → Mainz Hbf · ICE · Sale 12:53 · Llega 14:39 · 1h46m · Sin cambios · 4 Adultos + 3 Adultos +60 + 1 Niño ✅ Comprado</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
+    <div class="stop stop-type-food">
+      <div class="stop-time">13:00</div>
+      <div class="stop-icon">🍺</div>
+      <div class="stop-body">
+        <div class="stop-title">Brauhaus Früh am Dom</div>
+        <div class="stop-note">Brauhaus icónico desde 1904, a 2 min del Dom. Kölsch €2.50, prueba el Käsespätzle. ⚠️ Para 8 personas: <strong>reservar mesa con anticipación</strong> en <a href="https://frueh-am-dom.de" target="_blank">frueh-am-dom.de</a> — grupos grandes necesitan reserva.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
       </div>
     </div>
   </div>
+</div>
+
+<div class="day-block">
+  <div class="day-label" data-date="2026-04-29" data-lat="50.94" data-lon="6.96">Mié 29 Abr · Day Trip a Bonn</div>
+  <div class="stops">
+    <div class="stop stop-type-transport">
+      <div class="stop-time">9:00</div>
+      <div class="stop-icon">🚆</div>
+      <div class="stop-body">
+        <div class="stop-title">Tren Köln → Bonn</div>
+        <div class="stop-note">~28 min, muy frecuente. Sin reserva necesaria — el tren regional tiene suficiente capacidad para el grupo.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+    <div class="stop stop-type-museum">
+      <div class="stop-time">10:00</div>
+      <div class="stop-icon">🎵</div>
+      <div class="stop-body">
+        <div class="stop-title">Beethoven-Haus Bonn</div>
+        <div class="stop-note">Casa natal de Beethoven. Instrumentos originales, manuscritos. €14/persona (€112 total grupo). Descarga la app para audio guide gratis. ~1.5 hrs. ⚠️ Espacio íntimo — el grupo entra en turnos, no todo junto. ✅ Abierto los miércoles.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+    <div class="stop stop-type-food">
+      <div class="stop-time">12:00</div>
+      <div class="stop-icon">🏛️</div>
+      <div class="stop-body">
+        <div class="stop-title">Marktplatz Bonn — Lunch</div>
+        <div class="stop-note">Plaza central con Ayuntamiento barroco. Terrazas y cafés.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+    <div class="stop stop-type-walk">
+      <div class="stop-time">13:45</div>
+      <div class="stop-icon">🌊</div>
+      <div class="stop-body">
+        <div class="stop-title">Rheinuferpromenade Bonn</div>
+        <div class="stop-note">Paseo a orillas del Rin. Espacio para que Andrés corra. Continúa al Rheinaue Park si hay energía.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="day-block">
+  <div class="day-label" data-date="2026-04-30" data-lat="50.94" data-lon="6.96">Jue 30 Abr · Salida a Mainz</div>
+  <div class="stops">
+    <div class="stop stop-type-food">
+      <div class="stop-time">9:00</div>
+      <div class="stop-icon">☕</div>
+      <div class="stop-body">
+        <div class="stop-title">Desayuno y última vuelta por Köln</div>
+        <div class="stop-note">Mañana libre antes del tren. Compras o regreso al Dom.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+    <div class="stop stop-type-transport">
+      <div class="stop-time">13:53</div>
+      <div class="stop-icon">🚂</div>
+      <div class="stop-body">
+        <div class="stop-title">Tren a Mainz</div>
+        <div class="stop-note">Köln Hbf → Mainz Hbf · ICE · Sale 12:53 · Llega 14:39 · 1h46m · Sin cambios · 4 Adultos + 3 Adultos +60 + 1 Niño ✅ Comprado</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+  </div>
 
   <!-- MAINZ -->
+
   <div class="city-block">
     <div class="city-header">
       <span class="city-flag">🇩🇪</span>
@@ -1145,282 +1158,311 @@
       <span class="city-dates">30 Abr – 4 May · 🎂 Cumple Andrés 30 Abr</span>
     </div>
 
-    <div class="day-block">
-      <div class="day-label" data-date="2026-04-30" data-lat="50.94" data-lon="6.96">Jue 30 Abr · Llegada + 🎂 Cumpleaños Andrés</div>
-      <div class="stops">
-        <div class="stop stop-type-transport">
-          <div class="stop-time">14:39</div>
-          <div class="stop-icon">🚂</div>
-          <div class="stop-body">
-            <div class="stop-title">Llegada a Mainz Hbf · Check-in Leonardo Hotel</div>
-            <div class="stop-note">Check-in Leonardo Hotel Mainz · Augustusstraße 6 · A pocos minutos de la estación caminando.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-landmark" style="border-left-color:#E87AA0">
-          <div class="stop-time">16:00</div>
-          <div class="stop-icon">🎂</div>
-          <div class="stop-body">
-            <div class="stop-title">🎉 ¡Cumpleaños de Andrés!</div>
-            <div class="stop-note">Subir a la <strong>Torre del Dom de Mainz</strong> — vistas panorámicas de la ciudad. Perfecta para celebrar con el cumpleañero. Después pastel o helado en la Marktplatz. 🎈</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-food">
-          <div class="stop-time">18:00</div>
-          <div class="stop-icon">🍕</div>
-          <div class="stop-body">
-            <div class="stop-title">🎂 Cena de cumpleaños — Eulchen Brauerei</div>
-            <div class="stop-note">✅ <strong>Reservado por Mar</strong> · 18:00 hrs · Terraza exterior · 8 personas · Pizza + cerveza artesanal propia · Cruzando la calle del hotel. <a href="https://www.eulchen-bier.de" target="_blank">eulchen-bier.de ↗</a> · <a href="https://www.google.com/maps/search/Eulchen+Brauerei+Mainz" target="_blank">📍 Maps ↗</a><br>🌡️ ~17°C esa noche — llevar chamarra ligera para la terraza.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
+```
+<div class="day-block">
+  <div class="day-label" data-date="2026-04-30" data-lat="50.94" data-lon="6.96">Jue 30 Abr · Llegada + 🎂 Cumpleaños Andrés</div>
+  <div class="stops">
+    <div class="stop stop-type-transport">
+      <div class="stop-time">14:39</div>
+      <div class="stop-icon">🚂</div>
+      <div class="stop-body">
+        <div class="stop-title">Llegada a Mainz Hbf · Check-in Leonardo Hotel</div>
+        <div class="stop-note">Check-in Leonardo Hotel Mainz · Augustusstraße 6 · A pocos minutos de la estación caminando.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
       </div>
     </div>
-
-    <div class="day-block">
-      <div class="day-label" data-date="2026-05-01" data-lat="49.99" data-lon="8.27">Vie 1 May · Day Trip a Heidelberg</div>
-      <div class="stops">
-        <div class="stop stop-type-transport">
-          <div class="stop-time">9:13</div>
-          <div class="stop-icon">🚆</div>
-          <div class="stop-body">
-            <div class="stop-title">Tren Mainz → Heidelberg · con escala en Mannheim</div>
-            <div class="stop-note">Sale Mainz 9:13 · Escala 20 min en Mannheim · Llega Heidelberg 10:38 · Tren regional (cubierto por Deutschland Ticket)<br>🎫 <strong>Deutschland Ticket — €63/persona:</strong> Cubre todo el transporte público en Alemania (trenes regionales, metro, bus) durante el mes. Conviene vs pagar trenes por separado: Heidelberg ida/vuelta + Frankfurt + Rüdesheim. Comprar en <a href="https://www.bahn.de/angebot/regio/deutschland-ticket" target="_blank">bahn.de ↗</a> o en la app DB Navigator.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-landmark">
-          <div class="stop-time">10:45</div>
-          <div class="stop-icon">🏰</div>
-          <div class="stop-body">
-            <div class="stop-title">Castillo de Heidelberg</div>
-            <div class="stop-note">Sube caminando (recomendado, ~15 min) o funicular (~€5/persona, €40 grupo). Barril de 220,000 litros imperdible. Vistas del Neckar. ~2 hrs. ⚠️ Para 8: considerar tour guiado en español. Reserva en <a href="https://schloss-heidelberg.de" target="_blank">schloss-heidelberg.de</a></div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-walk">
-          <div class="stop-time">12:30</div>
-          <div class="stop-icon">🌉</div>
-          <div class="stop-body">
-            <div class="stop-title">Alte Brücke — Puente Viejo</div>
-            <div class="stop-note">El puente más fotogénico de Alemania. Vistas del castillo y el Neckar. Busca el mono de bronce — foto obligada con Andrés.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
+    <div class="stop stop-type-landmark" style="border-left-color:#E87AA0">
+      <div class="stop-time">16:00</div>
+      <div class="stop-icon">🎂</div>
+      <div class="stop-body">
+        <div class="stop-title">🎉 ¡Cumpleaños de Andrés!</div>
+        <div class="stop-note">Subir a la <strong>Torre del Dom de Mainz</strong> — vistas panorámicas de la ciudad. Perfecta para celebrar con el cumpleañero. Después pastel o helado en la Marktplatz. 🎈</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
       </div>
     </div>
-
-    <div class="day-block">
-      <div class="day-label" data-date="2026-05-02" data-lat="49.99" data-lon="8.27">Sáb 2 May · Mainz a fondo</div>
-      <div class="stops">
-        <div class="stop stop-type-landmark">
-          <div class="stop-time">9:30</div>
-          <div class="stop-icon">⛪</div>
-          <div class="stop-body">
-            <div class="stop-title">Dom de Mainz con calma</div>
-            <div class="stop-note">Cripta, vidrieras modernas, capillas laterales. Tomarse el tiempo.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-food">
-          <div class="stop-time">10:45</div>
-          <div class="stop-icon">🛒</div>
-          <div class="stop-body">
-            <div class="stop-title">Mercado en Marktplatz</div>
-            <div class="stop-note">Los jueves hay mercado activo — frutas, quesos, flores locales.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-food">
-          <div class="stop-time">12:30</div>
-          <div class="stop-icon">🍷</div>
-          <div class="stop-body">
-            <div class="stop-title">Weinraumwohnung — Vinos de Rheinhessen</div>
-            <div class="stop-note">Bodega boutique 4.9⭐. Riesling y Spätburgunder locales. Abre jue-sáb desde 11am. ✅ El 2 mayo es sábado — abre normal.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
+    <div class="stop stop-type-food">
+      <div class="stop-time">18:00</div>
+      <div class="stop-icon">🍕</div>
+      <div class="stop-body">
+        <div class="stop-title">🎂 Cena de cumpleaños — Eulchen Brauerei</div>
+        <div class="stop-note">✅ <strong>Reservado por Mar</strong> · 18:00 hrs · Terraza exterior · 8 personas · Pizza + cerveza artesanal propia · Cruzando la calle del hotel. <a href="https://www.eulchen-bier.de" target="_blank">eulchen-bier.de ↗</a> · <a href="https://www.google.com/maps/search/Eulchen+Brauerei+Mainz" target="_blank">📍 Maps ↗</a><br>🌡️ ~17°C esa noche — llevar chamarra ligera para la terraza.</div>
       </div>
-    </div>
-
-    <div class="day-block">
-      <div class="day-label" data-date="2026-05-03" data-lat="50.04" data-lon="8.68">Dom 3 May · Frankfurt — Guero regresa 🇲🇽</div>
-      <div class="alert">
-        <span class="alert-icon">⏰</span>
-        <span>Guero: vuelo 16:25 Frankfurt → Ámsterdam → México. Recoger maleta del locker y salir al aeropuerto a las <strong>13:40</strong>. S-Bahn S8/S9 desde Frankfurt Hbf → aeropuerto = <strong>~11 min</strong>. Llegas ~14:00 — 2h25 antes del vuelo, perfecto.</span>
-      </div>
-      <div class="stops">
-        <div class="stop stop-type-transport">
-          <div class="stop-time">9:00</div>
-          <div class="stop-icon">🚆</div>
-          <div class="stop-body">
-            <div class="stop-title">Tren Mainz → Frankfurt Hbf · Toda la familia</div>
-            <div class="stop-note">~35 min en tren regional. Llegan juntos a Frankfurt para el último día.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-transport">
-          <div class="stop-time">9:30</div>
-          <div class="stop-icon">🧳</div>
-          <div class="stop-body">
-            <div class="stop-title">Guero deja maleta en locker — Frankfurt Hbf</div>
-            <div class="stop-note">Lockers Deutsche Bahn cerca del andén 7 · €4–6 según tamaño · Disponibles 24/7 · Reservar con anticipación en <a href="https://bounce.com/luggage-storage/frankfurt/main-hbf" target="_blank">bounce.com</a> o <a href="https://luggagehero.com/frankfurt/frankfurt-main-hbf/" target="_blank">luggagehero.com</a> para asegurar espacio (~€5–6)</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-food">
-          <div class="stop-time">9:30</div>
-          <div class="stop-icon">☕</div>
-          <div class="stop-body">
-            <div class="stop-title">Desayuno familiar en Frankfurt</div>
-            <div class="stop-note">Primer café en la ciudad — zona Römerberg o Fressgass (callejón gastronómico a pocos pasos de la estación).</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-walk">
-          <div class="stop-time">10:30</div>
-          <div class="stop-icon">🏙️</div>
-          <div class="stop-body">
-            <div class="stop-title">Römerberg + Orillas del Main</div>
-            <div class="stop-note">Plaza medieval con casas de entramado — la postal de Frankfurt. Bajar al Eiserner Steg (puente de hierro) para vistas del skyline. Domingos hay mercado al aire libre en Konstablerwache con comida regional. ✅ Museos del Museumsufer abiertos los domingos.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-food">
-          <div class="stop-time">12:00</div>
-          <div class="stop-icon">🍽️</div>
-          <div class="stop-body">
-            <div class="stop-title">Último almuerzo juntos 🥂</div>
-            <div class="stop-note">Almuerzo en el Sachsenhausen o zona del río Main. Despedida de Guero.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-transport" style="border-left-color:#C4622D">
-          <div class="stop-time">13:30</div>
-          <div class="stop-icon">🧳</div>
-          <div class="stop-body">
-            <div class="stop-title">Guero recoge maleta del locker · Frankfurt Hbf</div>
-            <div class="stop-note">Regresa a la estación, recoge maleta y toma el S8/S9 al aeropuerto.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-transport" style="border-left-color:#C4622D">
-          <div class="stop-time">13:50</div>
-          <div class="stop-icon">✈️</div>
-          <div class="stop-body">
-            <div class="stop-title">Guero → Frankfurt Flughafen · LH996 → AM26</div>
-            <div class="stop-note">S-Bahn S8/S9 desde Frankfurt Hbf → Terminal 1 · ~11 min · Llega ~14:00 · Check-in + migración · Vuelo 16:25 FRA→AMS · Conf# 85A7VN · Conexión AMS→MEX 22:00 · Conf# KLFDOL</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-walk">
-          <div class="stop-time">14:00</div>
-          <div class="stop-icon">🗺️</div>
-          <div class="stop-body">
-            <div class="stop-title">La familia sigue en Frankfurt 🎉</div>
-            <div class="stop-note">Cookie, Manolo, Ana Paola, Andrés, Toño, Lorena y MariTere — tarde completa. Museo Städel (abierto dom 10-18h · €14), Senckenberg de dinosaurios para Andrés (abierto dom · €12), o simplemente callejear el Sachsenhausen. Regresan a Mainz en tren al final del día.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="day-block">
-      <div class="day-label" data-date="2026-05-04" data-lat="49.99" data-lon="8.27">Lun 4 May · Familia → Lutzerath 🚗</div>
-      <div class="stops">
-        <div class="stop stop-type-transport">
-          <div class="stop-time">AM</div>
-          <div class="stop-icon">🚗</div>
-          <div class="stop-body">
-            <div class="stop-title">Recogen coche rentado — Alamo Mainz</div>
-            <div class="stop-note">✅ <strong>2 coches confirmados</strong> · Recogida: Wallstrasse 1, Mainz · 4 May 11:00 AM · Devolución: Johannisstrasse 54, Köln · 8 May 2:00 PM<br>🚗 Coche 1: Nissan Qashqai · Jose Antonio Alcazar · Voucher 1210085 · €294.58<br>🚗 Coche 2: Ford Kuga · Lorena Mora Alcazar · Voucher 1210223 · €309.30<br>⚠️ Cada conductor presenta su voucher y tarjeta de crédito física en el mostrador</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-transport">
-          <div class="stop-time">AM</div>
-          <div class="stop-icon">🛣️</div>
-          <div class="stop-body">
-            <div class="stop-title">Mainz → Lutzerath (Kliding)</div>
-            <div class="stop-note">~2 hrs en coche · Destino: Ferienhaus Lenartz, Hauptstraße 9, Kliding · Check-in casa completa (3 hab, 3 baños, jardín)</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-walk">
-          <div class="stop-time">Tarde</div>
-          <div class="stop-icon">🌿</div>
-          <div class="stop-body">
-            <div class="stop-title">Rudesheim — Day Trip</div>
-            <div class="stop-note">Pueblo vinícola en el Rin — Drosselgasse (callejón de bares y vino), vistas desde el teleférico. ~60 min desde Kliding.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
       </div>
     </div>
   </div>
+</div>
+
+<div class="day-block">
+  <div class="day-label" data-date="2026-05-01" data-lat="49.99" data-lon="8.27">Vie 1 May · Day Trip a Heidelberg</div>
+  <div class="stops">
+    <div class="stop stop-type-transport">
+      <div class="stop-time">9:13</div>
+      <div class="stop-icon">🚆</div>
+      <div class="stop-body">
+        <div class="stop-title">Tren Mainz → Heidelberg · con escala en Mannheim</div>
+        <div class="stop-note">Sale Mainz 9:13 · Escala 20 min en Mannheim · Llega Heidelberg 10:38 · Tren regional (cubierto por Deutschland Ticket)<br>🎫 <strong>Deutschland Ticket — €63/persona:</strong> Cubre todo el transporte público en Alemania (trenes regionales, metro, bus) durante el mes. Conviene vs pagar trenes por separado: Heidelberg ida/vuelta + Frankfurt + Rüdesheim. Comprar en <a href="https://www.bahn.de/angebot/regio/deutschland-ticket" target="_blank">bahn.de ↗</a> o en la app DB Navigator.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+    <div class="stop stop-type-landmark">
+      <div class="stop-time">10:45</div>
+      <div class="stop-icon">🏰</div>
+      <div class="stop-body">
+        <div class="stop-title">Castillo de Heidelberg</div>
+        <div class="stop-note">Sube caminando (recomendado, ~15 min) o funicular (~€5/persona, €40 grupo). Barril de 220,000 litros imperdible. Vistas del Neckar. ~2 hrs. ⚠️ Para 8: considerar tour guiado en español. Reserva en <a href="https://schloss-heidelberg.de" target="_blank">schloss-heidelberg.de</a></div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+    <div class="stop stop-type-walk">
+      <div class="stop-time">12:30</div>
+      <div class="stop-icon">🌉</div>
+      <div class="stop-body">
+        <div class="stop-title">Alte Brücke — Puente Viejo</div>
+        <div class="stop-note">El puente más fotogénico de Alemania. Vistas del castillo y el Neckar. Busca el mono de bronce — foto obligada con Andrés.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="day-block">
+  <div class="day-label" data-date="2026-05-02" data-lat="49.99" data-lon="8.27">Sáb 2 May · Mainz a fondo</div>
+  <div class="stops">
+    <div class="stop stop-type-landmark">
+      <div class="stop-time">9:30</div>
+      <div class="stop-icon">⛪</div>
+      <div class="stop-body">
+        <div class="stop-title">Dom de Mainz con calma</div>
+        <div class="stop-note">Cripta, vidrieras modernas, capillas laterales. Tomarse el tiempo.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+    <div class="stop stop-type-food">
+      <div class="stop-time">10:45</div>
+      <div class="stop-icon">🛒</div>
+      <div class="stop-body">
+        <div class="stop-title">Mercado en Marktplatz</div>
+        <div class="stop-note">Los jueves hay mercado activo — frutas, quesos, flores locales.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+    <div class="stop stop-type-food">
+      <div class="stop-time">12:30</div>
+      <div class="stop-icon">🍷</div>
+      <div class="stop-body">
+        <div class="stop-title">Weinraumwohnung — Vinos de Rheinhessen</div>
+        <div class="stop-note">Bodega boutique 4.9⭐. Riesling y Spätburgunder locales. Abre jue-sáb desde 11am. ✅ El 2 mayo es sábado — abre normal.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="day-block">
+  <div class="day-label" data-date="2026-05-03" data-lat="50.04" data-lon="8.68">Dom 3 May · Frankfurt — Guero regresa 🇲🇽</div>
+  <div class="alert">
+    <span class="alert-icon">⏰</span>
+    <span>Guero: vuelo 16:25 Frankfurt → Ámsterdam → México. Recoger maleta del locker y salir al aeropuerto a las <strong>13:40</strong>. S-Bahn S8/S9 desde Frankfurt Hbf → aeropuerto = <strong>~11 min</strong>. Llegas ~14:00 — 2h25 antes del vuelo, perfecto.</span>
+  </div>
+  <div class="stops">
+    <div class="stop stop-type-transport">
+      <div class="stop-time">9:00</div>
+      <div class="stop-icon">🚆</div>
+      <div class="stop-body">
+        <div class="stop-title">Tren Mainz → Frankfurt Hbf · Toda la familia</div>
+        <div class="stop-note">Tren regional ~35 min · Llegan juntos a Frankfurt para el último día.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+    <div class="stop stop-type-transport">
+      <div class="stop-time">9:30</div>
+      <div class="stop-icon">🧳</div>
+      <div class="stop-body">
+        <div class="stop-title">Guero deja maleta en locker — Frankfurt Hbf</div>
+        <div class="stop-note">Lockers Deutsche Bahn cerca del andén 7 · €4–6 según tamaño · Reservar en <a href="https://bounce.com/luggage-storage/frankfurt/main-hbf" target="_blank">bounce.com</a> o <a href="https://luggagehero.com/frankfurt/frankfurt-main-hbf/" target="_blank">luggagehero.com</a> (~€5–6)</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+    <div class="stop stop-type-walk">
+      <div class="stop-time">10:00</div>
+      <div class="stop-icon">🏛️</div>
+      <div class="stop-body">
+        <div class="stop-title">Römerberg — Plaza Medieval · Todos juntos</div>
+        <div class="stop-note">La postal de Frankfurt — casas de entramado medievales y el Römer (ayuntamiento). <a href="https://www.google.com/maps/search/Romerberg+Frankfurt" target="_blank">📍 Maps ↗</a></div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+    <div class="stop stop-type-walk">
+      <div class="stop-time">10:30</div>
+      <div class="stop-icon">🚌</div>
+      <div class="stop-body">
+        <div class="stop-title">Hop-on Hop-off — Todos juntos</div>
+        <div class="stop-note">Sale desde <strong>Paulskirche</strong>, al lado de Römerberg · 13 paradas · Cada 20-30 min · Ticket desde €20.50/adulto · <a href="https://www.getyourguide.com/frankfurt-l21/frankfurt-hop-on-hop-off-grand-or-express-bus-ticket-t31919/" target="_blank">Reservar en GetYourGuide ↗</a></div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+    <div class="stop stop-type-landmark">
+      <div class="stop-time">11:30</div>
+      <div class="stop-icon">🏙️</div>
+      <div class="stop-body">
+        <div class="stop-title">MAIN Tower — Todos juntos</div>
+        <div class="stop-note">Mirador 200m · Vistas 360° · €9 adultos / €6 niños · Sin reserva, compra en taquilla · Dom 10:00–21:00 · <a href="https://www.google.com/maps/search/Main+Tower+Frankfurt,+Neue+Mainzer+Strasse+52" target="_blank">📍 Maps ↗</a> · <a href="https://www.maintower.de/en/" target="_blank">maintower.de ↗</a> · ⚠️ Deck al aire libre, puede cerrar por mal tiempo.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+
+    <div class="stop stop-type-transport" style="border-left-color:#C4622D">
+      <div class="stop-time">13:30</div>
+      <div class="stop-icon">🧳</div>
+      <div class="stop-body">
+        <div class="stop-title">Guero recoge maleta del locker · Frankfurt Hbf</div>
+        <div class="stop-note">Regresa a la estación, recoge maleta y toma el S8/S9 al aeropuerto.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+    <div class="stop stop-type-transport" style="border-left-color:#C4622D">
+      <div class="stop-time">13:50</div>
+      <div class="stop-icon">✈️</div>
+      <div class="stop-body">
+        <div class="stop-title">Guero → Frankfurt Flughafen · LH996 → AM26</div>
+        <div class="stop-note">S-Bahn S8/S9 desde Frankfurt Hbf → Terminal 1 · ~11 min · Llega ~14:00 · Check-in + migración · Vuelo 16:25 FRA→AMS · Conf# 85A7VN · Conexión AMS→MEX 22:00 · Conf# KLFDOL</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+    <div class="stop stop-type-walk">
+      <div class="stop-time">14:00</div>
+      <div class="stop-icon">🎉</div>
+      <div class="stop-body">
+        <div class="stop-title">La familia sigue en Frankfurt 🎉</div>
+        <div class="stop-note">Tarde libre — Eiserner Steg (puente de hierro) con vistas al skyline · Sachsenhausen para tomar algo · Comen cuando les dé hambre.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+    <div class="stop stop-type-walk">
+      <div class="stop-time">14:30</div>
+      <div class="stop-icon">🚌</div>
+      <div class="stop-body">
+        <div class="stop-title">Hop-on Hop-off Frankfurt</div>
+        <div class="stop-note">🚌 13 paradas: Römerberg · Goethe-Haus · Main Tower · Alte Oper · Sachsenhausen · Frankfurt Zoo y más · Sale cada 20-30 min · Ticket desde €20.50/adulto · <a href="https://www.getyourguide.com/frankfurt-l21/frankfurt-hop-on-hop-off-grand-or-express-bus-ticket-t31919/" target="_blank">Reservar en GetYourGuide ↗</a></div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+    <div class="stop stop-type-landmark">
+      <div class="stop-time">16:00</div>
+      <div class="stop-icon">🏙️</div>
+      <div class="stop-body">
+        <div class="stop-title">MAIN Tower — Mirador para Andrés</div>
+        <div class="stop-note">200m de altura · Vistas 360° del skyline de Frankfurt · €9 adultos / €6 niños · Sin reserva, compra en taquilla · Abierto Dom hasta 21:00 · <a href="https://www.google.com/maps/search/Main+Tower+Frankfurt,+Neue+Mainzer+Strasse+52" target="_blank">📍 Maps ↗</a> · <a href="https://www.maintower.de/en/" target="_blank">maintower.de ↗</a><br>⚠️ Deck al aire libre — puede cerrar por mal tiempo.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="day-block">
+  <div class="day-label" data-date="2026-05-04" data-lat="49.99" data-lon="8.27">Lun 4 May · Familia → Lutzerath 🚗</div>
+  <div class="stops">
+    <div class="stop stop-type-transport">
+      <div class="stop-time">AM</div>
+      <div class="stop-icon">🚗</div>
+      <div class="stop-body">
+        <div class="stop-title">Recogen coche rentado — Alamo Mainz</div>
+        <div class="stop-note">✅ <strong>2 coches confirmados</strong> · Recogida: Wallstrasse 1, Mainz · 4 May 11:00 AM · Devolución: Johannisstrasse 54, Köln · 8 May 2:00 PM<br>🚗 Coche 1: Nissan Qashqai · Jose Antonio Alcazar · Voucher 1210085 · €294.58<br>🚗 Coche 2: Ford Kuga · Lorena Mora Alcazar · Voucher 1210223 · €309.30<br>⚠️ Cada conductor presenta su voucher y tarjeta de crédito física en el mostrador</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+    <div class="stop stop-type-transport">
+      <div class="stop-time">AM</div>
+      <div class="stop-icon">🛣️</div>
+      <div class="stop-body">
+        <div class="stop-title">Mainz → Lutzerath (Kliding)</div>
+        <div class="stop-note">~2 hrs en coche · Destino: Ferienhaus Lenartz, Hauptstraße 9, Kliding · Check-in casa completa (3 hab, 3 baños, jardín)</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+    <div class="stop stop-type-walk">
+      <div class="stop-time">Tarde</div>
+      <div class="stop-icon">🌿</div>
+      <div class="stop-body">
+        <div class="stop-title">Rudesheim — Day Trip</div>
+        <div class="stop-note">Pueblo vinícola en el Rin — Drosselgasse (callejón de bares y vino), vistas desde el teleférico. ~60 min desde Kliding.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+  </div>
 
   <!-- LUTZERATH -->
+
   <div class="city-block">
     <div class="city-header">
       <span class="city-flag">🇩🇪</span>
@@ -1428,92 +1470,96 @@
       <span class="city-dates">4 – 8 May</span>
     </div>
 
-    <div class="day-block">
-      <div class="day-label" data-date="2026-05-05" data-lat="50.22" data-lon="6.97">Mar 5 May · Crucero Mosel</div>
-      <div class="stops">
-        <div class="stop stop-type-walk">
-          <div class="stop-time">AM</div>
-          <div class="stop-icon">🛳️</div>
-          <div class="stop-body">
-            <div class="stop-title">Crucero por el río Mosel</div>
-            <div class="stop-note">Paisajes de viñedos y castillos medievales desde el agua. Salidas habituales desde Cochem o Traben-Trarbach (~20 min en coche). Buscar operadores locales: Köln-Düsseldorfer o Moselschifffahrt. Andrés va a disfrutarlo mucho.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
+```
+<div class="day-block">
+  <div class="day-label" data-date="2026-05-05" data-lat="50.22" data-lon="6.97">Mar 5 May · Crucero Mosel</div>
+  <div class="stops">
+    <div class="stop stop-type-walk">
+      <div class="stop-time">AM</div>
+      <div class="stop-icon">🛳️</div>
+      <div class="stop-body">
+        <div class="stop-title">Crucero por el río Mosel</div>
+        <div class="stop-note">Paisajes de viñedos y castillos medievales desde el agua. Salidas habituales desde Cochem o Traben-Trarbach (~20 min en coche). Buscar operadores locales: Köln-Düsseldorfer o Moselschifffahrt. Andrés va a disfrutarlo mucho.</div>
       </div>
-    </div>
-
-    <div class="day-block">
-      <div class="day-label" data-date="2026-05-06" data-lat="50.22" data-lon="6.97">Mié 6 May · Thier</div>
-      <div class="stops">
-        <div class="stop stop-type-walk">
-          <div class="stop-time">AM</div>
-          <div class="stop-icon">🏘️</div>
-          <div class="stop-body">
-            <div class="stop-title">Thier — Pueblo de la región</div>
-            <div class="stop-note">Exploración de la zona rural de Eifel. Paisaje verde, pueblos medievales, ideal para descansar del ritmo de ciudad. Confirmar actividades específicas.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="day-block">
-      <div class="day-label" data-date="2026-05-07" data-lat="50.22" data-lon="6.97">Jue 7 May · Día libre en Lutzerath</div>
-      <div class="stops">
-        <div class="stop stop-type-walk">
-          <div class="stop-time">Todo el día</div>
-          <div class="stop-icon">🌄</div>
-          <div class="stop-body">
-            <div class="stop-title">Descanso en Ferienhaus Lenartz</div>
-            <div class="stop-note">Día relajado en la casa. Jardín, naturaleza, cocinar en casa. Zona de Eifel perfecta para caminatas cortas alrededor.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="day-block">
-      <div class="day-label" data-date="2026-05-08" data-lat="50.94" data-lon="6.96">Vie 8 May · Lutzerath → Köln (coche) → Utrecht (tren)</div>
-      <div class="stops">
-        <div class="stop stop-type-transport">
-          <div class="stop-time">AM</div>
-          <div class="stop-icon">🚗</div>
-          <div class="stop-body">
-            <div class="stop-title">Kliding → Köln · Devolver coche Alamo</div>
-            <div class="stop-note">📍 Devolución: Johannisstrasse 54, Köln · ~1 hr desde Kliding · Salir de Kliding antes de las 13:00 para llegar a Köln con margen antes del tren 14:50.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-transport">
-          <div class="stop-time">14:50</div>
-          <div class="stop-icon">🚂</div>
-          <div class="stop-body">
-            <div class="stop-title">Tren Köln → Utrecht</div>
-            <div class="stop-note">Köln Hbf → Utrecht Centraal · ICE · Sale 14:50 · Llega 17:25 · 2h35m · Sin cambios · 3 Adultos + 3 Adultos +60 + 1 Niño ✅ Comprado · Check-in Moxy Utrecht</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
       </div>
     </div>
   </div>
+</div>
+
+<div class="day-block">
+  <div class="day-label" data-date="2026-05-06" data-lat="50.22" data-lon="6.97">Mié 6 May · Thier</div>
+  <div class="stops">
+    <div class="stop stop-type-walk">
+      <div class="stop-time">AM</div>
+      <div class="stop-icon">🏘️</div>
+      <div class="stop-body">
+        <div class="stop-title">Thier — Pueblo de la región</div>
+        <div class="stop-note">Exploración de la zona rural de Eifel. Paisaje verde, pueblos medievales, ideal para descansar del ritmo de ciudad. Confirmar actividades específicas.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="day-block">
+  <div class="day-label" data-date="2026-05-07" data-lat="50.22" data-lon="6.97">Jue 7 May · Día libre en Lutzerath</div>
+  <div class="stops">
+    <div class="stop stop-type-walk">
+      <div class="stop-time">Todo el día</div>
+      <div class="stop-icon">🌄</div>
+      <div class="stop-body">
+        <div class="stop-title">Descanso en Ferienhaus Lenartz</div>
+        <div class="stop-note">Día relajado en la casa. Jardín, naturaleza, cocinar en casa. Zona de Eifel perfecta para caminatas cortas alrededor.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="day-block">
+  <div class="day-label" data-date="2026-05-08" data-lat="50.94" data-lon="6.96">Vie 8 May · Lutzerath → Köln (coche) → Utrecht (tren)</div>
+  <div class="stops">
+    <div class="stop stop-type-transport">
+      <div class="stop-time">AM</div>
+      <div class="stop-icon">🚗</div>
+      <div class="stop-body">
+        <div class="stop-title">Kliding → Köln · Devolver coche Alamo</div>
+        <div class="stop-note">📍 Devolución: Johannisstrasse 54, Köln · ~1 hr desde Kliding · Salir de Kliding antes de las 13:00 para llegar a Köln con margen antes del tren 14:50.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+    <div class="stop stop-type-transport">
+      <div class="stop-time">14:50</div>
+      <div class="stop-icon">🚂</div>
+      <div class="stop-body">
+        <div class="stop-title">Tren Köln → Utrecht</div>
+        <div class="stop-note">Köln Hbf → Utrecht Centraal · ICE · Sale 14:50 · Llega 17:25 · 2h35m · Sin cambios · 3 Adultos + 3 Adultos +60 + 1 Niño ✅ Comprado · Check-in Moxy Utrecht</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+  </div>
 
   <!-- UTRECHT -->
+
   <div class="city-block">
     <div class="city-header">
       <span class="city-flag">🇳🇱</span>
@@ -1521,72 +1567,75 @@
       <span class="city-dates">8 – 10 May</span>
     </div>
 
-    <div class="day-block">
-      <div class="day-label" data-date="2026-05-09" data-lat="52.09" data-lon="5.12">Sáb 9 May · Utrecht</div>
-      <div class="stops">
-        <div class="stop stop-type-walk">
-          <div class="stop-time">AM</div>
-          <div class="stop-icon">🏰</div>
-          <div class="stop-body">
-            <div class="stop-title">Dom Tower + Casco Antiguo</div>
-            <div class="stop-note">La torre más alta de Países Bajos. Canales con terrazas a nivel del agua — únicos en Europa. Muy distinto a Ámsterdam, más tranquilo y local.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-food">
-          <div class="stop-time">Tarde</div>
-          <div class="stop-icon">🍽️</div>
-          <div class="stop-body">
-            <div class="stop-title">Mercado y cena en Utrecht</div>
-            <div class="stop-note">Zona de Neude o Oudegracht para cenar. Última noche europea — celebrar. 🥂</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
+```
+<div class="day-block">
+  <div class="day-label" data-date="2026-05-09" data-lat="52.09" data-lon="5.12">Sáb 9 May · Utrecht</div>
+  <div class="stops">
+    <div class="stop stop-type-walk">
+      <div class="stop-time">AM</div>
+      <div class="stop-icon">🏰</div>
+      <div class="stop-body">
+        <div class="stop-title">Dom Tower + Casco Antiguo</div>
+        <div class="stop-note">La torre más alta de Países Bajos. Canales con terrazas a nivel del agua — únicos en Europa. Muy distinto a Ámsterdam, más tranquilo y local.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
       </div>
     </div>
+    <div class="stop stop-type-food">
+      <div class="stop-time">Tarde</div>
+      <div class="stop-icon">🍽️</div>
+      <div class="stop-body">
+        <div class="stop-title">Mercado y cena en Utrecht</div>
+        <div class="stop-note">Zona de Neude o Oudegracht para cenar. Última noche europea — celebrar. 🥂</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <div class="day-block">
-      <div class="day-label" data-date="2026-05-10" data-lat="52.09" data-lon="5.12">Dom 10 May · Utrecht → Ámsterdam → CDMX ✈️</div>
-      <div class="stops">
-        <div class="stop stop-type-transport">
-          <div class="stop-time">AM</div>
-          <div class="stop-icon">🚆</div>
-          <div class="stop-body">
-            <div class="stop-title">Tren Utrecht → Ámsterdam Schiphol</div>
-            <div class="stop-note">~30 min directo. Salir mínimo 3 hrs antes del vuelo. ⏳ Confirmar horario según vuelo exacto.</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
-        <div class="stop stop-type-transport">
-          <div class="stop-time">22:00</div>
-          <div class="stop-icon">✈️</div>
-          <div class="stop-body">
-            <div class="stop-title">Vuelo Ámsterdam → CDMX</div>
-            <div class="stop-note">Salida ~22:00 hrs desde Schiphol. ¡Hasta Puebla! 🇲🇽</div>
-          </div>
-          <div class="stop-actions">
-            <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
-            <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
-          </div>
-        </div>
+<div class="day-block">
+  <div class="day-label" data-date="2026-05-10" data-lat="52.09" data-lon="5.12">Dom 10 May · Utrecht → Ámsterdam → CDMX ✈️</div>
+  <div class="stops">
+    <div class="stop stop-type-transport">
+      <div class="stop-time">AM</div>
+      <div class="stop-icon">🚆</div>
+      <div class="stop-body">
+        <div class="stop-title">Tren Utrecht → Ámsterdam Schiphol</div>
+        <div class="stop-note">~30 min directo. Salir mínimo 3 hrs antes del vuelo. ⏳ Confirmar horario según vuelo exacto.</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
       </div>
     </div>
+    <div class="stop stop-type-transport">
+      <div class="stop-time">22:00</div>
+      <div class="stop-icon">✈️</div>
+      <div class="stop-body">
+        <div class="stop-title">Vuelo Ámsterdam → CDMX</div>
+        <div class="stop-note">Salida ~22:00 hrs desde Schiphol. ¡Hasta Puebla! 🇲🇽</div>
+      </div>
+      <div class="stop-actions">
+        <button class="btn-done" onclick="toggleDone(this)" title="Marcar como hecho">✓</button>
+        <button class="btn-edit" onclick="openEdit(this)" title="Editar">✏️</button>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
   </div>
 
 </div><!-- /itinerario -->
 
 <!-- ===================== RESERVAS ===================== -->
-<div class="section" id="tab-reservas" style="display:none">
 
+<div class="section" id="tab-reservas" style="display:none">
 
   <div class="progress-wrap" id="reservas-progress">
     <div class="progress-label">
@@ -1632,7 +1681,6 @@
       </div>
     </div>
   </div>
-
 
 <div class="notes-area" style="margin-top:20px">
     <h3>🚂 Trenes — Estado de reservas</h3>
@@ -1707,6 +1755,7 @@
 </div><!-- /tab-reservas -->
 
 <!-- ===================== RESUMEN ===================== -->
+
 <div class="section" id="tab-resumen" style="display:none">
 
   <div class="summary-grid">
@@ -1757,6 +1806,7 @@
 </div><!-- /tab-resumen -->
 
 <!-- ===================== POR CONFIRMAR ===================== -->
+
 <div class="section" id="tab-porconfirmar" style="display:none">
 
   <div class="alert">
@@ -1812,6 +1862,7 @@
 </div><!-- /porconfirmar -->
 
 <!-- ================= DOCUMENTOS ================= -->
+
 <div class="section" id="tab-documentos" style="display:none">
 
   <div class="confirm-block">
@@ -1867,6 +1918,7 @@
 </div><!-- /tab-documentos -->
 
 <!-- MODAL EDICIÓN -->
+
 <div class="modal-overlay" id="modal">
   <div class="modal">
     <button class="btn-close-modal" onclick="closeModal()">×</button>
@@ -2092,5 +2144,6 @@
     if (e.target === this) closeModal();
   });
 </script>
+
 </body>
 </html>
